@@ -33,3 +33,74 @@ body {
   color: #05668D; /* Azul oscuro para texto */
   margin-bottom: 60px;
 }
+
+/* Contenedor principal */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+  position: relative;
+}
+
+/* Fondo con forma de gota */
+.drop-container {
+  background-color: #028090;
+  width: 250px;
+  height: 250px;
+  border-radius: 50% 50% 40% 40%; /* Simula la forma de una gota */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -60px; /* Ajuste para que caiga correctamente sobre el segundo div */
+  z-index: 2;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
+}
+
+/* Imagen dentro de la gota */
+.content-image {
+  width: 90%;
+  max-height: 90%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Contenedor de texto debajo de la gota */
+.content-box {
+  background-color: white;
+  width: 80%;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  margin-top: 120px; /* Espacio suficiente para la gota */
+  text-align: center;
+  z-index: 1;
+}
+
+/* Fila superior de sub-divs */
+.text-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Bloques de texto */
+.text-block {
+  background-color: #05668D;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  flex: 1;
+  margin: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Bloque grande */
+.text-block.large {
+  width: 100%;
+  background-color: #00A896;
+  padding: 20px;
+  font-size: 18px;
+}

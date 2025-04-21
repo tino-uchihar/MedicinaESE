@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+SasxHeBQVsSwSOqVsm9DttnaiV+3WWXiy+xrHQmo0g=",
+  "Hash": "t+jOXyi8nAb/y42yCkKLHG5Wiut5EjfpVj4vwV6ftu0=",
   "Source": "MedicinaESE",
   "BasePath": "_content/MedicinaESE",
   "Mode": "Default",
@@ -31,8 +31,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "4zw8a3kosz",
-      "Integrity": "EDF+0+viAlm6wEkGnZshDE1V41KmBFfqgIRRI2gLYQs=",
+      "Fingerprint": "d3nsgtjpqo",
+      "Integrity": "6XefwzdGyv1cIKulmAXsyHCKz5wZM5q+5Z+kTctb+ZQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\obj\\Debug\\net8.0\\scopedcss\\bundle\\MedicinaESE.styles.css"
@@ -52,8 +52,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "4zw8a3kosz",
-      "Integrity": "EDF+0+viAlm6wEkGnZshDE1V41KmBFfqgIRRI2gLYQs=",
+      "Fingerprint": "d3nsgtjpqo",
+      "Integrity": "6XefwzdGyv1cIKulmAXsyHCKz5wZM5q+5Z+kTctb+ZQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MedicinaESE.bundle.scp.css"
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "uktpvvm7qa",
-      "Integrity": "/twXkFc2N/Q+9ReGqo87SoPlER31MdFZIYfBKfpKQNM=",
+      "Fingerprint": "6s79zdvs4v",
+      "Integrity": "Wil8Q6jeJZmelHM7LGobxUn42Plls1vNMoi1zml1edA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -99,6 +99,69 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\logo.png",
+      "SourceId": "MedicinaESE",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\",
+      "BasePath": "_content/MedicinaESE",
+      "RelativePath": "img/logo#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "qtz402y4mw",
+      "Integrity": "ognYLpETHPfhsk5vkwzZ2HzZaLZgh6LdRTvVeKLneew=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\logo.png"
+    },
+    {
+      "Identity": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\logosinfondo.png",
+      "SourceId": "MedicinaESE",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\",
+      "BasePath": "_content/MedicinaESE",
+      "RelativePath": "img/logosinfondo#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hlymcasopl",
+      "Integrity": "pQzXH2L0hylsWS7rO8XR2Or34QY6qBmMzf1vPeP8ly4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\logosinfondo.png"
+    },
+    {
+      "Identity": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\logosinfondo2.png",
+      "SourceId": "MedicinaESE",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\",
+      "BasePath": "_content/MedicinaESE",
+      "RelativePath": "img/logosinfondo2#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0mr7kw5o99",
+      "Integrity": "iOv4QhTCLwZBIBt9+GgoA4kAJrWPMVW31rznyw8gHLQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\logosinfondo2.png"
     },
     {
       "Identity": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\js\\site.js",
@@ -1321,6 +1384,51 @@
   ],
   "Endpoints": [
     {
+      "Route": "css/site.6s79zdvs4v.css",
+      "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1670"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Wil8Q6jeJZmelHM7LGobxUn42Plls1vNMoi1zml1edA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 21 Apr 2025 21:38:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6s79zdvs4v"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Wil8Q6jeJZmelHM7LGobxUn42Plls1vNMoi1zml1edA="
+        }
+      ]
+    },
+    {
       "Route": "css/site.css",
       "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -1331,7 +1439,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "788"
+          "Value": "1670"
         },
         {
           "Name": "Content-Type",
@@ -1339,11 +1447,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"/twXkFc2N/Q+9ReGqo87SoPlER31MdFZIYfBKfpKQNM=\""
+          "Value": "\"Wil8Q6jeJZmelHM7LGobxUn42Plls1vNMoi1zml1edA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 21 Apr 2025 00:41:38 GMT"
+          "Value": "Mon, 21 Apr 2025 21:38:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1353,52 +1461,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-/twXkFc2N/Q+9ReGqo87SoPlER31MdFZIYfBKfpKQNM="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.uktpvvm7qa.css",
-      "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "788"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"/twXkFc2N/Q+9ReGqo87SoPlER31MdFZIYfBKfpKQNM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 21 Apr 2025 00:41:38 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "uktpvvm7qa"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-/twXkFc2N/Q+9ReGqo87SoPlER31MdFZIYfBKfpKQNM="
+          "Value": "sha256-Wil8Q6jeJZmelHM7LGobxUn42Plls1vNMoi1zml1edA="
         }
       ]
     },
@@ -1481,6 +1544,252 @@
         {
           "Name": "integrity",
           "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+        }
+      ]
+    },
+    {
+      "Route": "img/logo.png",
+      "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30361"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ognYLpETHPfhsk5vkwzZ2HzZaLZgh6LdRTvVeKLneew=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 21 Apr 2025 01:43:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ognYLpETHPfhsk5vkwzZ2HzZaLZgh6LdRTvVeKLneew="
+        }
+      ]
+    },
+    {
+      "Route": "img/logo.qtz402y4mw.png",
+      "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30361"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ognYLpETHPfhsk5vkwzZ2HzZaLZgh6LdRTvVeKLneew=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 21 Apr 2025 01:43:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qtz402y4mw"
+        },
+        {
+          "Name": "label",
+          "Value": "img/logo.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ognYLpETHPfhsk5vkwzZ2HzZaLZgh6LdRTvVeKLneew="
+        }
+      ]
+    },
+    {
+      "Route": "img/logosinfondo.hlymcasopl.png",
+      "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\logosinfondo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35946"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pQzXH2L0hylsWS7rO8XR2Or34QY6qBmMzf1vPeP8ly4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 21 Apr 2025 01:42:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hlymcasopl"
+        },
+        {
+          "Name": "label",
+          "Value": "img/logosinfondo.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-pQzXH2L0hylsWS7rO8XR2Or34QY6qBmMzf1vPeP8ly4="
+        }
+      ]
+    },
+    {
+      "Route": "img/logosinfondo.png",
+      "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\logosinfondo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35946"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pQzXH2L0hylsWS7rO8XR2Or34QY6qBmMzf1vPeP8ly4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 21 Apr 2025 01:42:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-pQzXH2L0hylsWS7rO8XR2Or34QY6qBmMzf1vPeP8ly4="
+        }
+      ]
+    },
+    {
+      "Route": "img/logosinfondo2.0mr7kw5o99.png",
+      "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\logosinfondo2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "28513"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iOv4QhTCLwZBIBt9+GgoA4kAJrWPMVW31rznyw8gHLQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 21 Apr 2025 01:52:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0mr7kw5o99"
+        },
+        {
+          "Name": "label",
+          "Value": "img/logosinfondo2.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-iOv4QhTCLwZBIBt9+GgoA4kAJrWPMVW31rznyw8gHLQ="
+        }
+      ]
+    },
+    {
+      "Route": "img/logosinfondo2.png",
+      "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\logosinfondo2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "28513"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iOv4QhTCLwZBIBt9+GgoA4kAJrWPMVW31rznyw8gHLQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 21 Apr 2025 01:52:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-iOv4QhTCLwZBIBt9+GgoA4kAJrWPMVW31rznyw8gHLQ="
         }
       ]
     },
@@ -6241,96 +6550,6 @@
       ]
     },
     {
-      "Route": "MedicinaESE.4zw8a3kosz.bundle.scp.css",
-      "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MedicinaESE.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2228"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"EDF+0+viAlm6wEkGnZshDE1V41KmBFfqgIRRI2gLYQs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 21 Apr 2025 00:59:56 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "4zw8a3kosz"
-        },
-        {
-          "Name": "label",
-          "Value": "MedicinaESE.bundle.scp.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-EDF+0+viAlm6wEkGnZshDE1V41KmBFfqgIRRI2gLYQs="
-        }
-      ]
-    },
-    {
-      "Route": "MedicinaESE.4zw8a3kosz.styles.css",
-      "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\obj\\Debug\\net8.0\\scopedcss\\bundle\\MedicinaESE.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2228"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"EDF+0+viAlm6wEkGnZshDE1V41KmBFfqgIRRI2gLYQs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 21 Apr 2025 00:59:56 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "4zw8a3kosz"
-        },
-        {
-          "Name": "label",
-          "Value": "MedicinaESE.styles.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-EDF+0+viAlm6wEkGnZshDE1V41KmBFfqgIRRI2gLYQs="
-        }
-      ]
-    },
-    {
       "Route": "MedicinaESE.bundle.scp.css",
       "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MedicinaESE.bundle.scp.css",
       "Selectors": [],
@@ -6349,11 +6568,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"EDF+0+viAlm6wEkGnZshDE1V41KmBFfqgIRRI2gLYQs=\""
+          "Value": "\"6XefwzdGyv1cIKulmAXsyHCKz5wZM5q+5Z+kTctb+ZQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 21 Apr 2025 00:59:56 GMT"
+          "Value": "Mon, 21 Apr 2025 01:06:05 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6363,7 +6582,97 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-EDF+0+viAlm6wEkGnZshDE1V41KmBFfqgIRRI2gLYQs="
+          "Value": "sha256-6XefwzdGyv1cIKulmAXsyHCKz5wZM5q+5Z+kTctb+ZQ="
+        }
+      ]
+    },
+    {
+      "Route": "MedicinaESE.d3nsgtjpqo.bundle.scp.css",
+      "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MedicinaESE.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2228"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6XefwzdGyv1cIKulmAXsyHCKz5wZM5q+5Z+kTctb+ZQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 21 Apr 2025 01:06:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "d3nsgtjpqo"
+        },
+        {
+          "Name": "label",
+          "Value": "MedicinaESE.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6XefwzdGyv1cIKulmAXsyHCKz5wZM5q+5Z+kTctb+ZQ="
+        }
+      ]
+    },
+    {
+      "Route": "MedicinaESE.d3nsgtjpqo.styles.css",
+      "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\obj\\Debug\\net8.0\\scopedcss\\bundle\\MedicinaESE.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2228"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6XefwzdGyv1cIKulmAXsyHCKz5wZM5q+5Z+kTctb+ZQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 21 Apr 2025 01:06:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "d3nsgtjpqo"
+        },
+        {
+          "Name": "label",
+          "Value": "MedicinaESE.styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6XefwzdGyv1cIKulmAXsyHCKz5wZM5q+5Z+kTctb+ZQ="
         }
       ]
     },
@@ -6386,11 +6695,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"EDF+0+viAlm6wEkGnZshDE1V41KmBFfqgIRRI2gLYQs=\""
+          "Value": "\"6XefwzdGyv1cIKulmAXsyHCKz5wZM5q+5Z+kTctb+ZQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 21 Apr 2025 00:59:56 GMT"
+          "Value": "Mon, 21 Apr 2025 01:06:05 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6400,7 +6709,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-EDF+0+viAlm6wEkGnZshDE1V41KmBFfqgIRRI2gLYQs="
+          "Value": "sha256-6XefwzdGyv1cIKulmAXsyHCKz5wZM5q+5Z+kTctb+ZQ="
         }
       ]
     }

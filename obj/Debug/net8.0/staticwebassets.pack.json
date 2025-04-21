@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MedicinaESE.bundle.scp.css",
-      "PackagePath": "staticwebassets\\MedicinaESE.4zw8a3kosz.bundle.scp.css"
+      "PackagePath": "staticwebassets\\MedicinaESE.d3nsgtjpqo.bundle.scp.css"
     },
     {
       "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\css\\site.css",
@@ -11,6 +11,18 @@
     {
       "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\logosinfondo.png",
+      "PackagePath": "staticwebassets\\img\\logosinfondo.png"
+    },
+    {
+      "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\logosinfondo2.png",
+      "PackagePath": "staticwebassets\\img\\logosinfondo2.png"
     },
     {
       "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\js\\site.js",

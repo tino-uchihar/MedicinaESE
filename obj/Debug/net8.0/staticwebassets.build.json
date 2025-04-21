@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "t+jOXyi8nAb/y42yCkKLHG5Wiut5EjfpVj4vwV6ftu0=",
+  "Hash": "/jDpeALr0/F20rJ/wpi6MQbjlw5hWUTPCkTmEB12zy4=",
   "Source": "MedicinaESE",
   "BasePath": "_content/MedicinaESE",
   "Mode": "Default",
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "6s79zdvs4v",
-      "Integrity": "Wil8Q6jeJZmelHM7LGobxUn42Plls1vNMoi1zml1edA=",
+      "Fingerprint": "rriyychu6k",
+      "Integrity": "hzWRAymPOlk76DqRAouT0Q7CTotU8Q0dfPWNMP7IqGc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -1384,51 +1384,6 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.6s79zdvs4v.css",
-      "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1670"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Wil8Q6jeJZmelHM7LGobxUn42Plls1vNMoi1zml1edA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 21 Apr 2025 21:38:41 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "6s79zdvs4v"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Wil8Q6jeJZmelHM7LGobxUn42Plls1vNMoi1zml1edA="
-        }
-      ]
-    },
-    {
       "Route": "css/site.css",
       "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -1439,7 +1394,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1670"
+          "Value": "2886"
         },
         {
           "Name": "Content-Type",
@@ -1447,11 +1402,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Wil8Q6jeJZmelHM7LGobxUn42Plls1vNMoi1zml1edA=\""
+          "Value": "\"hzWRAymPOlk76DqRAouT0Q7CTotU8Q0dfPWNMP7IqGc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 21 Apr 2025 21:38:41 GMT"
+          "Value": "Mon, 21 Apr 2025 23:07:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1461,7 +1416,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Wil8Q6jeJZmelHM7LGobxUn42Plls1vNMoi1zml1edA="
+          "Value": "sha256-hzWRAymPOlk76DqRAouT0Q7CTotU8Q0dfPWNMP7IqGc="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.rriyychu6k.css",
+      "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2886"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hzWRAymPOlk76DqRAouT0Q7CTotU8Q0dfPWNMP7IqGc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 21 Apr 2025 23:07:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rriyychu6k"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hzWRAymPOlk76DqRAouT0Q7CTotU8Q0dfPWNMP7IqGc="
         }
       ]
     },

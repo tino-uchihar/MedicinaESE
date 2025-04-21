@@ -44,10 +44,10 @@ body {
   position: relative;
 }
 
-/* Caja azul que contiene la imagen */
+/* Caja azul que contiene la imagen y la gota */
 .main-container {
   background-color: #028090;
-  width: 320px;
+  width: 85%; /* Ahora tiene el mismo tamaño que la caja de texto */
   height: 400px;
   position: relative;
   display: flex;
@@ -55,13 +55,14 @@ body {
   align-items: center;
   border-radius: 20px;
   padding: 20px;
+  margin-bottom: 60px; /* Para evitar que se empalme con la siguiente sección */
 }
 
 /* Caja rectangular que contiene la imagen */
 .image-box {
   background-color: white;
-  width: 280px;
-  height: 180px;
+  width: 80%;
+  height: 200px;
   border-radius: 12px;
   display: flex;
   justify-content: center;
@@ -78,28 +79,29 @@ body {
   border-radius: 8px;
 }
 
-/* Capa superior en forma de gota */
-.drop-overlay {
-  background-color: #028090; /* Igual al contenedor principal */
-  width: 200px;
-  height: 220px;
-  border-radius: 50% 50% 80% 80%;
+/* Círculo debajo del contenedor principal */
+.main-container::before {
   position: absolute;
-  top: -50px;
-  z-index: 3;
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  content: '';
+  left: 50%;
+  z-index: 1; /* Asegura que esté debajo del contenedor principal */
+  width: 80%;
+  height: 120px;
+  border-radius: 50%;
+  background: inherit;
+  transform: translateX(-50%) translateY(10%);
+  bottom: -40px; /* Ahora está entre el contenedor y la siguiente sección */
 }
 
-/* Contenedor de texto debajo de la gota */
+/* Contenedor de texto debajo del círculo */
 .content-box {
   background-color: white;
   width: 85%;
   padding: 50px;
   border-radius: 20px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-  margin-top: 140px;
+  margin-top: -20px; /* Lo acercamos al círculo */
   text-align: center;
-  z-index: 1;
+  z-index: 0;
 }
 
 /* Fila superior de sub-divs */

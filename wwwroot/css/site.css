@@ -1,3 +1,11 @@
+/* Colores principales de la página
+   #05668D - Azul oscuro (botones, texto)
+   #028090 - Azul medio
+   #00A896 - Verde azulado (detalles destacados)
+   #02C39A - Verde brillante (elementos interactivos)
+   #F0F3BD - Amarillo claro (fondo general)
+*/
+
 html {
   font-size: 14px;
 }
@@ -8,15 +16,20 @@ html {
   }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+/* Efectos en botones y formularios */
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, 
+.form-control:focus, .form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
+/* Ajuste global */
 html {
   position: relative;
   min-height: 100%;
 }
 
 body {
+  background-color: #F0F3BD; /* Amarillo claro */
+  color: #05668D; /* Azul oscuro para texto */
   margin-bottom: 60px;
 }

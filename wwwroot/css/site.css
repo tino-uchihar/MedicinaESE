@@ -44,37 +44,60 @@ body {
   position: relative;
 }
 
-/* Fondo con forma de gota */
-.drop-container {
+/* Caja azul que contiene la imagen */
+.main-container {
   background-color: #028090;
-  width: 250px;
-  height: 250px;
-  border-radius: 50% 50% 40% 40%; /* Simula la forma de una gota */
+  width: 320px;
+  height: 400px;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: -60px; /* Ajuste para que caiga correctamente sobre el segundo div */
-  z-index: 2;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
+  border-radius: 20px;
+  padding: 20px;
 }
 
-/* Imagen dentro de la gota */
+/* Caja rectangular que contiene la imagen */
+.image-box {
+  background-color: white;
+  width: 280px;
+  height: 180px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Imagen dentro de la caja */
 .content-image {
-  width: 90%;
+  max-width: 90%;
   max-height: 90%;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 8px;
+}
+
+/* Capa superior en forma de gota */
+.drop-overlay {
+  background-color: #028090; /* Igual al contenedor principal */
+  width: 200px;
+  height: 220px;
+  border-radius: 50% 50% 80% 80%;
+  position: absolute;
+  top: -50px;
+  z-index: 3;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Contenedor de texto debajo de la gota */
 .content-box {
   background-color: white;
-  width: 80%;
-  padding: 40px;
+  width: 85%;
+  padding: 50px;
   border-radius: 20px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-  margin-top: 120px; /* Espacio suficiente para la gota */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  margin-top: 140px;
   text-align: center;
   z-index: 1;
 }

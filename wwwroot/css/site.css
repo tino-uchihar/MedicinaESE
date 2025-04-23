@@ -71,7 +71,8 @@ html, body {
   align-items: center;
   border-radius: 20px;
   padding: 20px;
-  margin-bottom: 60px; /* Para evitar que se empalme con la siguiente sección */
+  margin-top: 40px;
+  margin-bottom: 30px; /* Para evitar que se empalme con la siguiente sección */
 }
 
 /* Caja rectangular que contiene la imagen */
@@ -143,7 +144,7 @@ html, body {
   width: 95%;
   padding: 50px;
   border-radius: 20px;
-  margin-top: -20px; /* Lo acercamos al círculo */
+  margin-top: -5px; /* Lo acercamos al círculo */
   text-align: center;
   z-index: 0;
 }
@@ -172,4 +173,6 @@ html, body {
   background-color: #00A896;
   padding: 20px;
   font-size: 18px;
+  margin-left: auto; /* Margen automático a la izquierda */
+  margin-right: auto; /* Margen automático a la derecha */
 }

@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\img\\logosinfondo2.png"
     },
     {
+      "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\medicosgenerik.png",
+      "PackagePath": "staticwebassets\\img\\medicosgenerik.png"
+    },
+    {
       "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

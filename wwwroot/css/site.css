@@ -45,10 +45,10 @@ body {
 }
 
 /* Caja azul que contiene la imagen y la gota */
-.main-container {
+.banner-container {
   background-color: #028090;
-  width: 85%; /* Ahora tiene el mismo tamaño que la caja de texto */
-  height: 400px;
+  width: 95%; /* Ahora tiene el mismo tamaño que la caja de texto */
+  aspect-ratio: 320 / 77; /* 21 a 9 es mas standart pero para la imagen actual ta bien*/
   position: relative;
   display: flex;
   justify-content: center;
@@ -61,32 +61,33 @@ body {
 /* Caja rectangular que contiene la imagen */
 .image-box {
   background-color: white;
-  width: 80%;
-  height: 200px;
-  border-radius: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Altura completa */
+  border-radius: 8px; /* Sin bordes redondeados */
   position: relative;
   z-index: 2;
+  overflow: hidden; /* Evita que la imagen sobresalga del contenedor */
 }
 
 /* Imagen dentro de la caja */
 .content-image {
-  max-width: 90%;
-  max-height: 90%;
-  object-fit: cover;
-  border-radius: 8px;
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Altura completa */
+  object-fit: cover; /* La imagen se adapta al contenedor */
+  border: 8px solid white; /* Borde blanco alrededor de la imagen */
+  border-radius: 12px; /* Bordes curveados para el borde */
 }
 
+
+
 /* Círculo debajo del contenedor principal */
-.main-container::before {
+.banner-container::before {
   position: absolute;
   content: '';
   left: 50%;
   z-index: 1; /* Asegura que esté debajo del contenedor principal */
   width: 80%;
-  height: 120px;
+  height: 49%; /* antes 120px */
   border-radius: 50%;
   background: inherit;
   transform: translateX(-50%) translateY(10%);

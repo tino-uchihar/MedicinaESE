@@ -29,7 +29,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 21 Apr 2025 01:06:05 GMT"
+          "Value": "Wed, 23 Apr 2025 21:16:11 GMT"
         }
       ],
       "EndpointProperties": [
@@ -74,58 +74,13 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 21 Apr 2025 01:06:05 GMT"
+          "Value": "Wed, 23 Apr 2025 21:16:11 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
           "Value": "sha256-6XefwzdGyv1cIKulmAXsyHCKz5wZM5q+5Z+kTctb+ZQ="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.59qbyjpj11.css",
-      "AssetFile": "css/site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2884"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"qTemE178rPoWMjhukyp+UqhJHOqCI0aHl7mC4SN4B7I=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 21 Apr 2025 23:09:24 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "59qbyjpj11"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-qTemE178rPoWMjhukyp+UqhJHOqCI0aHl7mC4SN4B7I="
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
         }
       ]
     },
@@ -144,7 +99,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2884"
+          "Value": "4271"
         },
         {
           "Name": "Content-Type",
@@ -152,17 +107,62 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"qTemE178rPoWMjhukyp+UqhJHOqCI0aHl7mC4SN4B7I=\""
+          "Value": "\"0NbdDCkQi8Qv5kN27q/nZ0BmEfq968aKHmBNDYUO8Lg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 21 Apr 2025 23:09:24 GMT"
+          "Value": "Wed, 23 Apr 2025 21:15:40 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-qTemE178rPoWMjhukyp+UqhJHOqCI0aHl7mC4SN4B7I="
+          "Value": "sha256-0NbdDCkQi8Qv5kN27q/nZ0BmEfq968aKHmBNDYUO8Lg="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.k3tmy2b9bw.css",
+      "AssetFile": "css/site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4271"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0NbdDCkQi8Qv5kN27q/nZ0BmEfq968aKHmBNDYUO8Lg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 21:15:40 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "k3tmy2b9bw"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0NbdDCkQi8Qv5kN27q/nZ0BmEfq968aKHmBNDYUO8Lg="
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
         }
       ]
     },
@@ -245,6 +245,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+        }
+      ]
+    },
+    {
+      "Route": "img/esebarrancalogo.hnedkik4tk.png",
+      "AssetFile": "img/esebarrancalogo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "106943"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kxjzyo4qqOCjFXvXPvZ0qou+P2dPxEMQ6YXAUerrJQs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 18:47:01 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hnedkik4tk"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-kxjzyo4qqOCjFXvXPvZ0qou+P2dPxEMQ6YXAUerrJQs="
+        },
+        {
+          "Name": "label",
+          "Value": "img/esebarrancalogo.png"
+        }
+      ]
+    },
+    {
+      "Route": "img/esebarrancalogo.png",
+      "AssetFile": "img/esebarrancalogo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "106943"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kxjzyo4qqOCjFXvXPvZ0qou+P2dPxEMQ6YXAUerrJQs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 18:47:01 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-kxjzyo4qqOCjFXvXPvZ0qou+P2dPxEMQ6YXAUerrJQs="
+        }
+      ]
+    },
+    {
+      "Route": "img/heromedicbanner.02uxpaqpu1.jpg",
+      "AssetFile": "img/heromedicbanner.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "113333"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aBfRBX9ugkFSSl7U1l88Htp5UGUO9C/kE/Ao/RPb0DM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 18:48:36 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "02uxpaqpu1"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-aBfRBX9ugkFSSl7U1l88Htp5UGUO9C/kE/Ao/RPb0DM="
+        },
+        {
+          "Name": "label",
+          "Value": "img/heromedicbanner.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "img/heromedicbanner.jpg",
+      "AssetFile": "img/heromedicbanner.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "113333"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aBfRBX9ugkFSSl7U1l88Htp5UGUO9C/kE/Ao/RPb0DM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 18:48:36 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-aBfRBX9ugkFSSl7U1l88Htp5UGUO9C/kE/Ao/RPb0DM="
         }
       ]
     },

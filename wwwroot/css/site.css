@@ -176,3 +176,27 @@ html, body {
   margin-left: auto; /* Margen automático a la izquierda */
   margin-right: auto; /* Margen automático a la derecha */
 }
+
+
+
+.btn-login-custom {
+  background-color: #4A148C; /* Violeta oscuro */
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn-login-custom:hover {
+  background-color: #7C4DFF; /* Violeta claro */
+  transform: scale(1.05);
+}
+
+
+.rounded-custom {
+  border-top-right-radius: 25%;
+  border-bottom-left-radius: 25%;
+}

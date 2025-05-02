@@ -7,7 +7,7 @@
 <div class="container d-flex justify-content-center align-items-center vh-100">
     <div class="card text-center border-0 shadow-lg p-4 rounded-custom" style="width: 40rem; background-color: #037381;">
         <div class="card-header bg-transparent border-0">
-            <img src="~/img/Doctor.png" alt="Logo Doctor" class="avatar img-fluid mx-auto d-block mb-4" style="width: 100px;">
+            <img src="~/img/logosinfondo2.png" alt="Logo Doctor" class="avatar img-fluid mx-auto d-block mb-4" style="width: 100px;">
             <h2 class="text-white">Iniciar Sesión</h2>
         </div>
         <div class="card-body py-4">
@@ -41,6 +41,8 @@
                 customClass: {
                     popup: 'rounded-custom'
                 }
+            }).then(() => {
+                window.location.href = "/agendar-cita"; // Redirige después de cerrar la alerta
             });
         } else if (mensaje === "error") {
             Swal.fire({

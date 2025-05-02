@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "S5EKdpce3qwP6tTyNitvPxz49Ct9xXBZBZk3nvTwo3E=",
+  "Hash": "V6K+UfZQhvszyekdZjqE64UEYRdIuax6oEPUWf8xnl8=",
   "Source": "MedicinaESE",
   "BasePath": "_content/MedicinaESE",
   "Mode": "Default",
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "wqwy3oiac4",
-      "Integrity": "uEKx7GMXAm+FSyTL6TEO6GrKqlWFCAbEf8i+As7dyvo=",
+      "Fingerprint": "gy9z8sb2y1",
+      "Integrity": "2LrXHahsUW7M/z1SX7U3bwh/mgjXHzC7NMRRBy/CtQs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -141,6 +141,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\heromedicbanner.jpg"
+    },
+    {
+      "Identity": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\iconosinfondo.ico",
+      "SourceId": "MedicinaESE",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\",
+      "BasePath": "_content/MedicinaESE",
+      "RelativePath": "img/iconosinfondo#[.{fingerprint}]?.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8ifrtiw763",
+      "Integrity": "wPNN4XlF6qv1bnzHtmaYHNeWEJYVzU50ND5vkZuqNKY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\iconosinfondo.ico"
+    },
+    {
+      "Identity": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\listcheck.png",
+      "SourceId": "MedicinaESE",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\",
+      "BasePath": "_content/MedicinaESE",
+      "RelativePath": "img/listcheck#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hdlaxpa5gr",
+      "Integrity": "tS8Z4Ma02zgDQfMDUDODrIwz/fZ6oM8bLwtUp++Rq70=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\listcheck.png"
     },
     {
       "Identity": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\logo.png",
@@ -225,6 +267,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\medicosgenerik.png"
+    },
+    {
+      "Identity": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\tomatee.ico",
+      "SourceId": "MedicinaESE",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\",
+      "BasePath": "_content/MedicinaESE",
+      "RelativePath": "img/tomatee#[.{fingerprint}]?.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "t94795iuj7",
+      "Integrity": "n3FlU7jBbZ2pWXHEeGAy+BZYpvWrkN62PI0M/O9RbMU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\tomatee.ico"
     },
     {
       "Identity": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\js\\site.js",
@@ -1457,7 +1520,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4875"
+          "Value": "5107"
         },
         {
           "Name": "Content-Type",
@@ -1465,11 +1528,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"uEKx7GMXAm+FSyTL6TEO6GrKqlWFCAbEf8i+As7dyvo=\""
+          "Value": "\"2LrXHahsUW7M/z1SX7U3bwh/mgjXHzC7NMRRBy/CtQs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 22:28:23 GMT"
+          "Value": "Fri, 02 May 2025 01:41:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1479,12 +1542,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-uEKx7GMXAm+FSyTL6TEO6GrKqlWFCAbEf8i+As7dyvo="
+          "Value": "sha256-2LrXHahsUW7M/z1SX7U3bwh/mgjXHzC7NMRRBy/CtQs="
         }
       ]
     },
     {
-      "Route": "css/site.wqwy3oiac4.css",
+      "Route": "css/site.gy9z8sb2y1.css",
       "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1494,7 +1557,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4875"
+          "Value": "5107"
         },
         {
           "Name": "Content-Type",
@@ -1502,11 +1565,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"uEKx7GMXAm+FSyTL6TEO6GrKqlWFCAbEf8i+As7dyvo=\""
+          "Value": "\"2LrXHahsUW7M/z1SX7U3bwh/mgjXHzC7NMRRBy/CtQs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 29 Apr 2025 22:28:23 GMT"
+          "Value": "Fri, 02 May 2025 01:41:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1516,7 +1579,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "wqwy3oiac4"
+          "Value": "gy9z8sb2y1"
         },
         {
           "Name": "label",
@@ -1524,7 +1587,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-uEKx7GMXAm+FSyTL6TEO6GrKqlWFCAbEf8i+As7dyvo="
+          "Value": "sha256-2LrXHahsUW7M/z1SX7U3bwh/mgjXHzC7NMRRBy/CtQs="
         }
       ]
     },
@@ -1771,6 +1834,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-aBfRBX9ugkFSSl7U1l88Htp5UGUO9C/kE/Ao/RPb0DM="
+        }
+      ]
+    },
+    {
+      "Route": "img/iconosinfondo.8ifrtiw763.ico",
+      "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\iconosinfondo.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19052"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wPNN4XlF6qv1bnzHtmaYHNeWEJYVzU50ND5vkZuqNKY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 02 May 2025 00:40:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8ifrtiw763"
+        },
+        {
+          "Name": "label",
+          "Value": "img/iconosinfondo.ico"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wPNN4XlF6qv1bnzHtmaYHNeWEJYVzU50ND5vkZuqNKY="
+        }
+      ]
+    },
+    {
+      "Route": "img/iconosinfondo.ico",
+      "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\iconosinfondo.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19052"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wPNN4XlF6qv1bnzHtmaYHNeWEJYVzU50ND5vkZuqNKY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 02 May 2025 00:40:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wPNN4XlF6qv1bnzHtmaYHNeWEJYVzU50ND5vkZuqNKY="
+        }
+      ]
+    },
+    {
+      "Route": "img/listcheck.hdlaxpa5gr.png",
+      "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\listcheck.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "423655"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tS8Z4Ma02zgDQfMDUDODrIwz/fZ6oM8bLwtUp++Rq70=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Apr 2025 18:39:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hdlaxpa5gr"
+        },
+        {
+          "Name": "label",
+          "Value": "img/listcheck.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tS8Z4Ma02zgDQfMDUDODrIwz/fZ6oM8bLwtUp++Rq70="
+        }
+      ]
+    },
+    {
+      "Route": "img/listcheck.png",
+      "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\listcheck.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "423655"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tS8Z4Ma02zgDQfMDUDODrIwz/fZ6oM8bLwtUp++Rq70=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Apr 2025 18:39:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tS8Z4Ma02zgDQfMDUDODrIwz/fZ6oM8bLwtUp++Rq70="
         }
       ]
     },
@@ -2099,6 +2326,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-KZmg//fS52UYcmXS3Psv1hZyPUrXxa/vtPuOkCeA9EM="
+        }
+      ]
+    },
+    {
+      "Route": "img/tomatee.ico",
+      "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\tomatee.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17106"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"n3FlU7jBbZ2pWXHEeGAy+BZYpvWrkN62PI0M/O9RbMU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 21:26:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-n3FlU7jBbZ2pWXHEeGAy+BZYpvWrkN62PI0M/O9RbMU="
+        }
+      ]
+    },
+    {
+      "Route": "img/tomatee.t94795iuj7.ico",
+      "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\tomatee.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17106"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"n3FlU7jBbZ2pWXHEeGAy+BZYpvWrkN62PI0M/O9RbMU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 21:26:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t94795iuj7"
+        },
+        {
+          "Name": "label",
+          "Value": "img/tomatee.ico"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-n3FlU7jBbZ2pWXHEeGAy+BZYpvWrkN62PI0M/O9RbMU="
         }
       ]
     },

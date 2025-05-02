@@ -1,0 +1,98 @@
+﻿@page
+@model Medicinaese.Pages.agendar_citaModel
+@{
+    ViewData["Title"] = "Agendar Cita";
+}
+
+<!-- Contenedor principal con fondo claro -->
+<div class="full-wrapper p-4 rounded shadow-sm">
+    <div class="container">
+        
+        <div class="sub-header d-flex justify-content-between align-items-center">
+            <h2>Agendamiento de Citas Médicas</h2>
+            <img src="~/img/listcheck.png" alt="Médico" class="subheader-img img-fluid" style="width: 80px;">
+        </div>
+
+        <div class="form-container">
+            <form method="post">
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <label for="appointmentType" class="form-label required-field">Tipo de cita</label>
+                        <select class="form-select" asp-for="AppointmentType" required>
+                            <option value="" selected disabled>Seleccione tipo de cita</option>
+                            <option value="medicina_general">Medicina General</option>
+                            <option value="odontologia">Odontología</option>
+                            <option value="ortodoncia">Ortodoncia</option>
+                            <option value="ginecologia">Ginecología</option>
+                            <option value="pediatria">Pediatría</option>
+                            <option value="cardiologia">Cardiología</option>
+                            <option value="dermatologia">Dermatología</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="patientName" class="form-label required-field">Apellidos y Nombres del Paciente</label>
+                        <input type="text" class="form-control" asp-for="PatientName" placeholder="Ej. García Pérez Juan Carlos" required>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <label for="idType" class="form-label required-field">Tipo de identificación</label>
+                        <select class="form-select" asp-for="IdType" required>
+                            <option value="" selected disabled>Seleccione tipo de identificación</option>
+                            <option value="cc">C.C. - Cédula de Ciudadanía</option>
+                            <option value="ti">T.I. - Tarjeta de Identidad</option>
+                            <option value="passport">Pasaporte</option>
+                            <option value="ce">C.E. - Cédula de Extranjería</option>
+                            <option value="nit">NIT - Número de Identificación Tributaria</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="idNumber" class="form-label required-field">Número de identificación</label>
+                        <input type="text" class="form-control" asp-for="IdNumber" pattern="[0-9]*" inputmode="numeric" placeholder="Ingrese solo números" required>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <label for="professional" class="form-label required-field">Profesional</label>
+                        <select class="form-select" asp-for="Professional" required>
+                            <option value="" selected disabled>Primero seleccione tipo de cita</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="room" class="form-label">Sala</label>
+                        <input type="text" class="form-control" asp-for="Room" readonly placeholder="Se asignará según el profesional">
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <label for="date" class="form-label required-field">Fecha</label>
+                        <input type="text" class="form-control" asp-for="Date" placeholder="Seleccione fecha" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="time" class="form-label required-field">Hora</label>
+                        <select class="form-select" asp-for="Time" required>
+                            <option value="" selected disabled>Primero seleccione fecha</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <label for="notes" class="form-label">Notas o síntomas (opcional)</label>
+                        <textarea class="form-control" asp-for="Notes" rows="3" placeholder="Describa brevemente sus síntomas o el motivo de su consulta"></textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-end gap-3">
+                        <button type="submit" class="btn btn-primary">Agendar</button>
+                        <button type="reset" class="btn btn-outline-secondary">Cancelar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

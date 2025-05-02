@@ -71,7 +71,7 @@ html, body {
   align-items: center;
   border-radius: 20px;
   padding: 20px;
-  margin-top: 40px;
+  margin-top: 10px;
   margin-bottom: 30px; /* Para evitar que se empalme con la siguiente sección */
 }
 
@@ -199,4 +199,13 @@ html, body {
 .rounded-custom {
   border-top-right-radius: 25%;
   border-bottom-left-radius: 25%;
+}
+
+
+/* Contenedor con fondo azul clarísimo */
+.full-wrapper {
+  background-color: #d6f4f5; /* Versión muy clara de rgb(2, 128, 144) */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }

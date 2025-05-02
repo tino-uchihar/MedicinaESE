@@ -21,6 +21,14 @@
       "PackagePath": "staticwebassets\\img\\heromedicbanner.jpg"
     },
     {
+      "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\iconosinfondo.ico",
+      "PackagePath": "staticwebassets\\img\\iconosinfondo.ico"
+    },
+    {
+      "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\listcheck.png",
+      "PackagePath": "staticwebassets\\img\\listcheck.png"
+    },
+    {
       "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\logo.png",
       "PackagePath": "staticwebassets\\img\\logo.png"
     },
@@ -35,6 +43,10 @@
     {
       "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\medicosgenerik.png",
       "PackagePath": "staticwebassets\\img\\medicosgenerik.png"
+    },
+    {
+      "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\tomatee.ico",
+      "PackagePath": "staticwebassets\\img\\tomatee.ico"
     },
     {
       "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\js\\site.js",

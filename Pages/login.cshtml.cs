@@ -13,7 +13,7 @@ namespace Medicinaese.Pages
 
         public string Mensaje { get; set; } = "";
 
-        public void OnPost()
+        public IActionResult OnPost() //Cambio void OnPost() --> firma del método a IActionResult OnPost() que permite controlar la redirección
         {
             if (Documento == "admin" && Contraseña == "1234")
             {
@@ -23,6 +23,9 @@ namespace Medicinaese.Pages
             {
                 Mensaje = "error"; // SweetAlert mostrará "acceso no permitido"
             }
+            
+            return Page(); // Se queda en la misma página para permitir la alerta
+
         }
     }
 }

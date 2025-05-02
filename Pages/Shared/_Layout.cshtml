@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - DoctorNow</title>
+    <link rel="shortcut icon" href="img/iconosinfondo.ico">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/MedicinaESE.styles.css" asp-append-version="true" />
@@ -14,7 +15,7 @@
             <div class="row align-items-center">
                 <!-- Logo y nombre (3 columnas) -->
                 <div class="col-3">
-                    <a href="#" class="d-flex align-items-center text-decoration-none">
+                    <a href="/index" class="d-flex align-items-center text-decoration-none">
                         <img src="~/img/logosinfondo2.png" alt="Logo" class="me-2" width="50">
                         <span class="fw-bold fs-5">ESE Barrancabermeja</span>
                     </a>
@@ -23,7 +24,7 @@
                 <!-- Botones de navegación (6 columnas) -->
                 <div class="col-6 text-center">
                     <nav>
-                        <a href="#" class="btn btn-nav mx-2">Inicio</a>
+                        <a href="/index" class="btn btn-nav mx-2">Inicio</a>
                         <a href="#" class="btn btn-nav mx-2">Acerca de</a>
                         <a href="#" class="btn btn-nav mx-2">Contacto</a>
                     </nav>
@@ -38,7 +39,7 @@
     </header>
 
     <div class="container">
-        <main role="main" class="pb-3">
+        <main role="main" class="py-3">
             @RenderBody()
         </main>
     </div>

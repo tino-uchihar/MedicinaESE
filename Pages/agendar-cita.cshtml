@@ -15,6 +15,8 @@
 
         <div class="form-container">
             <form method="post">
+                <input type="hidden" name="action" value="agendar"> <!-- Define acción -->
+                
                 <div class="row mb-4">
                     <div class="col-md-6">
                         <label for="appointmentType" class="form-label required-field">Tipo de cita</label>
@@ -55,19 +57,6 @@
 
                 <div class="row mb-4">
                     <div class="col-md-6">
-                        <label for="professional" class="form-label required-field">Profesional</label>
-                        <select class="form-select" asp-for="Professional" required>
-                            <option value="" selected disabled>Primero seleccione tipo de cita</option>
-                        </select>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="room" class="form-label">Sala</label>
-                        <input type="text" class="form-control" asp-for="Room" readonly placeholder="Se asignará según el profesional">
-                    </div>
-                </div>
-
-                <div class="row mb-4">
-                    <div class="col-md-6">
                         <label for="date" class="form-label required-field">Fecha</label>
                         <input type="text" class="form-control" asp-for="Date" placeholder="Seleccione fecha" required>
                     </div>
@@ -75,6 +64,7 @@
                         <label for="time" class="form-label required-field">Hora</label>
                         <select class="form-select" asp-for="Time" required>
                             <option value="" selected disabled>Primero seleccione fecha</option>
+                            <option value="ddasdad">Cualquier dia</option>
                         </select>
                     </div>
                 </div>
@@ -89,10 +79,49 @@
                 <div class="row">
                     <div class="col-12 d-flex justify-content-end gap-3">
                         <button type="submit" class="btn btn-primary">Agendar</button>
-                        <button type="reset" class="btn btn-outline-secondary">Cancelar</button>
+                        <a asp-page="/Index" class="btn btn-outline-secondary">Cancelar</a>
                     </div>
                 </div>
             </form>
         </div>
     </div>
 </div>
+
+@if (Model.CitaConfirmada)
+{
+    <div class="confirmation-wrapper p-4 rounded shadow-sm mt-4">
+        <div class="confirmation-header">
+            <h4><i class="fas fa-check-circle me-2"></i>Cita Agendada Correctamente</h4>
+        </div>
+        <div class="confirmation-body">
+            <p>Su cita ha sido agendada exitosamente. A continuación se muestran los detalles:</p>
+
+            <div class="confirmation-detail">
+                <p><strong>Paciente:</strong> @Model.PatientName</p>
+            </div>
+
+            <div class="confirmation-detail">
+                <p><strong>Tipo de cita:</strong> @Model.AppointmentType</p>
+                <p><strong>Profesional:</strong> @Model.Professional</p>
+                <p><strong>Sala:</strong> @Model.Room</p>
+            </div>
+
+            <div class="confirmation-detail">
+                <p><strong>Fecha:</strong> @Model.Date</p>
+                <p><strong>Hora:</strong> @Model.Time</p>
+            </div>
+
+            <div class="d-grid gap-2 mt-4">
+                <button type="button" class="btn btn-outline-primary action-btn">Configurar Recordatorio</button>
+                <button type="button" class="btn btn-outline-primary action-btn">Guardar PDF</button>
+
+                <form method="post">
+                    <input type="hidden" name="action" value="cerrar">
+                    <button type="submit" class="btn btn-primary w-100">
+                        <i class="fas fa-check me-2"></i>Cerrar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+}

@@ -32,6 +32,8 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         const mensaje = '@Model.Mensaje';
+        const redireccion = '@Model.Redireccion';
+
         if (mensaje === "success") {
             Swal.fire({
                 title: '¡Acceso permitido!',
@@ -42,7 +44,7 @@
                     popup: 'rounded-custom'
                 }
             }).then(() => {
-                window.location.href = "/agendar-cita"; // Redirige después de cerrar la alerta
+                window.location.href = redireccion; // Redirige dinámicamente
             });
         } else if (mensaje === "error") {
             Swal.fire({

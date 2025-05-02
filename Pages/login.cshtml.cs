@@ -12,20 +12,26 @@ namespace Medicinaese.Pages
         public string Contraseña { get; set; } = "";
 
         public string Mensaje { get; set; } = "";
+        public string Redireccion { get; set; } = "";
 
-        public IActionResult OnPost() //Cambio void OnPost() --> firma del método a IActionResult OnPost() que permite controlar la redirección
+        public IActionResult OnPost()
         {
             if (Documento == "admin" && Contraseña == "1234")
             {
                 Mensaje = "success"; // SweetAlert mostrará "acceso permitido"
+                Redireccion = "/agendar-cita"; // Redirige a agendar cita
+            }
+            else if (Documento == "medico" && Contraseña == "1234")
+            {
+                Mensaje = "success"; // SweetAlert mostrará "acceso permitido"
+                Redireccion = "/ficha-medica"; // Redirige a ficha médica
             }
             else
             {
                 Mensaje = "error"; // SweetAlert mostrará "acceso no permitido"
             }
             
-            return Page(); // Se queda en la misma página para permitir la alerta
-
+            return Page(); // Permite mostrar la alerta antes de redirigir
         }
     }
 }

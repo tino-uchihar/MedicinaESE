@@ -24,9 +24,29 @@ namespace Medicinaese.Pages
         [BindProperty]
         public string Notes { get; set; } = "";
 
-        public void OnPost()
+        public bool CitaConfirmada { get; set; } = false;
+
+        public void OnPost(string action)
         {
-            // Aquí podrías agregar la lógica para guardar la cita en una base de datos.
+            if (action == "agendar")
+            {
+                CitaConfirmada = true;
+            }
+            else if (action == "cerrar")
+            {
+                // Limpiar los datos del formulario y ocultar la confirmación
+                AppointmentType = "";
+                PatientName = "";
+                IdType = "";
+                IdNumber = "";
+                Professional = "";
+                Room = "";
+                Date = "";
+                Time = "";
+                Notes = "";
+
+                CitaConfirmada = false;
+            }
         }
     }
 }

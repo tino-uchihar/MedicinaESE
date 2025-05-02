@@ -3,14 +3,14 @@
     <StaticWebAssetEndpoint Include="_content/MedicinaESE/css/site.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-2LrXHahsUW7M/z1SX7U3bwh/mgjXHzC7NMRRBy/CtQs="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"5107"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00222LrXHahsUW7M/z1SX7U3bwh/mgjXHzC7NMRRBy/CtQs=\u0022"},{"Name":"Last-Modified","Value":"Fri, 02 May 2025 01:41:43 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-U/wGEc/p8KeDctHhlzNfyRCbf7xv8r3LjrrGEcUip2E="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"5448"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022U/wGEc/p8KeDctHhlzNfyRCbf7xv8r3LjrrGEcUip2E=\u0022"},{"Name":"Last-Modified","Value":"Fri, 02 May 2025 04:14:08 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/MedicinaESE/css/site.gy9z8sb2y1.css">
+    <StaticWebAssetEndpoint Include="_content/MedicinaESE/css/site.lm0q2zt02u.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"gy9z8sb2y1"},{"Name":"integrity","Value":"sha256-2LrXHahsUW7M/z1SX7U3bwh/mgjXHzC7NMRRBy/CtQs="},{"Name":"label","Value":"_content/MedicinaESE/css/site.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5107"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00222LrXHahsUW7M/z1SX7U3bwh/mgjXHzC7NMRRBy/CtQs=\u0022"},{"Name":"Last-Modified","Value":"Fri, 02 May 2025 01:41:43 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"lm0q2zt02u"},{"Name":"integrity","Value":"sha256-U/wGEc/p8KeDctHhlzNfyRCbf7xv8r3LjrrGEcUip2E="},{"Name":"label","Value":"_content/MedicinaESE/css/site.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5448"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022U/wGEc/p8KeDctHhlzNfyRCbf7xv8r3LjrrGEcUip2E=\u0022"},{"Name":"Last-Modified","Value":"Fri, 02 May 2025 04:14:08 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/MedicinaESE/favicon.61n19gt1b8.ico">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</AssetFile>

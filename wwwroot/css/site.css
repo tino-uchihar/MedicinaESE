@@ -142,7 +142,7 @@ html, body {
 .content-box {
   background-color: white;
   width: 95%;
-  padding: 50px;
+  padding: clamp(20px, 5vw, 50px);
   border-radius: 20px;
   margin-top: -5px; /* Lo acercamos al círculo */
   text-align: center;
@@ -232,4 +232,95 @@ html, body {
   width: clamp(120px, 10vw, 180px); /* Tamaño responsivo */
   height: auto;
   margin: auto;
+}
+
+
+
+/* Fondos alternados en la sección "Acerca de" */
+.service-row-left {
+  background-color: #d6f4f5; /* Azul claro */
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.service-row-right {
+  background-color: #F0F3BD; /* Amarillo claro */
+  padding: 10px;
+  border-radius: 12px;
+}
+
+/* Ajuste del tamaño de las imágenes */
+.service-img {
+  width: 100%; /* Ajusta automáticamente al contenedor */
+  max-width: 250px; /* Reduce tamaño en escritorio */
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+
+
+/* Contenedor de noticias */
+.news-card {
+  background-color: white;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Imágenes de noticias */
+.news-img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.news-img:hover {
+  transform: scale(1.05);
+}
+
+/* Texto de noticias */
+.news-text {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #05668D;
+}
+
+/* Estilos para el carrusel */
+.carousel {
+  max-width: 100%;
+  margin: auto;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+/* Ajuste dinámico de columnas en el carrusel */
+@media (min-width: 992px) {
+    .carousel-item .col-lg-4 {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .carousel-item .col-lg-4 {
+        display: none;
+    }
+
+    .carousel-item .col-md-6 {
+        display: block;
+    }
+}
+
+@media (max-width: 767px) {
+    .carousel-item .col-lg-4, .carousel-item .col-md-6 {
+        display: none;
+    }
+
+    .carousel-item .col-sm-12 {
+        display: block;
+    }
 }

@@ -41,12 +41,36 @@
       "PackagePath": "staticwebassets\\img\\logosinfondo2.png"
     },
     {
+      "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\medicina-general.png",
+      "PackagePath": "staticwebassets\\img\\medicina-general.png"
+    },
+    {
       "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\medicosgenerik.png",
       "PackagePath": "staticwebassets\\img\\medicosgenerik.png"
     },
     {
+      "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\odontologia.jpg",
+      "PackagePath": "staticwebassets\\img\\odontologia.jpg"
+    },
+    {
+      "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\profile.png",
+      "PackagePath": "staticwebassets\\img\\profile.png"
+    },
+    {
+      "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\psicologia.jpg",
+      "PackagePath": "staticwebassets\\img\\psicologia.jpg"
+    },
+    {
+      "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\terapia.jpg",
+      "PackagePath": "staticwebassets\\img\\terapia.jpg"
+    },
+    {
       "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\tomatee.ico",
       "PackagePath": "staticwebassets\\img\\tomatee.ico"
+    },
+    {
+      "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\js\\noticias.js",
+      "PackagePath": "staticwebassets\\js\\noticias.js"
     },
     {
       "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\js\\site.js",

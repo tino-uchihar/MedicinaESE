@@ -16,18 +16,109 @@
         </div>
     </div>
 
-    <!-- Sección de texto con tres sub-divs -->
-    <div class="content-box">
-        <div class="text-row">
-            <div class="text-block" id="text-box-1">
-                <p>Mantenerse saludable es clave para una vida plena. La prevención y el acceso oportuno a atención médica nos ayudan a vivir mejor y con más energía cada día.</p>
+
+    <!-- Sección de Noticias -->
+    <div class="content-box mt-4">
+        <h2 class="text-center text-primary mb-4">Últimas Noticias</h2>
+
+        <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner" id="carouselContainer"></div>
+
+            <!-- Botones de navegación -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+
+
+    <!-- Sección "Acerca de" -->
+    <div class="content-box mt-4">
+        <h2 class="text-center text-primary mb-4">Acerca de</h2>
+        <p class="text-center">Nuestra IPS ofrece distintos servicios para beneficiar a nuestra comunidad.</p>
+
+        <!-- Servicios Médicos con fondo alternado -->
+        <div class="container mt-4">
+            <div class="row mb-4 align-items-center service-row-left">
+                <div class="col-md-4">
+                    <img src="~/img/medicina-general.png" alt="Medicina General" class="img-fluid rounded service-img">
+                </div>
+                <div class="col-md-8">
+                    <h4>Medicina General</h4>
+                    <p>Atención primaria con médicos especializados para el diagnóstico y tratamiento oportuno.</p>
+                </div>
             </div>
-            <div class="text-block" id="text-box-2">
-                <p>Tu tiempo es valioso, por eso hacemos que gestionar tus citas sea rápido y eficiente. Con tecnología avanzada y un equipo capacitado, te garantizamos atención sin largas esperas.</p>
+            <div class="row mb-4 align-items-center flex-row-reverse service-row-right">
+                <div class="col-md-4">
+                    <img src="~/img/odontologia.jpg" alt="Odontología" class="img-fluid rounded service-img">
+                </div>
+                <div class="col-md-8">
+                    <h4>Odontología</h4>
+                    <p>Cuida tu sonrisa con nuestros servicios odontológicos avanzados y tratamientos preventivos.</p>
+                </div>
+            </div>
+            <div class="row mb-4 align-items-center service-row-left">
+                <div class="col-md-4">
+                    <img src="~/img/psicologia.jpg" alt="Psicología" class="img-fluid rounded service-img">
+                </div>
+                <div class="col-md-8">
+                    <h4>Psicología</h4>
+                    <p>Contamos con apoyo psicológico para el bienestar mental y emocional de nuestros pacientes.</p>
+                </div>
+            </div>
+            <div class="row mb-4 align-items-center flex-row-reverse service-row-right">
+                <div class="col-md-4">
+                    <img src="~/img/terapia.jpg" alt="Terapias" class="img-fluid rounded service-img">
+                </div>
+                <div class="col-md-8">
+                    <h4>Terapias</h4>
+                    <p>Recupera tu movilidad y bienestar con nuestras terapias físicas y ocupacionales.</p>
+                </div>
             </div>
         </div>
-        <div class="text-block large" id="text-box-3">
-            <p>Nuestra misión va más allá de brindar servicios médicos: buscamos transformar la manera en que las personas cuidan su salud. En un mundo donde las responsabilidades diarias pueden hacer que olvidemos priorizar nuestro bienestar, queremos ser el puente que facilite el acceso a atención médica sin complicaciones. Con profesionales altamente capacitados y tecnología innovadora, nuestras clínicas se convierten en un espacio donde la prevención, el diagnóstico y el tratamiento trabajan en armonía para garantizar el mejor cuidado posible. Desde consultas generales hasta especialidades avanzadas, ponemos a tu disposición todas las herramientas necesarias para que vivas con tranquilidad y confianza. Porque cuando cuidas de ti, también cuidas de los que te rodean.</p>
+    </div>
+
+    <!-- Sección "Contacto" -->
+    <div class="content-box mt-4">
+        <h2 class="text-center text-primary mb-4">Contacto</h2>
+
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <h5>Horario de Atención</h5>
+                    <p>Lunes a Viernes: 7:00 AM - 6:00 PM</p>
+                    <p>Sábados: 8:00 AM - 2:00 PM</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Correo Electrónico</h5>
+                    <p><a href="mailto:info@doctornow.com">info@doctornow.com</a></p>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <h5>Teléfonos</h5>
+                    <p><a href="tel:+573101234567">+57 310 123 4567</a></p>
+                    <p><a href="tel:+6012345678">+60 1 2345678</a></p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Sedes</h5>
+                    <p><a href="/sede-bogota">Bogotá</a></p>
+                    <p><a href="/sede-medellin">Medellín</a></p>
+                    <p><a href="/sede-barrancabermeja">Barrancabermeja</a></p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
+
+<!-- Wea del carrousel de noticias -->
+
+<script>
+    window.noticiasJson = @Html.Raw(Json.Serialize(Model.Noticias));
+</script>
+<script src="~/js/noticias.js"></script>

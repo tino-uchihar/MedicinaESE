@@ -260,17 +260,28 @@ html, body {
 
 
 
-.news-carousel {
+
+
+.news-carousel-container {
+  width: 100%;
   display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-wrapper {
+  display: flex;
   gap: 15px;
+  transition: transform 0.4s ease-in-out;
+  justify-content: flex-start; /* Asegura que las noticias estén alineadas correctamente */
 }
 
 .news-item {
   flex: 0 0 auto;
-  width: 300px;
-  height: 400px;
+  width: 280px;
+  height: 320px;
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -278,12 +289,11 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  scroll-snap-align: start;
 }
 
 .news-image {
   width: 100%;
-  height: 150px;
+  height: 120px;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -295,8 +305,25 @@ html, body {
 
 .news-description {
   max-height: 80px;
-  overflow-y: auto; /* Agrega desplazamiento en caso de texto largo */
+  overflow-y: auto; /* Desplazamiento solo dentro del texto */
   padding: 5px;
 }
 
+/* Botones de navegación */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #028090;
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 10; /* Asegura que los botones estén sobre las noticias */
+}
 
+#prevBtn { left: 10px; }
+#nextBtn { right: 10px; }

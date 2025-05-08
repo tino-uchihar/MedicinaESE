@@ -120,5 +120,6 @@
 
 <script>
     window.noticiasJson = @Html.Raw(Json.Serialize(Model.Noticias));
+    console.log("Noticias cargadas desde Razor:", window.noticiasJson);
 </script>
 <script src="~/js/noticias.js"></script>

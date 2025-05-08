@@ -259,68 +259,87 @@ html, body {
 }
 
 
-
-/* Contenedor de noticias */
+/* 🔹 Contenedor de noticias con más espacio */
 .news-card {
   background-color: white;
-  padding: 15px;
-  border-radius: 12px;
+  padding: 10px;
+  border-radius: 10px;
   text-align: center;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  width: 250px; /* Ajustado para un mejor tamaño */
+  height: 190px; /* Más alto para texto legible */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-/* Imágenes de noticias */
+/* 🖼️ Ajuste de imágenes para mejor proporción */
 .news-img {
   width: 100%;
-  border-radius: 8px;
-  transition: transform 0.3s ease-in-out;
+  height: 140px; /* Aumentamos un poco para mejor equilibrio */
+  object-fit: cover;
+  border-radius: 6px;
 }
 
-.news-img:hover {
-  transform: scale(1.05);
-}
-
-/* Texto de noticias */
+/* 📄 Texto con más espacio */
 .news-text {
-  margin-top: 10px;
+  font-size: 0.9em;
   font-weight: bold;
   color: #05668D;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Permite 2 líneas antes de truncar */
+  -webkit-box-orient: vertical;
 }
 
-/* Estilos para el carrusel */
-.carousel {
-  max-width: 100%;
-  margin: auto;
+/* 📝 Título con ajuste */
+.news-card h5 {
+  font-size: 1em;
+  margin: 4px 0;
+  min-height: 40px;
 }
 
-.carousel-control-prev-icon, .carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
+/* 🎯 Ajuste de margen y padding */
+.content-box {
+  background-color: white;
+  width: 95%;
+  padding: clamp(20px, 5vw, 50px) 10px 10px 10px; /* Ahora `10px` en izquierda, derecha e inferior */
+  border-radius: 20px;
+  margin-top: -5px;
+  text-align: center;
 }
 
-/* Ajuste dinámico de columnas en el carrusel */
-@media (min-width: 992px) {
+/* 🔹 Corrección para 3 columnas en PC */
+@media (min-width: 1440px) { /* PC */
     .carousel-item .col-lg-4 {
-        display: block;
+        width: 32%;
+        margin: auto;
+        display: inline-block; /* Asegura que haya 3 noticias */
     }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-    .carousel-item .col-lg-4 {
-        display: none;
-    }
-
+/* 📌 Ajuste en Tablet */
+@media (min-width: 772px) and (max-width: 1440px) { /* Tablet */
     .carousel-item .col-md-6 {
-        display: block;
+        width: 48%;
+        margin: auto;
     }
 }
 
-@media (max-width: 767px) {
-    .carousel-item .col-lg-4, .carousel-item .col-md-6 {
-        display: none;
-    }
-
+/* 📌 Ajuste en Móvil */
+@media (max-width: 772px) { /* Móvil */
     .carousel-item .col-sm-12 {
-        display: block;
+        width: 80%;
+        margin: auto;
     }
+}
+
+/* 🎯 Botones de desplazamiento más grandes y visibles */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color: #028090 !important; /* Azul medio */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  z-index: 10;
 }

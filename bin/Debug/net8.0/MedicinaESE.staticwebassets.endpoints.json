@@ -29,7 +29,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 07 May 2025 22:20:25 GMT"
+          "Value": "Thu, 08 May 2025 21:54:39 GMT"
         }
       ],
       "EndpointProperties": [
@@ -74,13 +74,58 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 07 May 2025 22:20:25 GMT"
+          "Value": "Thu, 08 May 2025 21:54:39 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
           "Value": "sha256-+jWVe65TWc5JD/3iXhQwOB3jgfrb5E/NZ0VRkX1wMoQ="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.70b2syv3g5.css",
+      "AssetFile": "css/site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7927"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yUcVe+QhDr/q01ReEaRRrYNAGJFLtGzEvhqt/BQPfs8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 21:53:42 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "70b2syv3g5"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-yUcVe+QhDr/q01ReEaRRrYNAGJFLtGzEvhqt/BQPfs8="
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
         }
       ]
     },
@@ -99,7 +144,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "7381"
+          "Value": "7927"
         },
         {
           "Name": "Content-Type",
@@ -107,62 +152,17 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"WlFDE5M4+wCt/HHIHphdVblHYVH8tpHySIn4LkcsTUM=\""
+          "Value": "\"yUcVe+QhDr/q01ReEaRRrYNAGJFLtGzEvhqt/BQPfs8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 07 May 2025 22:15:23 GMT"
+          "Value": "Thu, 08 May 2025 21:53:42 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-WlFDE5M4+wCt/HHIHphdVblHYVH8tpHySIn4LkcsTUM="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.e6c0x8dz30.css",
-      "AssetFile": "css/site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "7381"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"WlFDE5M4+wCt/HHIHphdVblHYVH8tpHySIn4LkcsTUM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 07 May 2025 22:15:23 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "e6c0x8dz30"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-WlFDE5M4+wCt/HHIHphdVblHYVH8tpHySIn4LkcsTUM="
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
+          "Value": "sha256-yUcVe+QhDr/q01ReEaRRrYNAGJFLtGzEvhqt/BQPfs8="
         }
       ]
     },
@@ -987,6 +987,334 @@
       ]
     },
     {
+      "Route": "img/noticias/noticia1.jpg",
+      "AssetFile": "img/noticias/noticia1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "134774"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+3XhYRz+iuItoJeKo7Hg8heECbG6qLhLGofzoxGF/t0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 21:14:15 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+3XhYRz+iuItoJeKo7Hg8heECbG6qLhLGofzoxGF/t0="
+        }
+      ]
+    },
+    {
+      "Route": "img/noticias/noticia1.vvcvz41qad.jpg",
+      "AssetFile": "img/noticias/noticia1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "134774"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+3XhYRz+iuItoJeKo7Hg8heECbG6qLhLGofzoxGF/t0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 21:14:15 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vvcvz41qad"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+3XhYRz+iuItoJeKo7Hg8heECbG6qLhLGofzoxGF/t0="
+        },
+        {
+          "Name": "label",
+          "Value": "img/noticias/noticia1.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "img/noticias/noticia2.9cl2kpoe1l.jpg",
+      "AssetFile": "img/noticias/noticia2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "173176"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"d49tAu6WnV6EVKZSWnyjK1vmPEu/yQbRREx7NElgyOI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 21:14:42 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9cl2kpoe1l"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-d49tAu6WnV6EVKZSWnyjK1vmPEu/yQbRREx7NElgyOI="
+        },
+        {
+          "Name": "label",
+          "Value": "img/noticias/noticia2.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "img/noticias/noticia2.jpg",
+      "AssetFile": "img/noticias/noticia2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "173176"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"d49tAu6WnV6EVKZSWnyjK1vmPEu/yQbRREx7NElgyOI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 21:14:42 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-d49tAu6WnV6EVKZSWnyjK1vmPEu/yQbRREx7NElgyOI="
+        }
+      ]
+    },
+    {
+      "Route": "img/noticias/noticia3.jpg",
+      "AssetFile": "img/noticias/noticia3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "70103"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"H/QoTQr+XmFhQphc1StRWPEk8a0LrPtj9kqCFmxKdSU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 21:15:31 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-H/QoTQr+XmFhQphc1StRWPEk8a0LrPtj9kqCFmxKdSU="
+        }
+      ]
+    },
+    {
+      "Route": "img/noticias/noticia3.n2g3chhcbu.jpg",
+      "AssetFile": "img/noticias/noticia3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "70103"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"H/QoTQr+XmFhQphc1StRWPEk8a0LrPtj9kqCFmxKdSU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 21:15:31 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "n2g3chhcbu"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-H/QoTQr+XmFhQphc1StRWPEk8a0LrPtj9kqCFmxKdSU="
+        },
+        {
+          "Name": "label",
+          "Value": "img/noticias/noticia3.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "img/noticias/noticia4.096ws7z6pa.jpg",
+      "AssetFile": "img/noticias/noticia4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "144282"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XFCrCgpUqlDPRmBqJpiIKAPWH+iqekTbwkaAyZlhUiU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 21:16:11 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "096ws7z6pa"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-XFCrCgpUqlDPRmBqJpiIKAPWH+iqekTbwkaAyZlhUiU="
+        },
+        {
+          "Name": "label",
+          "Value": "img/noticias/noticia4.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "img/noticias/noticia4.jpg",
+      "AssetFile": "img/noticias/noticia4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "144282"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XFCrCgpUqlDPRmBqJpiIKAPWH+iqekTbwkaAyZlhUiU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 21:16:11 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-XFCrCgpUqlDPRmBqJpiIKAPWH+iqekTbwkaAyZlhUiU="
+        }
+      ]
+    },
+    {
       "Route": "img/odontologia.2imk533kgb.jpg",
       "AssetFile": "img/odontologia.jpg",
       "Selectors": [],
@@ -1411,7 +1739,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1882"
+          "Value": "2771"
         },
         {
           "Name": "Content-Type",
@@ -1419,22 +1747,22 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"6HSUHyumr660a78/WJy0nygiA+Npt/S+lCsdVYeQgbY=\""
+          "Value": "\"6Kr2qhGsrrGSkp9XOI1dLmHRpToo0nnxoDWq/8ZlmHo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 07 May 2025 22:38:20 GMT"
+          "Value": "Thu, 08 May 2025 21:52:15 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-6HSUHyumr660a78/WJy0nygiA+Npt/S+lCsdVYeQgbY="
+          "Value": "sha256-6Kr2qhGsrrGSkp9XOI1dLmHRpToo0nnxoDWq/8ZlmHo="
         }
       ]
     },
     {
-      "Route": "js/noticias.klhk9nhazs.js",
+      "Route": "js/noticias.os923ptw40.js",
       "AssetFile": "js/noticias.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1448,7 +1776,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1882"
+          "Value": "2771"
         },
         {
           "Name": "Content-Type",
@@ -1456,21 +1784,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"6HSUHyumr660a78/WJy0nygiA+Npt/S+lCsdVYeQgbY=\""
+          "Value": "\"6Kr2qhGsrrGSkp9XOI1dLmHRpToo0nnxoDWq/8ZlmHo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 07 May 2025 22:38:20 GMT"
+          "Value": "Thu, 08 May 2025 21:52:15 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "klhk9nhazs"
+          "Value": "os923ptw40"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-6HSUHyumr660a78/WJy0nygiA+Npt/S+lCsdVYeQgbY="
+          "Value": "sha256-6Kr2qhGsrrGSkp9XOI1dLmHRpToo0nnxoDWq/8ZlmHo="
         },
         {
           "Name": "label",

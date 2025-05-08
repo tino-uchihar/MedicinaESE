@@ -49,6 +49,22 @@
       "PackagePath": "staticwebassets\\img\\medicosgenerik.png"
     },
     {
+      "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\noticias\\noticia1.jpg",
+      "PackagePath": "staticwebassets\\img\\noticias\\noticia1.jpg"
+    },
+    {
+      "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\noticias\\noticia2.jpg",
+      "PackagePath": "staticwebassets\\img\\noticias\\noticia2.jpg"
+    },
+    {
+      "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\noticias\\noticia3.jpg",
+      "PackagePath": "staticwebassets\\img\\noticias\\noticia3.jpg"
+    },
+    {
+      "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\noticias\\noticia4.jpg",
+      "PackagePath": "staticwebassets\\img\\noticias\\noticia4.jpg"
+    },
+    {
       "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\odontologia.jpg",
       "PackagePath": "staticwebassets\\img\\odontologia.jpg"
     },

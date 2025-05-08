@@ -4,18 +4,22 @@ window.addEventListener("load", function() {
         return;
     }
     
-    ajustarNoticias(window.noticiasJson);
+    console.log("Noticias cargadas en JS:", window.noticiasJson); // Verifica estructura en consola
+    ajustarNoticias();
 });
 
+window.addEventListener("resize", ajustarNoticias);
 
-function ajustarNoticias(noticiasJson) {
+function ajustarNoticias() {
     let ancho = window.innerWidth;
     let columnas = 3;
 
-    if (ancho <= 1024) columnas = 2; // Tablet (768px - 1024px)
-    if (ancho <= 768) columnas = 1; // Móvil (≤ 768px)
+    if (ancho < 1440 && ancho > 772) columnas = 2; // Tablet (772px - 1440px)
+    if (ancho <= 772) columnas = 1; // Móvil (≤ 772px)
 
-    let noticias = JSON.parse(noticiasJson);
+    let noticias = window.noticiasJson;
+    console.log("Noticias antes de procesar:", noticias); // Depuración
+
     let carouselContainer = document.getElementById("carouselContainer");
     carouselContainer.innerHTML = ""; // Limpiar contenido
 
@@ -27,16 +31,32 @@ function ajustarNoticias(noticiasJson) {
         row.className = "row";
 
         for (let j = i; j < i + columnas && j < noticias.length; j++) {
+            let noticia = noticias[j];
+
+            console.log("Procesando noticia:", noticia); // Depuración
+
+            // Acceder a las propiedades con los nombres correctos
+            if (!noticia || typeof noticia !== "object") {
+                console.error("⚠️ Error en noticia (no es un objeto válido):", noticia);
+                continue;
+            }
+
+            // Acceder con nombres en minúsculas
+            if (!noticia.titulo || !noticia.descripcion || !noticia.imagenUrl) {
+                console.error("⚠️ Error en noticia (faltan datos):", noticia);
+                continue;
+            }
+
             let col = document.createElement("div");
             col.className = "col-lg-4 col-md-6 col-sm-12";
 
             col.innerHTML = `
                 <div class="news-card">
-                    <a href="${noticias[j].Enlace}">
-                        <img src="${noticias[j].ImagenUrl}" alt="${noticias[j].Titulo}" class="img-fluid news-img">
+                    <a href="${noticia.enlace}">
+                        <img src="${noticia.imagenUrl}" alt="${noticia.titulo}" class="img-fluid news-img">
                     </a>
-                    <h5>${noticias[j].Titulo}</h5>
-                    <p class="news-text">${noticias[j].Descripcion}</p>
+                    <h5>${noticia.titulo}</h5>
+                    <p class="news-text">${noticia.descripcion}</p>
                 </div>
             `;
             row.appendChild(col);
@@ -46,6 +66,3 @@ function ajustarNoticias(noticiasJson) {
         carouselContainer.appendChild(item);
     }
 }
-
-window.addEventListener("resize", () => ajustarNoticias(window.noticiasJson));
-window.addEventListener("load", () => ajustarNoticias(window.noticiasJson));

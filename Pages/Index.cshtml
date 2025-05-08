@@ -19,20 +19,22 @@
 
     <!-- Sección de Noticias -->
     <div class="content-box mt-4">
-        <h2 class="text-center text-primary mb-4">Últimas Noticias</h2>
-
-        <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner" id="carouselContainer"></div>
-
-            <!-- Botones de navegación -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
+        <h2>Últimas Noticias Médicas</h2>
+        <div class="news-carousel">
+            @foreach (var noticia in Model.Noticias)
+            {
+                <div class="news-item">
+                    <img src="@noticia.ImagenUrl" alt="Imagen de @noticia.Titulo" class="news-image">
+                    <div class="news-content">
+                        <h5>@noticia.Titulo</h5>
+                        <p class="news-description">@noticia.Descripcion</p>
+                        <small>Publicado: @noticia.FechaPublicacion.ToString("dd/MM/yyyy")</small>
+                    </div>
+                </div>
+            }
         </div>
     </div>
+
 
 
     <!-- Sección "Acerca de" -->

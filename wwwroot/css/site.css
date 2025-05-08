@@ -259,87 +259,44 @@ html, body {
 }
 
 
-/* 🔹 Contenedor de noticias con más espacio */
-.news-card {
-  background-color: white;
-  padding: 10px;
+
+.news-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 15px;
+}
+
+.news-item {
+  flex: 0 0 auto;
+  width: 300px;
+  height: 400px;
+  background-color: #ffffff;
   border-radius: 10px;
-  text-align: center;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
-  width: 250px; /* Ajustado para un mejor tamaño */
-  height: 190px; /* Más alto para texto legible */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 15px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  scroll-snap-align: start;
 }
 
-/* 🖼️ Ajuste de imágenes para mejor proporción */
-.news-img {
+.news-image {
   width: 100%;
-  height: 140px; /* Aumentamos un poco para mejor equilibrio */
+  height: 150px;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
-/* 📄 Texto con más espacio */
-.news-text {
-  font-size: 0.9em;
-  font-weight: bold;
-  color: #05668D;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2; /* Permite 2 líneas antes de truncar */
-  -webkit-box-orient: vertical;
-}
-
-/* 📝 Título con ajuste */
-.news-card h5 {
-  font-size: 1em;
-  margin: 4px 0;
-  min-height: 40px;
-}
-
-/* 🎯 Ajuste de margen y padding */
-.content-box {
-  background-color: white;
-  width: 95%;
-  padding: clamp(20px, 5vw, 50px) 10px 10px 10px; /* Ahora `10px` en izquierda, derecha e inferior */
-  border-radius: 20px;
-  margin-top: -5px;
+.news-content {
+  flex-grow: 1;
   text-align: center;
 }
 
-/* 🔹 Corrección para 3 columnas en PC */
-@media (min-width: 1440px) { /* PC */
-    .carousel-item .col-lg-4 {
-        width: 32%;
-        margin: auto;
-        display: inline-block; /* Asegura que haya 3 noticias */
-    }
+.news-description {
+  max-height: 80px;
+  overflow-y: auto; /* Agrega desplazamiento en caso de texto largo */
+  padding: 5px;
 }
 
-/* 📌 Ajuste en Tablet */
-@media (min-width: 772px) and (max-width: 1440px) { /* Tablet */
-    .carousel-item .col-md-6 {
-        width: 48%;
-        margin: auto;
-    }
-}
 
-/* 📌 Ajuste en Móvil */
-@media (max-width: 772px) { /* Móvil */
-    .carousel-item .col-sm-12 {
-        width: 80%;
-        margin: auto;
-    }
-}
-
-/* 🎯 Botones de desplazamiento más grandes y visibles */
-.carousel-control-prev-icon, .carousel-control-next-icon {
-  background-color: #028090 !important; /* Azul medio */
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  z-index: 10;
-}

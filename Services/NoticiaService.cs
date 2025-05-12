@@ -1,27 +1,20 @@
+using System;
 using System.Collections.Generic;
-using System.Linq;
 using MedicinaESE.Models;
 
-namespace MedicinaESE.Services
+
+namespace MedicinaESE.Services;
+
+public class NoticiaService
 {
-    public class NoticiasService
+    public List<Noticia> ObtenerNoticias()
     {
-        private List<Noticia> noticias = new List<Noticia>
+        return new List<Noticia>
         {
-            new Noticia(1, "Avance Médico", "Nueva terapia revolucionaria para X condición...", "/img/noticias/noticia1.jpg", DateTime.Now),
-            new Noticia(2, "Investigación Científica", "Descubrimiento innovador que cambiará la medicina...", "/img/noticias/noticia2.jpg", DateTime.Now.AddDays(-1)),
-            new Noticia(3, "Conferencia Internacional", "Expertos discuten los avances en tratamientos...", "/img/noticias/noticia3.jpg", DateTime.Now.AddDays(-2)),
-            new Noticia(4, "Salud Pública", "Nueva normativa sobre el uso de fármacos...", "/img/noticias/noticia4.jpg", DateTime.Now.AddDays(-3))
+            new Noticia { Id = 1, Titulo = "Avances Médicos", Descripcion = "Descubren nueva terapia genética.", ImagenUrl = "/img/noticias/noticia1.jpg", FechaPublicacion = DateTime.Now.AddDays(-2) },
+            new Noticia { Id = 2, Titulo = "Salud y Bienestar", Descripcion = "Consejos para mejorar la calidad de vida.", ImagenUrl = "/img/noticias/noticia2.jpg", FechaPublicacion = DateTime.Now.AddDays(-5) },
+            new Noticia { Id = 3, Titulo = "Nutrición Inteligente", Descripcion = "Alimentación saludable según expertos.", ImagenUrl = "/img/noticias/noticia3.jpg", FechaPublicacion = DateTime.Now.AddDays(-7) },
+            new Noticia { Id = 4, Titulo = "Ejercicio y Salud", Descripcion = "Impacto positivo del deporte en la salud.", ImagenUrl = "/img/noticias/noticia4.jpg", FechaPublicacion = DateTime.Now.AddDays(-10) }
         };
-
-        public List<Noticia> ObtenerNoticias()
-        {
-            return noticias;
-        }
-
-        public Noticia ObtenerNoticiaPorId(int id)
-        {
-            return noticias.FirstOrDefault(n => n.Id == id);
-        }
     }
 }

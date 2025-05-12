@@ -325,3 +325,46 @@ html, body {
   align-items: center;
   justify-content: center;
 }
+
+
+
+/* Contenedor del carrusel */
+.carousel {
+  display: flex;
+  overflow: hidden;
+  width: 99%;
+  height: clamp(140px, 5vw, 200px);
+  gap: 10px;
+  justify-content: flex-start;
+  transition: transform 0.3s ease; /* Para animar el desplazamiento */
+}
+
+/* Estilos de cada noticia (ítem) */
+.carousel-item {
+  flex: 0 0 calc(100% / 3); /* Cada ítem ocupará un tercio del contenedor */
+  max-width: calc(100% / 3);
+  height: clamp(140px, 5vw, 200px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+/* Imagen y título */
+.news-img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.news-title {
+  width: 100%;
+  height: 20%;
+  text-align: center;
+  font-size: clamp(12px, 3vw, 20px);
+  font-weight: bold;
+  color: #05668D;
+}

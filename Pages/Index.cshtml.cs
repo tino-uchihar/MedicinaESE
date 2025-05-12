@@ -9,14 +9,15 @@ namespace MedicinaESE.Pages;
 public class IndexModel : PageModel
 {
     private readonly ILogger<IndexModel> _logger;
-    private readonly NoticiasService _noticiasService; // 
+    private readonly NoticiaService _noticiasService; // Inyectamos el servicio correctamente
 
     public List<Noticia> Noticias { get; set; } = new List<Noticia>();
 
-    public IndexModel(ILogger<IndexModel> logger)
+    // Inyección del servicio en el constructor
+    public IndexModel(ILogger<IndexModel> logger, NoticiaService noticiasService)
     {
         _logger = logger;
-        _noticiasService = new NoticiasService(); // 
+        _noticiasService = noticiasService; // Asignamos la instancia inyectada
     }
 
     public void OnGet()
@@ -25,7 +26,7 @@ public class IndexModel : PageModel
 
         if (Noticias.Count == 0)
         {
-            _logger.LogWarning("⚠️ No se encontraron noticias."); // 
+            _logger.LogWarning("No se encontraron noticias.");
         }
     }
 }

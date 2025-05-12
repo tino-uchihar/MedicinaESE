@@ -29,7 +29,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 08 May 2025 22:55:36 GMT"
+          "Value": "Mon, 12 May 2025 22:40:02 GMT"
         }
       ],
       "EndpointProperties": [
@@ -74,7 +74,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 08 May 2025 22:55:36 GMT"
+          "Value": "Mon, 12 May 2025 22:40:02 GMT"
         }
       ],
       "EndpointProperties": [
@@ -99,7 +99,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "7485"
+          "Value": "8437"
         },
         {
           "Name": "Content-Type",
@@ -107,22 +107,22 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Z7qgZSRuvUi3wYcRqE+xRaKiNlHP+nB29ljIFNG3Lkg=\""
+          "Value": "\"3Q8uMZLlPtwCv7BGiC7qpyhYiRrd+TIu4CKRUfjtrtc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 20:13:44 GMT"
+          "Value": "Mon, 12 May 2025 23:11:42 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Z7qgZSRuvUi3wYcRqE+xRaKiNlHP+nB29ljIFNG3Lkg="
+          "Value": "sha256-3Q8uMZLlPtwCv7BGiC7qpyhYiRrd+TIu4CKRUfjtrtc="
         }
       ]
     },
     {
-      "Route": "css/site.dz2yuljaiu.css",
+      "Route": "css/site.xfevl0cb4i.css",
       "AssetFile": "css/site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -136,7 +136,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "7485"
+          "Value": "8437"
         },
         {
           "Name": "Content-Type",
@@ -144,21 +144,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Z7qgZSRuvUi3wYcRqE+xRaKiNlHP+nB29ljIFNG3Lkg=\""
+          "Value": "\"3Q8uMZLlPtwCv7BGiC7qpyhYiRrd+TIu4CKRUfjtrtc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 20:13:44 GMT"
+          "Value": "Mon, 12 May 2025 23:11:42 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "dz2yuljaiu"
+          "Value": "xfevl0cb4i"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Z7qgZSRuvUi3wYcRqE+xRaKiNlHP+nB29ljIFNG3Lkg="
+          "Value": "sha256-3Q8uMZLlPtwCv7BGiC7qpyhYiRrd+TIu4CKRUfjtrtc="
         },
         {
           "Name": "label",
@@ -1739,7 +1739,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "539"
+          "Value": "2598"
         },
         {
           "Name": "Content-Type",
@@ -1747,22 +1747,22 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"mHqXvuEe15cNmxYPNFrIa+4T34uMe6B5fMuPlJKh6mU=\""
+          "Value": "\"p/wxJ2XLjUhVG/HPtxj5IxG7rIL8AQ/+HaxV7wr+K9c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:54:02 GMT"
+          "Value": "Mon, 12 May 2025 23:11:14 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-mHqXvuEe15cNmxYPNFrIa+4T34uMe6B5fMuPlJKh6mU="
+          "Value": "sha256-p/wxJ2XLjUhVG/HPtxj5IxG7rIL8AQ/+HaxV7wr+K9c="
         }
       ]
     },
     {
-      "Route": "js/noticias.sbb9pgu0am.js",
+      "Route": "js/noticias.n01e4vyiz1.js",
       "AssetFile": "js/noticias.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1776,7 +1776,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "539"
+          "Value": "2598"
         },
         {
           "Name": "Content-Type",
@@ -1784,21 +1784,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"mHqXvuEe15cNmxYPNFrIa+4T34uMe6B5fMuPlJKh6mU=\""
+          "Value": "\"p/wxJ2XLjUhVG/HPtxj5IxG7rIL8AQ/+HaxV7wr+K9c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 19:54:02 GMT"
+          "Value": "Mon, 12 May 2025 23:11:14 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "sbb9pgu0am"
+          "Value": "n01e4vyiz1"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-mHqXvuEe15cNmxYPNFrIa+4T34uMe6B5fMuPlJKh6mU="
+          "Value": "sha256-p/wxJ2XLjUhVG/HPtxj5IxG7rIL8AQ/+HaxV7wr+K9c="
         },
         {
           "Name": "label",

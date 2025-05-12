@@ -28,7 +28,17 @@
 
             <!-- Carrusel central -->
             <div class="section-carousel">
-                <!-- Aquí irá el carrusel en el siguiente paso -->
+                <div class="carousel">
+                    @foreach (var noticia in Model.Noticias)
+                    {
+                        <div class="carousel-item" data-id="@noticia.Id">
+                            <img src="@noticia.ImagenUrl" alt="@noticia.Titulo" class="news-img">
+                            <h5 class="news-title">@noticia.Titulo</h5>
+                            <p class="news-description" style="display: none;">@noticia.Descripcion</p>
+                            <span class="news-date" style="display: none;">@noticia.FechaPublicacion.ToString("dd/MM/yyyy")</span>
+                        </div>
+                    }
+                </div>
             </div>
 
             <!-- Botón de desplazamiento derecho -->

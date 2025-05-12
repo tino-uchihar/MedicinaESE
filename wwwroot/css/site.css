@@ -294,3 +294,34 @@ html, body {
   justify-content: center;
   align-items: center;
 }
+
+
+/* Botón de desplazamiento izquierdo */
+.carousel-btn-prev {
+  width: 99%;
+  aspect-ratio: 1/1;
+  background-color: #05668D;
+  color: white;
+  border: none;
+  font-size: clamp(12px, 3vw, 24px);
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Botón de desplazamiento derecho */
+.carousel-btn-next {
+  width: 99%;
+  aspect-ratio: 1/1;
+  background-color: #05668D;
+  color: white;
+  border: none;
+  font-size: clamp(12px, 3vw, 24px);
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

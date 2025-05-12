@@ -9,14 +9,14 @@ namespace MedicinaESE.Pages;
 public class IndexModel : PageModel
 {
     private readonly ILogger<IndexModel> _logger;
-    private readonly NoticiasService _noticiasService; // Corrección en el nombre del servicio
+    private readonly NoticiasService _noticiasService; // 
 
     public List<Noticia> Noticias { get; set; } = new List<Noticia>();
 
     public IndexModel(ILogger<IndexModel> logger)
     {
         _logger = logger;
-        _noticiasService = new NoticiasService(); // Instancia corregida
+        _noticiasService = new NoticiasService(); // 
     }
 
     public void OnGet()
@@ -25,7 +25,7 @@ public class IndexModel : PageModel
 
         if (Noticias.Count == 0)
         {
-            _logger.LogWarning("⚠️ No se encontraron noticias."); // Mejor usar el logger en vez de Console.WriteLine
+            _logger.LogWarning("⚠️ No se encontraron noticias."); // 
         }
     }
 }

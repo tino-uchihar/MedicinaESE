@@ -262,68 +262,35 @@ html, body {
 
 
 
-.news-carousel-container {
-  width: 100%;
+/* Contenedor principal del carrusel */
+.carousel-box {
   display: flex;
-  align-items: center;
+  align-items: center; /* Centra los elementos verticalmente */
+  justify-content: center; /* Espaciado correcto */
+  width: 100%;
+  gap: 2%; /* Espacio de separación */
+}
+
+/* Botón de desplazamiento izquierdo */
+.section-btn-left {
+  width: 9%;
+  display: flex;
   justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.carousel-wrapper {
-  display: flex;
-  gap: 15px;
-  transition: transform 0.4s ease-in-out;
-  justify-content: flex-start; /* Asegura que las noticias estén alineadas correctamente */
-}
-
-.news-item {
-  flex: 0 0 auto;
-  width: 280px;
-  height: 320px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
-.news-image {
-  width: 100%;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 8px;
+/* Carrusel ocupando el 80% central */
+.section-carousel {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.news-content {
-  flex-grow: 1;
-  text-align: center;
+/* Botón de desplazamiento derecho */
+.section-btn-right {
+  width: 9%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.news-description {
-  max-height: 80px;
-  overflow-y: auto; /* Desplazamiento solo dentro del texto */
-  padding: 5px;
-}
-
-/* Botones de navegación */
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #028090;
-  color: white;
-  border: none;
-  font-size: 24px;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 50%;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-  z-index: 10; /* Asegura que los botones estén sobre las noticias */
-}
-
-#prevBtn { left: 10px; }
-#nextBtn { right: 10px; }

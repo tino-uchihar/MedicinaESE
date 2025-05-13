@@ -279,13 +279,6 @@ html, body {
   align-items: center;
 }
 
-/* Carrusel ocupando el 80% central */
-.section-carousel {
-  width: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 /* Botón de desplazamiento derecho */
 .section-btn-right {
@@ -328,43 +321,66 @@ html, body {
 
 
 
-/* Contenedor del carrusel */
-.carousel {
+.section-carousel {
+  width: 80%;
+  overflow: hidden; /* 🔹 Asegura que solo se vean los visibles */
   display: flex;
-  overflow: hidden;
-  width: 99%;
-  height: clamp(140px, 5vw, 200px);
-  gap: 10px;
-  justify-content: flex-start;
-  transition: transform 0.3s ease; /* Para animar el desplazamiento */
+  justify-content: center;
+  align-items: center;
 }
 
-/* Estilos de cada noticia (ítem) */
+/* Contenedor del carrusel */
+.carousel {
+    display: flex;
+    gap: 2px; /* Reducimos el espacio entre ítems a solo 2px */
+    justify-content: center; /* Mantiene los elementos alineados correctamente */
+    transition: transform 0.3s ease-in-out; /* Animación suave */
+}
+
+
+/* Estilos de cada noticia */
 .carousel-item {
-  flex: 0 0 calc(100% / 3); /* Cada ítem ocupará un tercio del contenedor */
-  max-width: calc(100% / 3);
-  height: clamp(140px, 5vw, 200px);
+  width: 31%;
+  min-height: 95%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  background-color: white;
-  padding: 10px;
-  border-radius: 12px;
+  justify-content: center;
+  margin: 0; /* Evita separación innecesaria */
+  padding: 0; /* Asegura que el contenido se ajuste perfectamente */
 }
 
-/* Imagen y título */
+/* Imagen con ajuste proporcional */
 .news-img {
   width: 100%;
-  height: 80%;
-  object-fit: cover;
-  border-radius: 8px;
+  height: 69%;
+  object-fit: fill; /* Se ajusta y recorta para evitar distorsión */
+  margin: 0; /* No añade separación externa */
+  padding: 0; /* Asegura que ocupe todo su espacio sin bordes extra */
 }
+
 .news-title {
   width: 100%;
-  height: 20%;
+  height: 29%;
   text-align: center;
-  font-size: clamp(12px, 3vw, 20px);
+  font-size: clamp(8px, 3vw, 24px); /* 🔹 Ajusta entre 14px y 24px según espacio disponible */
   font-weight: bold;
   color: #05668D;
 }
+
+/*
+.news-title {
+    width: 100%;
+    height: 29%;
+    text-align: center;
+    font-size: 24px; 
+    font-weight: bold;
+    color: #05668D;
+    white-space: nowrap; Evita saltos de línea 
+    overflow: hidden; Oculta texto que se desborde 
+    text-overflow: ellipsis;  Agrega "..." si el texto es demasiado largo 
+}
+
+*/
+
+

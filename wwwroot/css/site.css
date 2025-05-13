@@ -268,7 +268,7 @@ html, body {
   align-items: center; /* Centra los elementos verticalmente */
   justify-content: center; /* Espaciado correcto */
   width: 100%;
-  gap: 2%; /* Espacio de separación */
+  gap: 2%;
 }
 
 /* Botón de desplazamiento izquierdo */
@@ -279,7 +279,6 @@ html, body {
   align-items: center;
 }
 
-
 /* Botón de desplazamiento derecho */
 .section-btn-right {
   width: 9%;
@@ -288,9 +287,8 @@ html, body {
   align-items: center;
 }
 
-
-/* Botón de desplazamiento izquierdo */
-.carousel-btn-prev {
+/* Botones de desplazamiento */
+.carousel-btn-prev, .carousel-btn-next {
   width: 99%;
   aspect-ratio: 1/1;
   background-color: #05668D;
@@ -302,41 +300,25 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-/* Botón de desplazamiento derecho */
-.carousel-btn-next {
-  width: 99%;
-  aspect-ratio: 1/1;
-  background-color: #05668D;
-  color: white;
-  border: none;
-  font-size: clamp(12px, 3vw, 24px);
-  cursor: pointer;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-
-.section-carousel {
-  width: 80%;
-  overflow: hidden; /* 🔹 Asegura que solo se vean los visibles */
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 /* Contenedor del carrusel */
-.carousel {
-    display: flex;
-    gap: 2px; /* Reducimos el espacio entre ítems a solo 2px */
-    justify-content: center; /* Mantiene los elementos alineados correctamente */
-    transition: transform 0.3s ease-in-out; /* Animación suave */
+.section-carousel {
+  width: 80%;
+  overflow: hidden; /* Se ocultan los elementos fuera del área visible */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Carrusel dinámico */
+.carousel {
+  display: flex;
+  gap: 2px; /* Reducimos el espacio entre ítems a solo 2px */
+  justify-content: center; /* Mantiene alineación */
+  transition: transform 0.3s ease-in-out; /* Animación de desplazamiento */
+}
 
 /* Estilos de cada noticia */
 .carousel-item {
@@ -346,41 +328,25 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0; /* Evita separación innecesaria */
-  padding: 0; /* Asegura que el contenido se ajuste perfectamente */
+  margin: 0;
+  padding: 0;
 }
 
-/* Imagen con ajuste proporcional */
+/* Imagen ajustada proporcionalmente */
 .news-img {
   width: 100%;
   height: 69%;
   object-fit: fill; /* Se ajusta y recorta para evitar distorsión */
-  margin: 0; /* No añade separación externa */
-  padding: 0; /* Asegura que ocupe todo su espacio sin bordes extra */
+  margin: 0;
+  padding: 0;
 }
 
+/* Título ajustado dinámicamente */
 .news-title {
   width: 100%;
   height: 29%;
   text-align: center;
-  font-size: clamp(8px, 3vw, 24px); /* 🔹 Ajusta entre 14px y 24px según espacio disponible */
+  font-size: clamp(8px, 3vw, 24px); /* Se adapta automáticamente */
   font-weight: bold;
   color: #05668D;
 }
-
-/*
-.news-title {
-    width: 100%;
-    height: 29%;
-    text-align: center;
-    font-size: 24px; 
-    font-weight: bold;
-    color: #05668D;
-    white-space: nowrap; Evita saltos de línea 
-    overflow: hidden; Oculta texto que se desborde 
-    text-overflow: ellipsis;  Agrega "..." si el texto es demasiado largo 
-}
-
-*/
-
-

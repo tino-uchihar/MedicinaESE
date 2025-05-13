@@ -5,14 +5,13 @@ window.addEventListener("load", function () {
         return;
     }
 
-    let visibles = noticias.slice(0, 3); // 🔹 Inicialmente muestra los primeros 3
-    let ocultas = noticias.slice(3); // 🔹 Resto de las noticias que no están en pantalla
+    let visibles = noticias.slice(0, 3); // 🔹 Noticias que estarán en pantalla
+    let ocultas = noticias.slice(3); // 🔹 Noticias en la lista de reserva, NO se renderizan
 
     let carrusel = document.querySelector(".carousel");
-    carrusel.innerHTML = ""; // Limpiar el contenido
 
     function renderCarousel() {
-        carrusel.innerHTML = ""; // 🔹 Limpiar antes de actualizar
+        carrusel.innerHTML = ""; // 🔹 Limpiar el carrusel antes de actualizarlo
         visibles.forEach(noticia => {
             let item = document.createElement("div");
             item.className = "carousel-item";
@@ -31,22 +30,22 @@ window.addEventListener("load", function () {
 
     document.querySelector(".carousel-btn-next").addEventListener("click", function () {
         if (ocultas.length > 0) {
-            let primerVisible = visibles.shift(); // 🔹 Elimina el primer visible
+            let primerVisible = visibles.shift(); // 🔹 Elimina el primero de la lista visible
             visibles.push(ocultas.shift()); // 🔹 Mueve el primero de la lista oculta a la visible
-            ocultas.push(primerVisible); // 🔹 El eliminado pasa al final de los ocultos
-            renderCarousel();
+            ocultas.push(primerVisible); // 🔹 Lo que salió pasa al final de los ocultos
+            renderCarousel(); // 🔹 Solo se actualizan los elementos mostrados en pantalla
         }
     });
 
     document.querySelector(".carousel-btn-prev").addEventListener("click", function () {
         if (ocultas.length > 0) {
-            let ultimoVisible = visibles.pop(); // 🔹 Elimina el último visible
+            let ultimoVisible = visibles.pop(); // 🔹 Elimina el último de la lista visible
             visibles.unshift(ocultas.pop()); // 🔹 Mueve el último oculto al inicio de los visibles
-            ocultas.unshift(ultimoVisible); // 🔹 El eliminado pasa al inicio de los ocultos
-            renderCarousel();
+            ocultas.unshift(ultimoVisible); // 🔹 Lo que salió pasa al inicio de los ocultos
+            renderCarousel(); // 🔹 Solo se actualizan los elementos en pantalla
         }
     });
 
     console.log("Noticias iniciales en pantalla:", visibles);
-    console.log("Noticias ocultas:", ocultas);
+    console.log("Noticias ocultas en memoria:", ocultas);
 });

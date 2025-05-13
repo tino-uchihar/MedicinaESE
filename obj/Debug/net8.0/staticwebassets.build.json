@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0TptnWe6NcElw3GT7mwzAw48E8N3gtCxMAbdStOjaCk=",
+  "Hash": "HQ1QbtF9ael8Sbf4qr2kK4YSPTcLKthuM2b1IScDI/U=",
   "Source": "MedicinaESE",
   "BasePath": "_content/MedicinaESE",
   "Mode": "Default",
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "re5mw6pi1p",
-      "Integrity": "HTN+3hsmEbj/4fy4vDuLGXI1vnWc1rKfhlmrEXZMR6g=",
+      "Fingerprint": "zen87dtjbv",
+      "Integrity": "dYwh5+hm1+D9VoqsMe93KIcvNB0ay4dIgguboypDWVE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -493,8 +493,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ne82kxml5v",
-      "Integrity": "8RDXnMiQfJe31nsTIXeYx3SFqEfTZ5fwfIAA4m2lfaQ=",
+      "Fingerprint": "xzx0lizt5d",
+      "Integrity": "4yYwxZHK92jmz1yAPWBIGAGx7Grpo5QNCREZ7/t9jeQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\noticias.js"
@@ -1730,7 +1730,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9092"
+          "Value": "8162"
         },
         {
           "Name": "Content-Type",
@@ -1738,11 +1738,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"HTN+3hsmEbj/4fy4vDuLGXI1vnWc1rKfhlmrEXZMR6g=\""
+          "Value": "\"dYwh5+hm1+D9VoqsMe93KIcvNB0ay4dIgguboypDWVE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 20:38:31 GMT"
+          "Value": "Tue, 13 May 2025 20:51:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1752,12 +1752,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-HTN+3hsmEbj/4fy4vDuLGXI1vnWc1rKfhlmrEXZMR6g="
+          "Value": "sha256-dYwh5+hm1+D9VoqsMe93KIcvNB0ay4dIgguboypDWVE="
         }
       ]
     },
     {
-      "Route": "css/site.re5mw6pi1p.css",
+      "Route": "css/site.zen87dtjbv.css",
       "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1767,7 +1767,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9092"
+          "Value": "8162"
         },
         {
           "Name": "Content-Type",
@@ -1775,11 +1775,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"HTN+3hsmEbj/4fy4vDuLGXI1vnWc1rKfhlmrEXZMR6g=\""
+          "Value": "\"dYwh5+hm1+D9VoqsMe93KIcvNB0ay4dIgguboypDWVE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 20:38:31 GMT"
+          "Value": "Tue, 13 May 2025 20:51:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1789,7 +1789,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "re5mw6pi1p"
+          "Value": "zen87dtjbv"
         },
         {
           "Name": "label",
@@ -1797,7 +1797,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-HTN+3hsmEbj/4fy4vDuLGXI1vnWc1rKfhlmrEXZMR6g="
+          "Value": "sha256-dYwh5+hm1+D9VoqsMe93KIcvNB0ay4dIgguboypDWVE="
         }
       ]
     },
@@ -3370,7 +3370,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2350"
+          "Value": "2464"
         },
         {
           "Name": "Content-Type",
@@ -3378,11 +3378,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"8RDXnMiQfJe31nsTIXeYx3SFqEfTZ5fwfIAA4m2lfaQ=\""
+          "Value": "\"4yYwxZHK92jmz1yAPWBIGAGx7Grpo5QNCREZ7/t9jeQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 20:04:56 GMT"
+          "Value": "Tue, 13 May 2025 20:48:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3392,12 +3392,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-8RDXnMiQfJe31nsTIXeYx3SFqEfTZ5fwfIAA4m2lfaQ="
+          "Value": "sha256-4yYwxZHK92jmz1yAPWBIGAGx7Grpo5QNCREZ7/t9jeQ="
         }
       ]
     },
     {
-      "Route": "js/noticias.ne82kxml5v.js",
+      "Route": "js/noticias.xzx0lizt5d.js",
       "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\js\\noticias.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3407,7 +3407,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2350"
+          "Value": "2464"
         },
         {
           "Name": "Content-Type",
@@ -3415,11 +3415,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"8RDXnMiQfJe31nsTIXeYx3SFqEfTZ5fwfIAA4m2lfaQ=\""
+          "Value": "\"4yYwxZHK92jmz1yAPWBIGAGx7Grpo5QNCREZ7/t9jeQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 20:04:56 GMT"
+          "Value": "Tue, 13 May 2025 20:48:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3429,7 +3429,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "ne82kxml5v"
+          "Value": "xzx0lizt5d"
         },
         {
           "Name": "label",
@@ -3437,7 +3437,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-8RDXnMiQfJe31nsTIXeYx3SFqEfTZ5fwfIAA4m2lfaQ="
+          "Value": "sha256-4yYwxZHK92jmz1yAPWBIGAGx7Grpo5QNCREZ7/t9jeQ="
         }
       ]
     },

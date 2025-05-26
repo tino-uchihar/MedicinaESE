@@ -19,6 +19,11 @@ namespace Medicinaese.Pages
             if (Documento == "admin" && Contraseña == "1234")
             {
                 Mensaje = "success"; // SweetAlert mostrará "acceso permitido"
+                Redireccion = "/admin-main"; // Redirige al panel de administración
+            }
+            else if (Documento == "paciente" && Contraseña == "1234")
+            {
+                Mensaje = "success"; // SweetAlert mostrará "acceso permitido"
                 Redireccion = "/agendar-cita"; // Redirige a agendar cita
             }
             else if (Documento == "medico" && Contraseña == "1234")

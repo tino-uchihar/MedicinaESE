@@ -1,23 +1,25 @@
-using MedicinaESE.Services; // Servicio de Noticias
-using Microsoft.Data.SqlClient; // 🔹 Usar Microsoft.Data.SqlClient en lugar de System.Data.SqlClient
+using MedicinaESE.Services;
+using Microsoft.Data.SqlClient;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Obtener la cadena de conexión desde appsettings.json
-var connectionString = builder.Configuration.GetConnectionString("DoctorNowDB");
+var connectionString = builder.Configuration.GetConnectionString("DoctorNowDB") 
+                       ?? throw new InvalidOperationException("La cadena de conexión no está definida en appsettings.json");
 
-// Registrar la conexión SQL para inyección de dependencias
+
+// Registrar la conexión SQL
 builder.Services.AddSingleton(_ => new SqlConnection(connectionString));
 
 // Registrar Razor Pages
 builder.Services.AddRazorPages();
 
-// Registrar servicio de Noticias
-builder.Services.AddSingleton<NoticiaService>();
+// Registrar servicio de Noticias con la cadena de conexión
+builder.Services.AddSingleton<NoticiaService>(provider => new NoticiaService(connectionString));
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configurar el pipeline de ejecución
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");

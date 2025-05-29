@@ -350,3 +350,71 @@ html, body {
   font-weight: bold;
   color: #05668D;
 }
+
+
+
+
+
+
+/* Contenedor principal del panel ADMIN */
+.admin-main-container {
+  margin: 40px auto;
+  padding: 30px;
+  max-width: 900px;
+  background-color: #f9f9f9; /* Fondo claro para resaltar */
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Encabezado */
+.admin-main-header {
+  font-size: 26px;
+  font-weight: bold;
+  color: #05668D;
+  margin-bottom: 20px;
+}
+
+/* Texto secundario */
+.admin-main-subtext {
+  font-size: 18px;
+  color: #028090;
+  margin-bottom: 30px;
+}
+
+/* Opciones alineadas verticalmente */
+.admin-main-options {
+  display: flex;
+  flex-direction: column; /* Organiza en una sola columna */
+  gap: 10px; /* Espacio entre elementos */
+  align-items: center;
+  width: 100%;
+}
+
+/* Botón ocupa ancho completo */
+.admin-btn {
+  display: block;
+  width: 80%;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  background-color: #02C39A;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease-in-out;
+}
+
+.admin-btn:hover {
+  background-color: #00A896;
+}
+
+/* Botón de cierre de sesión */
+.admin-btn-danger {
+  background-color: #E63946;
+}
+
+.admin-btn-danger:hover {
+  background-color: #D62828;
+}

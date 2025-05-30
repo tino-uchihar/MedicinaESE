@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Fjz1PoRhrKEHL5pjJv32KNSS3dG1ohGKRwXPdmuDFaQ=",
+  "Hash": "nlqqN4YYhdWFow2wZmBhFVXVntPq0biKeP9hUhZkcsY=",
   "Source": "MedicinaESE",
   "BasePath": "_content/MedicinaESE",
   "Mode": "Default",
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "rd4xt7yulv",
-      "Integrity": "kRJKat5u1nSdCVi1wqegsttwUgNflJhCl3z+qBGBDpc=",
+      "Fingerprint": "b49t7821a9",
+      "Integrity": "a7rnHPijCkpNT+bWVMt/gxnbwn/ndIHyfEoQfRwYUn8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -99,6 +99,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\404error.jpg",
+      "SourceId": "MedicinaESE",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\",
+      "BasePath": "_content/MedicinaESE",
+      "RelativePath": "img/404error#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ly07vfcc0a",
+      "Integrity": "nds2ELAo0tsuOAJ+DZRcCsr9878c5HPgZBIpChm8rwg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\404error.jpg"
+    },
+    {
+      "Identity": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\503error.jpg",
+      "SourceId": "MedicinaESE",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\",
+      "BasePath": "_content/MedicinaESE",
+      "RelativePath": "img/503error#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "g5ao16mgia",
+      "Integrity": "nN277FSIZ9fGn9rFAlfUPPZCwd0U7gpyjMF+AtVIRvo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\503error.jpg"
     },
     {
       "Identity": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\esebarrancalogo.png",
@@ -1720,6 +1762,51 @@
   ],
   "Endpoints": [
     {
+      "Route": "css/site.b49t7821a9.css",
+      "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9769"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"a7rnHPijCkpNT+bWVMt/gxnbwn/ndIHyfEoQfRwYUn8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 30 May 2025 22:40:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "b49t7821a9"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-a7rnHPijCkpNT+bWVMt/gxnbwn/ndIHyfEoQfRwYUn8="
+        }
+      ]
+    },
+    {
       "Route": "css/site.css",
       "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -1730,7 +1817,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9458"
+          "Value": "9769"
         },
         {
           "Name": "Content-Type",
@@ -1738,11 +1825,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"kRJKat5u1nSdCVi1wqegsttwUgNflJhCl3z+qBGBDpc=\""
+          "Value": "\"a7rnHPijCkpNT+bWVMt/gxnbwn/ndIHyfEoQfRwYUn8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 29 May 2025 20:10:27 GMT"
+          "Value": "Fri, 30 May 2025 22:40:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1752,52 +1839,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-kRJKat5u1nSdCVi1wqegsttwUgNflJhCl3z+qBGBDpc="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.rd4xt7yulv.css",
-      "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "9458"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"kRJKat5u1nSdCVi1wqegsttwUgNflJhCl3z+qBGBDpc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 29 May 2025 20:10:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "rd4xt7yulv"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-kRJKat5u1nSdCVi1wqegsttwUgNflJhCl3z+qBGBDpc="
+          "Value": "sha256-a7rnHPijCkpNT+bWVMt/gxnbwn/ndIHyfEoQfRwYUn8="
         }
       ]
     },
@@ -1880,6 +1922,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+        }
+      ]
+    },
+    {
+      "Route": "img/404error.jpg",
+      "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\404error.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "38532"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nds2ELAo0tsuOAJ+DZRcCsr9878c5HPgZBIpChm8rwg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 30 May 2025 22:46:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nds2ELAo0tsuOAJ+DZRcCsr9878c5HPgZBIpChm8rwg="
+        }
+      ]
+    },
+    {
+      "Route": "img/404error.ly07vfcc0a.jpg",
+      "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\404error.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "38532"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nds2ELAo0tsuOAJ+DZRcCsr9878c5HPgZBIpChm8rwg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 30 May 2025 22:46:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ly07vfcc0a"
+        },
+        {
+          "Name": "label",
+          "Value": "img/404error.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nds2ELAo0tsuOAJ+DZRcCsr9878c5HPgZBIpChm8rwg="
+        }
+      ]
+    },
+    {
+      "Route": "img/503error.g5ao16mgia.jpg",
+      "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\503error.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "26282"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nN277FSIZ9fGn9rFAlfUPPZCwd0U7gpyjMF+AtVIRvo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 30 May 2025 22:36:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "g5ao16mgia"
+        },
+        {
+          "Name": "label",
+          "Value": "img/503error.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nN277FSIZ9fGn9rFAlfUPPZCwd0U7gpyjMF+AtVIRvo="
+        }
+      ]
+    },
+    {
+      "Route": "img/503error.jpg",
+      "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\503error.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "26282"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nN277FSIZ9fGn9rFAlfUPPZCwd0U7gpyjMF+AtVIRvo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 30 May 2025 22:36:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nN277FSIZ9fGn9rFAlfUPPZCwd0U7gpyjMF+AtVIRvo="
         }
       ]
     },
@@ -8220,7 +8426,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 22:40:02 GMT"
+          "Value": "Fri, 30 May 2025 22:57:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8257,7 +8463,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 22:40:02 GMT"
+          "Value": "Fri, 30 May 2025 22:57:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8302,7 +8508,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 22:40:02 GMT"
+          "Value": "Fri, 30 May 2025 22:57:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8347,7 +8553,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 22:40:02 GMT"
+          "Value": "Fri, 30 May 2025 22:57:50 GMT"
         },
         {
           "Name": "Cache-Control",

@@ -418,3 +418,23 @@ html, body {
 .admin-btn-danger:hover {
   background-color: #D62828;
 }
+
+
+
+
+.error-container {
+  text-align: center;
+  padding: 50px;
+  max-width: 600px;
+  margin: 50px auto;
+  background: #f8d7da;
+  color: #721c24;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.error-container img {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+}

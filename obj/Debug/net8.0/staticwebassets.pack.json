@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\404error.jpg",
+      "PackagePath": "staticwebassets\\img\\404error.jpg"
+    },
+    {
+      "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\503error.jpg",
+      "PackagePath": "staticwebassets\\img\\503error.jpg"
+    },
+    {
       "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\esebarrancalogo.png",
       "PackagePath": "staticwebassets\\img\\esebarrancalogo.png"
     },

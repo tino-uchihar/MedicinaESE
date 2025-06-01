@@ -24,6 +24,10 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcYWRtaW4tbWFpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Cosas y weas varias/Programas/Programeishon/CiSharp/MedicinaESE/Pages/Admin/lista-usuarios.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cbGlzdGEtdXN1YXJpb3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Cosas y weas varias/Programas/Programeishon/CiSharp/MedicinaESE/Pages/agendar-cita.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcYWdlbmRhci1jaXRhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

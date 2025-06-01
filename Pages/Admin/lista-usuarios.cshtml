@@ -1,0 +1,70 @@
+﻿@page
+@model MedicinaESE.Pages.Admin.ListaUsuariosModel
+@{
+    ViewData["Title"] = "Lista de Usuarios";
+}
+
+<div class="admin-container">
+    <h1 class="admin-title">Lista de Usuarios</h1>
+    
+    <div class="table-container">
+        <table class="users-table">
+            <thead>
+                <tr>
+                    <th><input type="checkbox" id="selectAll"></th>
+                    <th class="sortable" data-column="DocumentoId">ID</th>
+                    <th class="sortable" data-column="Nombre">Nombre</th>
+                    <th class="sortable" data-column="Correo">Correo</th>
+                    <th class="sortable" data-column="TipoUsuario">Tipo de Usuario</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="userTableBody">
+                @foreach (var usuario in Model.Usuarios)
+                {
+                    <tr>
+                        <td><input type="checkbox" class="select-user"></td>
+                        <td>@usuario.DocumentoId</td>
+                        <td>@usuario.Nombre</td>
+                        <td>@usuario.Correo</td>
+                        <td>@usuario.TipoUsuario</td>
+                        <td>
+                            <button class="edit-btn">Editar</button>
+                            <button class="delete-btn">Eliminar</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="admin-actions">
+        <button id="refreshPage" class="action-btn">Refrescar</button>
+        <button id="undoChanges" class="action-btn">Deshacer cambios</button>
+        <button id="saveChanges" class="action-btn action-save">Guardar todo</button>
+        <button onclick="window.location.href='../admin-main'" class="action-btn action-back">Volver</button>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.getElementById("refreshPage").addEventListener("click", () => location.reload());
+        document.getElementById("selectAll").addEventListener("change", function() {
+            document.querySelectorAll(".select-user").forEach(checkbox => checkbox.checked = this.checked);
+        });
+
+        document.querySelectorAll(".sortable").forEach(header => {
+            header.addEventListener("click", function() {
+                const column = this.getAttribute("data-column");
+                sortTable(column);
+            });
+        });
+
+        function sortTable(column) {
+            const rows = Array.from(document.querySelector("#userTableBody").rows);
+            rows.sort((a, b) => a.cells[column].innerText.localeCompare(b.cells[column].innerText));
+            document.querySelector("#userTableBody").innerHTML = "";
+            rows.forEach(row => document.querySelector("#userTableBody").appendChild(row));
+        }
+    </script>
+}

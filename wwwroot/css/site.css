@@ -461,3 +461,84 @@ html, body {
   font-size: 18px;
   margin: 10px 0;
 }
+
+
+
+
+
+/* Admin we */
+
+
+.admin-container {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.admin-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.table-container {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.users-table th, .users-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.sortable {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.edit-btn {
+  background-color: #0288D1;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background-color: #D32F2F;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.admin-actions {
+  margin-top: 20px;
+}
+
+.action-btn {
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  background-color: #039BE5;
+  color: white;
+  cursor: pointer;
+}
+
+.action-save {
+  background-color: #43A047;
+}
+
+.action-back {
+  background-color: #F57C00;
+}
+
+
+
+

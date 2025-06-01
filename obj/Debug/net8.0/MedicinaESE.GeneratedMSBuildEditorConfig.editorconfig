@@ -52,8 +52,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcbG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Cosas y weas varias/Programas/Programeishon/CiSharp/MedicinaESE/Pages/perfil-usuario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGVyZmlsLXVzdWFyaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Cosas y weas varias/Programas/Programeishon/CiSharp/MedicinaESE/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Cosas y weas varias/Programas/Programeishon/CiSharp/MedicinaESE/Pages/registro-usuario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNccmVnaXN0cm8tdXN1YXJpby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Cosas y weas varias/Programas/Programeishon/CiSharp/MedicinaESE/Pages/Shared/_ValidationScriptsPartial.cshtml]

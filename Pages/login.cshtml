@@ -1,5 +1,5 @@
 ﻿@page
-@model Medicinaese.Pages.loginModel
+@model MedicinaESE.Pages.LoginModel
 @{
     ViewData["Title"] = "Iniciar Sesión";
 }
@@ -13,11 +13,19 @@
         <div class="card-body py-4">
             <form method="post">
                 <div class="mb-4">
-                    <input type="text" class="form-control w-85 mx-auto py-3" id="documento" name="Documento" placeholder="Documento de identidad" required style="border-color: #02c39a; font-size: 1rem;">
+                    <input type="number" class="form-control w-85 mx-auto py-3" id="documento" name="Documento"
+                           placeholder="Documento de identidad" required min="1000" style="border-color: #02c39a; font-size: 1rem;">
                 </div>
                 <div class="mb-4">
-                    <input type="password" class="form-control w-85 mx-auto py-3" id="password" name="Contraseña" placeholder="Contraseña" required style="border-color: #02c39a; font-size: 1rem;">
+                    <input type="password" class="form-control w-85 mx-auto py-3" id="password" name="Contraseña"
+                           placeholder="Contraseña" required minlength="8" style="border-color: #02c39a; font-size: 1rem;">
                 </div>
+
+                @if (TempData["IntentosRestantes"] is int intentos && intentos <= 5 && intentos > 0)
+                {
+                    <p class="text-warning">⚠ Te quedan @intentos intentos.</p>
+                }
+
                 <button type="submit" class="btn btn-login-custom w-85 mx-auto py-3">Iniciar Sesión</button>
                 <small class="d-block mt-3 text-white">¿Olvidaste tu contraseña? <a href="#" class="text-warning text-decoration-none">Recupérala aquí</a></small>
             </form>
@@ -31,30 +39,40 @@
 @section Scripts {
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
-        const mensaje = '@Model.Mensaje';
-        const redireccion = '@Model.Redireccion';
+        const mensaje = '@(TempData["Mensaje"] ?? "")';
+        const redireccion = '@(TempData["Redireccion"] ?? "")';
 
         if (mensaje === "success") {
             Swal.fire({
                 title: '¡Acceso permitido!',
                 text: 'Bienvenido al sistema.',
                 icon: 'success',
-                confirmButtonText: 'Aceptar',
-                customClass: {
-                    popup: 'rounded-custom'
-                }
+                confirmButtonText: 'Aceptar'
             }).then(() => {
-                window.location.href = redireccion; // Redirige dinámicamente
+                window.location.href = redireccion;
             });
-        } else if (mensaje === "error") {
+        } else if (mensaje === "usuarioNoEncontrado") {
             Swal.fire({
-                title: 'Error',
-                text: 'Acceso no permitido.',
+                title: 'Usuario no encontrado',
+                text: 'No hay un usuario registrado con ese documento.',
+                icon: 'question',
+                confirmButtonText: 'Reintentar'
+            });
+        } else if (mensaje === "contraIncorrecta") {
+            Swal.fire({
+                title: 'Contraseña incorrecta',
+                text: 'La contraseña ingresada no es correcta.',
                 icon: 'error',
-                confirmButtonText: 'Intentar de nuevo',
-                customClass: {
-                    popup: 'rounded-custom'
-                }
+                confirmButtonText: 'Intentar de nuevo'
+            });
+        } else if (mensaje === "bloqueado") {
+            Swal.fire({
+                title: 'Demasiados intentos',
+                text: 'Has superado el límite de intentos fallidos. Intenta más tarde.',
+                icon: 'warning',
+                confirmButtonText: 'Aceptar'
+            }).then(() => {
+                window.location.href = "/ErrorBD";
             });
         }
     </script>

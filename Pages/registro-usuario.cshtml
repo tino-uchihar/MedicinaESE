@@ -1,0 +1,31 @@
+﻿@page
+@model MedicinaESE.Pages.RegistroUsuarioModel
+@{
+    ViewData["Title"] = "Registro de Usuario";
+}
+
+<div class="registro-container">
+    <h1>➕ Registrar Nuevo Usuario</h1>
+    <form method="post">
+        <label>Documento:</label>
+        <input type="text" asp-for="DocumentoId" required>
+
+        <label>Nombre:</label>
+        <input type="text" asp-for="Nombre" required>
+
+        <label>Correo:</label>
+        <input type="email" asp-for="Correo" required>
+
+        <label>Contraseña:</label>
+        <input type="password" asp-for="Contraseña" required>
+
+        <label>Tipo de Usuario:</label>
+        <select asp-for="TipoUsuario">
+            <option value="admin">Administrador</option>
+            <option value="medico">Médico</option>
+            <option value="paciente">Paciente</option>
+        </select>
+
+        <button type="submit">Registrar</button>
+    </form>
+</div>

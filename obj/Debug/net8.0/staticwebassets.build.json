@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "nlqqN4YYhdWFow2wZmBhFVXVntPq0biKeP9hUhZkcsY=",
+  "Hash": "Nr8E6npaplhtbNUkR3m3Bha9vrh4H3UAYE9VnErT3IQ=",
   "Source": "MedicinaESE",
   "BasePath": "_content/MedicinaESE",
   "Mode": "Default",
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "b49t7821a9",
-      "Integrity": "a7rnHPijCkpNT+bWVMt/gxnbwn/ndIHyfEoQfRwYUn8=",
+      "Fingerprint": "1l93gry2hq",
+      "Integrity": "RU9xUs2BlmwRAIJlEhJ9P4WXO8tU4Mrfa8EutCjjPkQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -1762,7 +1762,7 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.b49t7821a9.css",
+      "Route": "css/site.1l93gry2hq.css",
       "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1772,7 +1772,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9769"
+          "Value": "10115"
         },
         {
           "Name": "Content-Type",
@@ -1780,11 +1780,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"a7rnHPijCkpNT+bWVMt/gxnbwn/ndIHyfEoQfRwYUn8=\""
+          "Value": "\"RU9xUs2BlmwRAIJlEhJ9P4WXO8tU4Mrfa8EutCjjPkQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 30 May 2025 22:40:00 GMT"
+          "Value": "Sat, 31 May 2025 23:32:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1794,7 +1794,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "b49t7821a9"
+          "Value": "1l93gry2hq"
         },
         {
           "Name": "label",
@@ -1802,7 +1802,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-a7rnHPijCkpNT+bWVMt/gxnbwn/ndIHyfEoQfRwYUn8="
+          "Value": "sha256-RU9xUs2BlmwRAIJlEhJ9P4WXO8tU4Mrfa8EutCjjPkQ="
         }
       ]
     },
@@ -1817,7 +1817,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9769"
+          "Value": "10115"
         },
         {
           "Name": "Content-Type",
@@ -1825,11 +1825,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"a7rnHPijCkpNT+bWVMt/gxnbwn/ndIHyfEoQfRwYUn8=\""
+          "Value": "\"RU9xUs2BlmwRAIJlEhJ9P4WXO8tU4Mrfa8EutCjjPkQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 30 May 2025 22:40:00 GMT"
+          "Value": "Sat, 31 May 2025 23:32:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1839,7 +1839,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-a7rnHPijCkpNT+bWVMt/gxnbwn/ndIHyfEoQfRwYUn8="
+          "Value": "sha256-RU9xUs2BlmwRAIJlEhJ9P4WXO8tU4Mrfa8EutCjjPkQ="
         }
       ]
     },
@@ -8426,7 +8426,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 30 May 2025 22:57:50 GMT"
+          "Value": "Sun, 01 Jun 2025 00:25:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8463,7 +8463,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 30 May 2025 22:57:50 GMT"
+          "Value": "Sun, 01 Jun 2025 00:25:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8508,7 +8508,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 30 May 2025 22:57:50 GMT"
+          "Value": "Sun, 01 Jun 2025 00:25:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8553,7 +8553,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 30 May 2025 22:57:50 GMT"
+          "Value": "Sun, 01 Jun 2025 00:25:44 GMT"
         },
         {
           "Name": "Cache-Control",

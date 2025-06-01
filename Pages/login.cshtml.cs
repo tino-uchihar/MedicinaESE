@@ -1,42 +1,71 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Http;
+using MedicinaESE.Services;
 
-namespace Medicinaese.Pages
+namespace MedicinaESE.Pages;
+
+public class LoginModel : PageModel
 {
-    public class loginModel : PageModel
+    // Propiedades que reciben los datos del formulario
+    [BindProperty] public string Documento { get; set; } = "";
+    [BindProperty] public string Contraseña { get; set; } = "";
+    
+    // Servicio de autenticación para manejar el acceso a la base de datos
+    private readonly AuthService _authService;
+
+    public LoginModel(AuthService authService)
     {
-        [BindProperty]
-        public string Documento { get; set; } = "";
+        _authService = authService;
+    }
 
-        [BindProperty]
-        public string Contraseña { get; set; } = "";
+    public IActionResult OnPost()
+    {
+        // Obtener el número de intentos fallidos desde la sesión
+        int intentosActuales = HttpContext.Session.GetInt32("IntentosFallidos") ?? 0;
 
-        public string Mensaje { get; set; } = "";
-        public string Redireccion { get; set; } = "";
-
-        public IActionResult OnPost()
+        // Si el usuario ha fallado 10 veces, bloquear el acceso
+        if (intentosActuales >= 10)
         {
-            if (Documento == "admin" && Contraseña == "1234")
-            {
-                Mensaje = "success"; // SweetAlert mostrará "acceso permitido"
-                Redireccion = "/admin-main"; // Redirige al panel de administración
-            }
-            else if (Documento == "paciente" && Contraseña == "1234")
-            {
-                Mensaje = "success"; // SweetAlert mostrará "acceso permitido"
-                Redireccion = "/agendar-cita"; // Redirige a agendar cita
-            }
-            else if (Documento == "medico" && Contraseña == "1234")
-            {
-                Mensaje = "success"; // SweetAlert mostrará "acceso permitido"
-                Redireccion = "/ficha-medica"; // Redirige a ficha médica
-            }
-            else
-            {
-                Mensaje = "error"; // SweetAlert mostrará "acceso no permitido"
-            }
-            
-            return Page(); // Permite mostrar la alerta antes de redirigir
+            TempData["Mensaje"] = "bloqueado";
+            return Page();
         }
+
+        // Validar credenciales con `AuthService`
+        var resultado = _authService.ValidarCredenciales(Documento, Contraseña);
+
+        if (resultado.Exitoso)
+        {
+            // Restablecer el contador de intentos fallidos en sesión
+            HttpContext.Session.SetInt32("IntentosFallidos", 0);
+
+            // Guardar información del usuario en sesión
+            HttpContext.Session.SetString("UsuarioDocumento", Documento);
+            HttpContext.Session.SetString("UsuarioNombre", resultado.Nombre);
+            HttpContext.Session.SetString("UsuarioCorreo", resultado.Correo);
+            HttpContext.Session.SetString("UsuarioTipo", resultado.TipoUsuario);
+
+            // Definir mensaje de éxito y redirección
+            TempData["Mensaje"] = "success";
+            TempData["Redireccion"] = resultado.TipoUsuario switch
+            {
+                "admin" => "/admin-main",
+                "medico" => "/ficha-medica",
+                "paciente" => "/agendar-cita",
+                _ => "/ErrorBD"
+            };
+        }
+        else
+        {
+            // Incrementar intentos fallidos si el acceso falla
+            intentosActuales++;
+            HttpContext.Session.SetInt32("IntentosFallidos", intentosActuales);
+            
+            // Guardar intentos restantes
+            TempData["IntentosRestantes"] = 10 - intentosActuales;
+            TempData["Mensaje"] = resultado.Mensaje;
+        }
+
+        return Page();
     }
 }

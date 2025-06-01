@@ -1,0 +1,15 @@
+﻿@page
+@model MedicinaESE.Pages.PerfilUsuarioModel
+@{
+    ViewData["Title"] = "Perfil de Usuario";
+}
+
+<div class="perfil-container">
+    <h1>Perfil del Usuario</h1>
+    <div class="perfil-info">
+        <p><strong>Documento:</strong> @Model.DocumentoId</p>
+        <p><strong>Nombre:</strong> @Model.Nombre</p>
+        <p><strong>Correo:</strong> @Model.Correo</p>
+        <p><strong>Tipo de Usuario:</strong> @Model.TipoUsuario</p>
+    </div>
+</div>

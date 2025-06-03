@@ -10,32 +10,58 @@
     <link rel="stylesheet" href="~/MedicinaESE.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header class="container-fluid custom-header py-3">
+    <!-- Versión Desktop: se mantiene sin cambios -->
+    <header class="container-fluid custom-header desktop-header py-3">
         <div class="container">
             <div class="row align-items-center">
-                <!-- Logo y nombre (3 columnas) -->
+                <!-- Logo y nombre -->
                 <div class="col-3">
                     <a href="/index" class="d-flex align-items-center text-decoration-none">
                         <img src="~/img/logosinfondo2.png" alt="Logo" class="me-2" width="50">
                         <span class="fw-bold fs-5">ESE Barrancabermeja</span>
                     </a>
                 </div>
-
-                <!-- Botones de navegación (6 columnas) -->
+                <!-- Botones de navegación -->
                 <div class="col-6 text-center">
                     <nav>
                         <a href="/index" class="btn btn-nav mx-2">Inicio</a>
-                        <a href="#" class="btn btn-nav mx-2">Acerca de</a>
-                        <a href="#" class="btn btn-nav mx-2">Contacto</a>
+                        <a href="/index#acerca-de" class="btn btn-nav mx-2">Acerca de</a>
+                        <a href="/index#contacto" class="btn btn-nav mx-2">Contacto</a>
                     </nav>
                 </div>
-
-                <!-- Inicio de sesión (3 columnas) -->
+                <!-- Botón de inicio de sesión -->
                 <div class="col-3 text-end">
                     <a href="/login" class="btn btn-login">Iniciar sesión</a>
                 </div>
             </div>
         </div>
+    </header>
+
+    <!-- Versión Mobile: se activará con media queries -->
+    <header class="mobile-header">
+      <nav class="top-nav">
+         <!-- Logo sin texto -->
+         <div class="mobile-logo">
+             <a href="/index">
+                 <img src="~/img/logosinfondo2.png" alt="Logo" width="50">
+             </a>
+         </div>
+         <!-- Checkbox hack para el menú -->
+         <input id="menu-toggle" type="checkbox" />
+         <label class="menu-button-container" for="menu-toggle">
+             <div class="menu-button"></div>
+         </label>
+         <!-- Menú desplegable -->
+         <ul class="menu">
+             <li><a href="/index">Inicio</a></li>
+             <li><a href="/index#acerca-de">Acerca de</a></li>
+             <li><a href="/index#contacto">Contacto</a></li>
+         </ul>
+         <!-- Botón de login: se muestra el icono (imagen) -->
+         <div class="mobile-login">
+             <a href="/login"><img src="/img/loginbutton.png" alt="Login" width="30"></a>
+         </div>
+      </nav>
     </header>
 
     <div class="container">
@@ -53,7 +79,6 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

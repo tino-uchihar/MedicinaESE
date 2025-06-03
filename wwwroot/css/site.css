@@ -354,191 +354,192 @@ html, body {
 
 
 
+/*------------------------------------------------------
+  Panel Admin we 
+------------------------------------------------------*/
 
-
-/* Contenedor principal del panel ADMIN */
 .admin-main-container {
-  margin: 40px auto;
-  padding: 30px;
-  max-width: 900px;
-  background-color: #f9f9f9; /* Fondo claro para resaltar */
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-/* Encabezado */
-.admin-main-header {
-  font-size: 26px;
-  font-weight: bold;
-  color: #05668D;
-  margin-bottom: 20px;
-}
-
-/* Texto secundario */
-.admin-main-subtext {
-  font-size: 18px;
-  color: #028090;
-  margin-bottom: 30px;
-}
-
-/* Opciones alineadas verticalmente */
-.admin-main-options {
-  display: flex;
-  flex-direction: column; /* Organiza en una sola columna */
-  gap: 10px; /* Espacio entre elementos */
-  align-items: center;
-  width: 100%;
-}
-
-/* Botón ocupa ancho completo */
-.admin-btn {
-  display: block;
-  width: 80%;
-  padding: 12px;
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-  color: white;
-  background-color: #02C39A;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background 0.3s ease-in-out;
-}
-
-.admin-btn:hover {
-  background-color: #00A896;
-}
-
-/* Botón de cierre de sesión */
-.admin-btn-danger {
-  background-color: #E63946;
-}
-
-.admin-btn-danger:hover {
-  background-color: #D62828;
-}
-
-
-
-
-.error-container {
-  text-align: center;
-  padding: 50px;
-  max-width: 600px;
-  margin: 50px auto;
-  background: #f8d7da;
-  color: #721c24;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.error-container img {
-  max-width: 100%;
-  height: auto;
-  margin: 20px 0;
-}
-
-
-
-
-.perfil-container {
-  max-width: 500px;
-  margin: 50px auto;
-  padding: 20px;
-  background: #f8f9fa;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  text-align: center;
-}
-
-.perfil-container h1 {
-  font-size: 24px;
-  margin-bottom: 15px;
-}
-
-.perfil-info p {
-  font-size: 18px;
-  margin: 10px 0;
-}
-
-
-
-
-
-/* Admin we */
-
-
-.admin-container {
-  max-width: 900px;
-  margin: auto;
-  text-align: center;
-}
-
-.admin-title {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.table-container {
-  max-height: 400px;
-  overflow-y: auto;
-  border: 1px solid #ccc;
-  padding: 10px;
-}
-
-.users-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.users-table th, .users-table td {
-  padding: 10px;
-  border-bottom: 1px solid #ccc;
-}
-
-.sortable {
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.edit-btn {
-  background-color: #0288D1;
-  color: white;
-  padding: 5px 10px;
-  border: none;
-  cursor: pointer;
-}
-
-.delete-btn {
-  background-color: #D32F2F;
-  color: white;
-  padding: 5px 10px;
-  border: none;
-  cursor: pointer;
-}
-
-.admin-actions {
-  margin-top: 20px;
-}
-
-.action-btn {
-  padding: 10px;
-  margin: 5px;
-  border: none;
-  background-color: #039BE5;
-  color: white;
-  cursor: pointer;
-}
-
-.action-save {
-  background-color: #43A047;
-}
-
-.action-back {
-  background-color: #F57C00;
-}
-
-
-
-
+   margin: 40px auto;
+   padding: 30px;
+   max-width: 900px;
+   background-color: #f9f9f9; /* Fondo claro */
+   border-radius: 12px;
+   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+   text-align: center;
+ }
+ 
+ .admin-main-header {
+   font-size: 26px;
+   font-weight: bold;
+   color: #05668D;
+   margin-bottom: 20px;
+ }
+ 
+ .admin-main-subtext {
+   font-size: 18px;
+   color: #028090;
+   margin-bottom: 30px;
+ }
+ 
+ .admin-main-options {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   align-items: center;
+   width: 100%;
+ }
+ 
+ /* Botones del panel principal */
+ .admin-btn {
+   display: block;
+   width: 80%;
+   padding: 12px;
+   font-size: 18px;
+   font-weight: bold;
+   text-align: center;
+   color: #fff;
+   background-color: #02C39A;
+   border-radius: 8px;
+   text-decoration: none;
+   transition: background-color 0.3s ease;
+ }
+ 
+ .admin-btn:hover {
+   background-color: #00A896;
+ }
+ 
+ .admin-btn-danger {
+   background-color: #E63946;
+ }
+ 
+ .admin-btn-danger:hover {
+   background-color: #D62828;
+ }
+ 
+ /*------------------------------------------------------
+   La Lista de Usuarios (admin/lista-usuarios)
+ ------------------------------------------------------*/
+ 
+ .admin-container {
+   max-width: 900px;
+   margin: 40px auto; /* Alineado con el panel, con un poco de margen */
+   text-align: center;
+ }
+ 
+ .admin-title {
+   font-size: 24px;
+   margin-bottom: 20px;
+   color: #05668D;
+ }
+ 
+ /* Contenedor de la tabla con scroll */
+ .table-container {
+   max-height: 400px;
+   overflow-y: auto;
+   border: 1px solid #ccc;
+   padding: 10px;
+   background-color: #fff; /* Fondo blanco para la legibilidad */
+   border-radius: 8px;
+ }
+ 
+ /* Estilo de la tabla */
+ .users-table {
+   width: 100%;
+   border-collapse: collapse;
+ }
+ 
+ .users-table th,
+ .users-table td {
+   padding: 10px;
+   border-bottom: 1px solid #ccc;
+   text-align: center;
+ }
+ 
+ /* Header con un fondo claro y fuente en negrita */
+ .users-table th {
+   background-color: #f1f1f1;
+   font-weight: bold;
+   position: sticky;
+   top: 0;
+   z-index: 2;
+ }
+ 
+ /* Hover sobre filas de la tabla */
+ .users-table tbody tr:hover {
+   background-color: #f9f9f9;
+ }
+ 
+ /* Estilo para columnas ordenables */
+ .sortable {
+   cursor: pointer;
+   font-weight: bold;
+ }
+ 
+ /* Botones para editar y eliminar (dentro de la tabla) */
+ .edit-btn {
+   background-color: #0288D1;
+   color: #fff;
+   padding: 5px 10px;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   transition: background 0.3s ease;
+   margin-right: 5px;
+ }
+ 
+ .edit-btn:hover {
+   background-color: #0277BD;
+ }
+ 
+ .delete-btn {
+   background-color: #D32F2F;
+   color: #fff;
+   padding: 5px 10px;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   transition: background 0.3s ease;
+ }
+ 
+ .delete-btn:hover {
+   background-color: #C62828;
+ }
+ 
+ /* Contenedor de acciones generales (debajo de la tabla) */
+ .admin-actions {
+   margin-top: 20px;
+ }
+ 
+ /* Botones de acciones (refrescar, deshacer, guardar, volver) */
+ .action-btn {
+   padding: 10px 15px;
+   margin: 5px;
+   border: none;
+   background-color: #039BE5;
+   color: #fff;
+   cursor: pointer;
+   font-weight: bold;
+   border-radius: 8px;
+   transition: background 0.3s ease;
+ }
+ 
+ .action-btn:hover {
+   background-color: #0288D1;
+ }
+ 
+ .action-save {
+   background-color: #43A047;
+ }
+ 
+ .action-save:hover {
+   background-color: #388E3C;
+ }
+ 
+ .action-back {
+   background-color: #F57C00;
+ }
+ 
+ .action-back:hover {
+   background-color: #E65100;
+ }
+ 

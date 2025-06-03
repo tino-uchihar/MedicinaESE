@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MedicinaESE.bundle.scp.css",
-      "PackagePath": "staticwebassets\\MedicinaESE.iur408rgaa.bundle.scp.css"
+      "PackagePath": "staticwebassets\\MedicinaESE.qq51duyjuy.bundle.scp.css"
     },
     {
       "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\css\\site.css",
@@ -35,6 +35,10 @@
     {
       "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\listcheck.png",
       "PackagePath": "staticwebassets\\img\\listcheck.png"
+    },
+    {
+      "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\loginbutton.png",
+      "PackagePath": "staticwebassets\\img\\loginbutton.png"
     },
     {
       "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\logo.png",

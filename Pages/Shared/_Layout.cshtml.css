@@ -6,6 +6,10 @@
    #F0F3BD - Amarillo claro (fondo general)
 */
 
+/* ============================= */
+/*       ESTILOS DESKTOP         */
+/* ============================= */
+
 /* Fondo del header */
 .custom-header {
   background-color: #028090 !important;
@@ -14,13 +18,13 @@
 
 /* Ajuste de los textos en el header */
 .custom-header a {
-  color: #F0F3BD !important; /* Amarillo claro para contraste */
+  color: #F0F3BD !important;
   font-weight: bold;
 }
 
 /* Estilos específicos para los botones de navegación */
 .btn-nav {
-  background-color: #05668D !important; /* Azul oscuro */
+  background-color: #05668D !important;
   border-color: #05668D !important;
   color: white !important;
   font-weight: bold;
@@ -30,33 +34,33 @@
 }
 
 .btn-nav:hover {
-  background-color: #00A896 !important; /* Verde azulado */
+  background-color: #00A896 !important;
   border-color: #00A896 !important;
   transform: scale(1.05);
 }
 
 /* Estilos específicos para el botón de inicio de sesión */
 .btn-login {
-  background-color: #02C39A !important; /* Azul oscuro */
-  border: 3px solid white !important; /* Borde blanco más grueso */
+  background-color: #02C39A !important;
+  border: 3px solid white !important;
   color: white !important;
   font-weight: bold;
   border-radius: 8px;
-  padding: 12px 22px; /* Más grande */
+  padding: 12px 22px;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
 .btn-login:hover {
-  background-color: #00A896 !important; /* Azul más intenso */
+  background-color: #00A896 !important;
   border-color: white !important;
   transform: scale(1.08);
 }
 
 /* Footer personalizado */
 .footer {
-  background-color: #028090 !important; /* Azul medio */
-  color: #F0F3BD !important; /* Texto amarillo claro */
+  background-color: #028090 !important;
+  color: #F0F3BD !important;
   text-align: center;
   padding: 15px 0;
   width: 100%;
@@ -64,7 +68,7 @@
 
 /* Bordes y sombras */
 .border-top {
-  border-top: 1px solid #05668D !important; /* Azul oscuro */
+  border-top: 1px solid #05668D !important;
 }
 
 .border-bottom {
@@ -72,5 +76,128 @@
 }
 
 .box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .1) !important;
+  box-shadow: 0 .25rem .75rem rgba(0,0,0,0.1) !important;
+}
+
+/* Se asume que el HTML desktop se encuentra en un contenedor con la clase "desktop-header" */
+.desktop-header {
+  display: block;
+}
+
+/* ============================= */
+/*       ESTILOS MOBILE          */
+/* (Pantallas con ancho <1024px)  */
+/* ============================= */
+
+.mobile-header {
+  display: none;
+}
+
+/* Por defecto, se muestra la versión desktop */
+@media (max-width: 1023px) {
+  /* Oculta la versión desktop */
+  .desktop-header {
+    display: none !important;
+  }
+  /* Muestra la versión mobile */
+  .mobile-header {
+    display: block;
+  }
+  
+  /* --- Header Mobile --- */
+  .top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #028090;
+    padding: 1em;
+    position: relative;
+  }
+  
+  /* Logo en mobile: solo se muestra la imagen de 50px */
+  .mobile-logo img {
+    width: 50px;
+    height: auto;
+  }
+  /* Nota: No se incluye ningún span con texto, por lo que se omite el nombre */
+
+  /* --- Menú Hamburguesa usando Checkbox Hack --- */
+  /* El HTML de la versión mobile deberá tener un input checkbox con id="menu-toggle" */
+  #menu-toggle {
+    display: none;
+  }
+  .menu-button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    position: relative;
+  }
+  .menu-button,
+  .menu-button::before,
+  .menu-button::after {
+    background-color: #FFF;
+    height: 4px;
+    width: 30px;
+    border-radius: 2px;
+    position: absolute;
+    transition: transform 0.4s cubic-bezier(0.23,1,0.32,1);
+  }
+  .menu-button {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .menu-button::before {
+    content: "";
+    top: -8px;
+  }
+  .menu-button::after {
+    content: "";
+    top: 8px;
+  }
+  
+  /* Menú desplegable; se usará el selector :checked para desplegarlo */
+  .menu {
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    background-color: #05668D;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    z-index: 99; /* Se asegura que el menú quede por encima de todo */
+  }
+  /* Cuando el checkbox esté chequeado, el menú se muestra.
+     (El hack: #menu-toggle:checked ~ .menu) */
+  #menu-toggle:checked ~ .menu {
+    display: flex;
+  }
+  .menu li {
+    padding: 10px;
+    text-align: center;
+  }
+  .menu li a {
+    color: #F0F3BD;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* --- Mobile Login --- */
+  /* Se oculta el botón de login con texto en mobile y se muestra el contenedor con la imagen del ícono */
+  .login-text {
+    display: none;
+  }
+  .mobile-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

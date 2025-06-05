@@ -1,5 +1,8 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿@* HttpContextAccessor por si acaso, pero trabajamos con User) *@
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,18 +13,20 @@
     <link rel="stylesheet" href="~/MedicinaESE.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <!-- Versión Desktop: se mantiene sin cambios -->
+    <!-- =================================================================== -->
+    <!-- Versión Desktop: Este header se mostrará en pantallas de 1024px o más -->
+    <!-- =================================================================== -->
     <header class="container-fluid custom-header desktop-header py-3">
         <div class="container">
             <div class="row align-items-center">
-                <!-- Logo y nombre -->
+                <!-- Bloque de logo y nombre del sitio -->
                 <div class="col-3">
                     <a href="/index" class="d-flex align-items-center text-decoration-none">
                         <img src="~/img/logosinfondo2.png" alt="Logo" class="me-2" width="50">
                         <span class="fw-bold fs-5">ESE Barrancabermeja</span>
                     </a>
                 </div>
-                <!-- Botones de navegación -->
+                <!-- Menú de navegación -->
                 <div class="col-6 text-center">
                     <nav>
                         <a href="/index" class="btn btn-nav mx-2">Inicio</a>
@@ -29,24 +34,60 @@
                         <a href="/index#contacto" class="btn btn-nav mx-2">Contacto</a>
                     </nav>
                 </div>
-                <!-- Botón de inicio de sesión -->
-                <div class="col-3 text-end">
-                    <a href="/login" class="btn btn-login">Iniciar sesión</a>
+                <!-- Bloque para el botón de sesión (login o usuario autenticado) -->
+                <div class="col-3 text-end user-session">
+                    @{
+                        // Verificamos si el usuario está autenticado mediante el middleware de cookies/claims.
+                        bool estaAutenticado = User?.Identity?.IsAuthenticated == true;
+                        
+                        // Inicialmente se define la URL de redirección (por defecto se dirige a /login)
+                        string urlPerfil = "/login";
+                        if (estaAutenticado)
+                        {
+                            // Obtenemos el nombre desde User.Identity.Name
+                            // y el tipo de usuario desde el claim "UsuarioTipo"
+                            var usuarioNombre = User?.Identity?.Name ?? "";
+                            var tipoUsuarioClaim = User?.FindFirst("UsuarioTipo")?.Value?.ToLower() ?? "";
+                            // Se decide la URL de perfil según el tipo de usuario.
+                            urlPerfil = tipoUsuarioClaim switch
+                            {
+                                "admin" => "/admin-main",
+                                "medico" => "/ficha-medica",
+                                "paciente" => "/agendar-cita",
+                                _ => "/perfil"
+                            };
+                        }
+                    }
+                    @if (estaAutenticado)
+                    {
+                        <!-- Muestra botón con nombre e ícono cuando el usuario está autenticado -->
+                        <a href="@urlPerfil" class="btn btn-user">
+                            <img src="~/img/userbutton.png" alt="Usuario" class="user-icon" width="50" height="50">
+                            <span class="user-name">@(User?.Identity?.Name ?? "")</span>
+                        </a>
+                    }
+                    else
+                    {
+                        <!-- Muestra el botón por defecto de "Iniciar sesión" cuando NO hay sesión -->
+                        <a href="/login" class="btn btn-login">Iniciar sesión</a>
+                    }
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Versión Mobile: se activará con media queries -->
+    <!-- =================================================================== -->
+    <!-- Versión Mobile: Este header se mostrará en pantallas menores a 1024px -->
+    <!-- =================================================================== -->
     <header class="mobile-header">
       <nav class="top-nav">
-         <!-- Logo sin texto -->
+         <!-- Logo (solo imagen, sin nombre) -->
          <div class="mobile-logo">
              <a href="/index">
                  <img src="~/img/logosinfondo2.png" alt="Logo" width="50">
              </a>
          </div>
-         <!-- Checkbox hack para el menú -->
+         <!-- Checkbox hack para el menú hamburguesa (no requiere JavaScript adicional) -->
          <input id="menu-toggle" type="checkbox" />
          <label class="menu-button-container" for="menu-toggle">
              <div class="menu-button"></div>
@@ -57,19 +98,41 @@
              <li><a href="/index#acerca-de">Acerca de</a></li>
              <li><a href="/index#contacto">Contacto</a></li>
          </ul>
-         <!-- Botón de login: se muestra el icono (imagen) -->
+         <!-- Bloque para el botón en mobile -->
          <div class="mobile-login">
-             <a href="/login"><img src="/img/loginbutton.png" alt="Login" width="30"></a>
+             @if (User?.Identity?.IsAuthenticated == true)
+             {
+                 <!-- Si el usuario está autenticado, se muestra solo el ícono -->
+                 <a href="@(
+                     // Redirección de acuerdo al tipo de usuario, se reutiliza la misma lógica:
+                     (User.FindFirst("UsuarioTipo")?.Value?.ToLower() switch
+                     {
+                         "admin" => "/admin-main",
+                         "medico" => "/ficha-medica",
+                         "paciente" => "/agendar-cita",
+                         _ => "/perfil"
+                     })
+                 )" class="btn btn-user">
+                     <img src="~/img/userbutton.png" alt="Usuario" class="user-icon" width="50" height="50">
+                 </a>
+             }
+             else
+             {
+                 <!-- Si no hay usuario, se muestra el ícono de login -->
+                 <a href="/login" class="btn btn-user"><img src="~/img/loginbutton.png" alt="Login" width="30"></a>
+             }
          </div>
       </nav>
     </header>
 
+    <!-- Contenido principal -->
     <div class="container">
         <main role="main" class="py-3">
             @RenderBody()
         </main>
     </div>
 
+    <!-- Footer -->
     <footer class="border-top footer text-muted">
         <div class="container text-center">
             &copy; 2025 - DoctorNow - <a asp-area="" asp-page="/Privacy">Privacy</a>

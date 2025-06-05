@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MedicinaESE.bundle.scp.css",
-      "PackagePath": "staticwebassets\\MedicinaESE.qq51duyjuy.bundle.scp.css"
+      "PackagePath": "staticwebassets\\MedicinaESE.7qtiycr5yp.bundle.scp.css"
     },
     {
       "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\css\\site.css",
@@ -81,10 +81,6 @@
       "PackagePath": "staticwebassets\\img\\odontologia.jpg"
     },
     {
-      "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\profile.png",
-      "PackagePath": "staticwebassets\\img\\profile.png"
-    },
-    {
       "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\psicologia.jpg",
       "PackagePath": "staticwebassets\\img\\psicologia.jpg"
     },
@@ -95,6 +91,10 @@
     {
       "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\tomatee.ico",
       "PackagePath": "staticwebassets\\img\\tomatee.ico"
+    },
+    {
+      "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\userbutton.png",
+      "PackagePath": "staticwebassets\\img\\userbutton.png"
     },
     {
       "Id": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\js\\noticias.js",

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "s/utL7GmXBkMXGr/eOxezaJWuDYp9P0lMof8UnSj1yk=",
+  "Hash": "jpKEm5N9ViC/XoKbjCbkj2hdJpAptifSUWhGfkEwghs=",
   "Source": "MedicinaESE",
   "BasePath": "_content/MedicinaESE",
   "Mode": "Default",
@@ -31,8 +31,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "qq51duyjuy",
-      "Integrity": "Uhgy0Jv9a1l1/n3FrGYPD3u2ZCqpptqo8gVWCNDX2o4=",
+      "Fingerprint": "7qtiycr5yp",
+      "Integrity": "/2gIELCyk2N0DS5SkgpEWaHv1gQ5wXXSkbhPpZ9RuAs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\obj\\Debug\\net8.0\\scopedcss\\bundle\\MedicinaESE.styles.css"
@@ -52,8 +52,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "qq51duyjuy",
-      "Integrity": "Uhgy0Jv9a1l1/n3FrGYPD3u2ZCqpptqo8gVWCNDX2o4=",
+      "Fingerprint": "7qtiycr5yp",
+      "Integrity": "/2gIELCyk2N0DS5SkgpEWaHv1gQ5wXXSkbhPpZ9RuAs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MedicinaESE.bundle.scp.css"
@@ -458,27 +458,6 @@
       "OriginalItemSpec": "wwwroot\\img\\odontologia.jpg"
     },
     {
-      "Identity": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\profile.png",
-      "SourceId": "MedicinaESE",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\",
-      "BasePath": "_content/MedicinaESE",
-      "RelativePath": "img/profile#[.{fingerprint}]?.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "738819if1b",
-      "Integrity": "DeCuls2AdOP4r6uP4EfNgEfi73YkGC1glj0jh0xMP4w=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\profile.png"
-    },
-    {
       "Identity": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\psicologia.jpg",
       "SourceId": "MedicinaESE",
       "SourceType": "Discovered",
@@ -540,6 +519,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\tomatee.ico"
+    },
+    {
+      "Identity": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\userbutton.png",
+      "SourceId": "MedicinaESE",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\",
+      "BasePath": "_content/MedicinaESE",
+      "RelativePath": "img/userbutton#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "mof8utzafv",
+      "Integrity": "ZiP0vXCxhs567SeROr8oEBrkqMPWULLdq08hd0gujnI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\userbutton.png"
     },
     {
       "Identity": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\js\\noticias.js",
@@ -3341,88 +3341,6 @@
       ]
     },
     {
-      "Route": "img/profile.738819if1b.png",
-      "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\profile.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "11808"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"DeCuls2AdOP4r6uP4EfNgEfi73YkGC1glj0jh0xMP4w=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 07 May 2025 19:44:39 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "738819if1b"
-        },
-        {
-          "Name": "label",
-          "Value": "img/profile.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-DeCuls2AdOP4r6uP4EfNgEfi73YkGC1glj0jh0xMP4w="
-        }
-      ]
-    },
-    {
-      "Route": "img/profile.png",
-      "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\profile.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "11808"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"DeCuls2AdOP4r6uP4EfNgEfi73YkGC1glj0jh0xMP4w=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 07 May 2025 19:44:39 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-DeCuls2AdOP4r6uP4EfNgEfi73YkGC1glj0jh0xMP4w="
-        }
-      ]
-    },
-    {
       "Route": "img/psicologia.1cynqz9vga.jpg",
       "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\psicologia.jpg",
       "Selectors": [],
@@ -3665,6 +3583,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-n3FlU7jBbZ2pWXHEeGAy+BZYpvWrkN62PI0M/O9RbMU="
+        }
+      ]
+    },
+    {
+      "Route": "img/userbutton.mof8utzafv.png",
+      "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\userbutton.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "49610"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZiP0vXCxhs567SeROr8oEBrkqMPWULLdq08hd0gujnI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Jun 2025 20:48:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mof8utzafv"
+        },
+        {
+          "Name": "label",
+          "Value": "img/userbutton.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZiP0vXCxhs567SeROr8oEBrkqMPWULLdq08hd0gujnI="
+        }
+      ]
+    },
+    {
+      "Route": "img/userbutton.png",
+      "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\img\\userbutton.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "49610"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZiP0vXCxhs567SeROr8oEBrkqMPWULLdq08hd0gujnI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Jun 2025 20:48:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZiP0vXCxhs567SeROr8oEBrkqMPWULLdq08hd0gujnI="
         }
       ]
     },
@@ -8507,6 +8507,96 @@
       ]
     },
     {
+      "Route": "MedicinaESE.7qtiycr5yp.bundle.scp.css",
+      "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MedicinaESE.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5864"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/2gIELCyk2N0DS5SkgpEWaHv1gQ5wXXSkbhPpZ9RuAs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Jun 2025 20:58:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7qtiycr5yp"
+        },
+        {
+          "Name": "label",
+          "Value": "MedicinaESE.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/2gIELCyk2N0DS5SkgpEWaHv1gQ5wXXSkbhPpZ9RuAs="
+        }
+      ]
+    },
+    {
+      "Route": "MedicinaESE.7qtiycr5yp.styles.css",
+      "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\obj\\Debug\\net8.0\\scopedcss\\bundle\\MedicinaESE.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5864"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/2gIELCyk2N0DS5SkgpEWaHv1gQ5wXXSkbhPpZ9RuAs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Jun 2025 20:58:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7qtiycr5yp"
+        },
+        {
+          "Name": "label",
+          "Value": "MedicinaESE.styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/2gIELCyk2N0DS5SkgpEWaHv1gQ5wXXSkbhPpZ9RuAs="
+        }
+      ]
+    },
+    {
       "Route": "MedicinaESE.bundle.scp.css",
       "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MedicinaESE.bundle.scp.css",
       "Selectors": [],
@@ -8517,7 +8607,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5339"
+          "Value": "5864"
         },
         {
           "Name": "Content-Type",
@@ -8525,11 +8615,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Uhgy0Jv9a1l1/n3FrGYPD3u2ZCqpptqo8gVWCNDX2o4=\""
+          "Value": "\"/2gIELCyk2N0DS5SkgpEWaHv1gQ5wXXSkbhPpZ9RuAs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 04:33:25 GMT"
+          "Value": "Thu, 05 Jun 2025 20:58:04 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8539,97 +8629,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Uhgy0Jv9a1l1/n3FrGYPD3u2ZCqpptqo8gVWCNDX2o4="
-        }
-      ]
-    },
-    {
-      "Route": "MedicinaESE.qq51duyjuy.bundle.scp.css",
-      "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MedicinaESE.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5339"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Uhgy0Jv9a1l1/n3FrGYPD3u2ZCqpptqo8gVWCNDX2o4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 04:33:25 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "qq51duyjuy"
-        },
-        {
-          "Name": "label",
-          "Value": "MedicinaESE.bundle.scp.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Uhgy0Jv9a1l1/n3FrGYPD3u2ZCqpptqo8gVWCNDX2o4="
-        }
-      ]
-    },
-    {
-      "Route": "MedicinaESE.qq51duyjuy.styles.css",
-      "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\obj\\Debug\\net8.0\\scopedcss\\bundle\\MedicinaESE.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5339"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Uhgy0Jv9a1l1/n3FrGYPD3u2ZCqpptqo8gVWCNDX2o4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 04:33:25 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "qq51duyjuy"
-        },
-        {
-          "Name": "label",
-          "Value": "MedicinaESE.styles.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Uhgy0Jv9a1l1/n3FrGYPD3u2ZCqpptqo8gVWCNDX2o4="
+          "Value": "sha256-/2gIELCyk2N0DS5SkgpEWaHv1gQ5wXXSkbhPpZ9RuAs="
         }
       ]
     },
@@ -8644,7 +8644,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5339"
+          "Value": "5864"
         },
         {
           "Name": "Content-Type",
@@ -8652,11 +8652,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Uhgy0Jv9a1l1/n3FrGYPD3u2ZCqpptqo8gVWCNDX2o4=\""
+          "Value": "\"/2gIELCyk2N0DS5SkgpEWaHv1gQ5wXXSkbhPpZ9RuAs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 04:33:25 GMT"
+          "Value": "Thu, 05 Jun 2025 20:58:04 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8666,7 +8666,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Uhgy0Jv9a1l1/n3FrGYPD3u2ZCqpptqo8gVWCNDX2o4="
+          "Value": "sha256-/2gIELCyk2N0DS5SkgpEWaHv1gQ5wXXSkbhPpZ9RuAs="
         }
       ]
     }

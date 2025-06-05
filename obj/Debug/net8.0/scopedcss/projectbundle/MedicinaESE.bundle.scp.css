@@ -58,6 +58,33 @@
   transform: scale(1.08);
 }
 
+/* Estilos para el botón del usuario (cuando haya sesión activa) */
+.btn-user[b-nxicaeq453] {
+  display: flex;
+  align-items: center;
+  background-color: #02C39A !important;
+  border: 3px solid white !important;
+  color: white !important;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 12px 22px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  text-decoration: none;
+}
+
+.btn-user:hover[b-nxicaeq453] {
+  background-color: #00A896 !important;
+  transform: scale(1.08);
+}
+
+
+
+/* Estilos para el nombre del usuario */
+.user-name[b-nxicaeq453] {
+  font-size: 16px;
+}
+
 /* Footer personalizado */
 .footer[b-nxicaeq453] {
   background-color: #028090 !important;
@@ -160,7 +187,7 @@
     top: 8px;
   }
   
-  /* Menú desplegable; se usará el selector :checked para desplegarlo */
+  /* Menú desplegable (se muestra utilizando el hack del checkbox) */
   .menu[b-nxicaeq453] {
     display: none;
     flex-direction: column;
@@ -174,10 +201,9 @@
     background-color: #05668D;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-    z-index: 99; /* Se asegura que el menú quede por encima de todo */
+    z-index: 99;
   }
-  /* Cuando el checkbox esté chequeado, el menú se muestra.
-     (El hack: #menu-toggle:checked ~ .menu) */
+  /* Cuando el checkbox esté chequeado, se muestra el menú */
   #menu-toggle:checked ~ .menu[b-nxicaeq453] {
     display: flex;
   }

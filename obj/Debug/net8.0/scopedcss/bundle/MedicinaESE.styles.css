@@ -40,8 +40,15 @@
   transform: scale(1.05);
 }
 
+
+
 /* Estilos específicos para el botón de inicio de sesión */
+/* Para el botón de login cuando no hay sesión (btn-login) */
 .btn-login[b-nxicaeq453] {
+  display: inline-flex;
+  align-items: center;
+  max-width: 300px;
+  width: auto; /* Se adapta según el contenido */
   background-color: #02C39A !important;
   border: 3px solid white !important;
   color: white !important;
@@ -52,7 +59,28 @@
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
-.btn-login:hover[b-nxicaeq453] {
+/* Para el botón de usuario (cuando hay sesión, btn-user) */
+.btn-user[b-nxicaeq453] {
+  display: inline-flex;
+  align-items: center;
+  max-width: 300px;
+  width: auto;
+  background-color: #02C39A !important;
+  border: 3px solid white !important;
+  color: white !important;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 12px 22px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  text-decoration: none;
+}
+
+
+
+/* Efectos Hover (para ambos botones) */
+.btn-login:hover[b-nxicaeq453],
+.btn-user:hover[b-nxicaeq453] {
   background-color: #00A896 !important;
   border-color: white !important;
   transform: scale(1.08);
@@ -73,9 +101,9 @@
   text-decoration: none;
 }
 
-.btn-user:hover[b-nxicaeq453] {
-  background-color: #00A896 !important;
-  transform: scale(1.08);
+/* Separación entre ícono y texto en el botón de usuario */
+.btn-user img.user-icon[b-nxicaeq453] {
+  margin-right: 8px; /* Ajusta esta cantidad según lo que desees */
 }
 
 
@@ -227,4 +255,25 @@
     align-items: center;
     justify-content: center;
   }
+}
+
+
+/* ----------------------------------------------------- */
+/*  Ajustes específicos para el botón de usuario logueado */
+/* ----------------------------------------------------- */
+
+/* 1) Empuja el bloque .user-session a la extrema derecha */
+.desktop-header .user-session[b-nxicaeq453] {
+  flex: 0 0 auto !important;   /* quita el width:25% de bootstrap */
+  width: auto      !important;  /* que sea ancho según contenido */
+  margin-left: auto!important;  /* deja todo el espacio sobrante a la izquierda */
+}
+
+/* 2) El botón .btn-user se adapta al contenido hasta max 300px */
+.btn-user[b-nxicaeq453] {
+  display: inline-flex  !important;
+  align-items: center   !important;
+  justify-content: center!important;
+  width: auto           !important;
+  max-width: 300px      !important;
 }

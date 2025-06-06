@@ -1,4 +1,185 @@
 ﻿@page
-@model MedicinaESE.Pages.Admin.crear_usuarioModel
+@model MedicinaESE.Pages.Admin.CrearUsuarioModel
 @{
+    ViewData["Title"] = "Crear Usuario";
+}
+
+<div class="container mt-5">
+  <!-- Sección USUARIO -->
+  <div class="card mb-4">
+    <div class="card-header" style="background-color: #028090; color: white;">
+      <h4 class="mb-0 text-center">Datos del Usuario</h4>
+    </div>
+    <div class="card-body">
+      <!-- Documento -->
+      <div class="mb-3">
+        <label for="DocumentoId" class="form-label">Documento</label>
+        <input type="number" class="form-control" id="DocumentoId" name="DocumentoId" asp-for="DocumentoId" required />
+      </div>
+      <!-- Nombre -->
+      <div class="mb-3">
+        <label for="Nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="Nombre" name="Nombre" asp-for="Nombre" required />
+      </div>
+      <!-- Apellido -->
+      <div class="mb-3">
+        <label for="Apellido" class="form-label">Apellido</label>
+        <input type="text" class="form-control" id="Apellido" name="Apellido" asp-for="Apellido" required />
+      </div>
+      <!-- Teléfono (opcional, si se ingresa debe tener entre 8 y 20 caracteres) -->
+      <div class="mb-3">
+        <label for="Telefono" class="form-label">Teléfono</label>
+        <input type="number" class="form-control" id="Telefono" name="Telefono" asp-for="Telefono" minlength="8" maxlength="20" />
+      </div>
+      <!-- Correo -->
+      <div class="mb-3">
+        <label for="Correo" class="form-label">Correo</label>
+        <input type="email" class="form-control" id="Correo" name="Correo" asp-for="Correo" required />
+      </div>
+      <!-- Contraseña -->
+    <div class="mb-3">
+    <label for="Contraseña" class="form-label">Contraseña</label>
+    <div class="input-group">
+        <input type="password" class="form-control" id="Contraseña" name="Contraseña" asp-for="Contraseña" required />
+        <span class="input-group-text" style="cursor:pointer;">
+        <i id="togglePassword" class="fa fa-eye" onclick="togglePasswordVisibility()"></i>
+        </span>
+    </div>
+    </div>
+      <!-- Tipo de Usuario -->
+      <div class="mb-3">
+        <label for="TipoUsuario" class="form-label">Tipo de Usuario</label>
+        <select class="form-select" id="TipoUsuario" name="TipoUsuario" asp-for="TipoUsuario" required onchange="toggleCampos()">
+          <option value="">-- Selecciona un rol --</option>
+          <option value="admin">Administrador</option>
+          <option value="medico">Médico</option>
+          <option value="paciente">Paciente</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sección MEDICO -->
+  <div id="div-medico" class="card mb-4" style="display:none;">
+    <div class="card-header" style="background-color: #028090; color: white;">
+      <h4 class="mb-0 text-center">Información del Médico</h4>
+    </div>
+    <div class="card-body">
+      <!-- Especialidad -->
+      <div class="mb-3">
+        <label for="Especialidad" class="form-label">Especialidad</label>
+        <select class="form-select" id="Especialidad" name="Especialidad" asp-for="Especialidad" onchange="toggleOtraEspecialidad()">
+          <option value="">-- Selecciona una especialidad --</option>
+          <option value="Medico General">Médico General</option>
+          <option value="Odontologo">Odontólogo</option>
+          <option value="Psicologo">Psicólogo</option>
+          <option value="Pediatria">Pediatría</option>
+          <option value="Otro">Otro</option>
+        </select>
+      </div>
+      <div class="mb-3" id="div-otra-especialidad" style="display:none;">
+        <label for="OtraEspecialidad" class="form-label">Otra Especialidad</label>
+        <input type="text" class="form-control" id="OtraEspecialidad" name="OtraEspecialidad" asp-for="OtraEspecialidad" placeholder="Escribe la especialidad" />
+      </div>
+      <!-- Horarios -->
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label for="HorarioInicio" class="form-label">Horario Inicio</label>
+          <input type="time" class="form-control" id="HorarioInicio" name="HorarioInicio" asp-for="HorarioInicio" />
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="HorarioFin" class="form-label">Horario Fin</label>
+          <input type="time" class="form-control" id="HorarioFin" name="HorarioFin" asp-for="HorarioFin" />
+        </div>
+      </div>
+      <!-- Consultorio -->
+      <div class="mb-3">
+        <label for="Consultorio" class="form-label">Consultorio</label>
+        <input type="text" class="form-control" id="Consultorio" name="Consultorio" asp-for="Consultorio" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Sección PACIENTE -->
+  <div id="div-paciente" class="card mb-4" style="display:none;">
+    <div class="card-header" style="background-color: #028090; color: white;">
+      <h4 class="mb-0 text-center">Información del Paciente</h4>
+    </div>
+    <div class="card-body">
+      <!-- Fecha de Nacimiento -->
+      <div class="mb-3">
+        <label for="FechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+        <input type="date" class="form-control" id="FechaNacimiento" name="FechaNacimiento" asp-for="FechaNacimiento" />
+      </div>
+      <!-- Grupo Sanguíneo -->
+      <div class="mb-3">
+        <label for="GrupoSanguineo" class="form-label">Grupo Sanguíneo</label>
+        <select class="form-select" id="GrupoSanguineo" name="GrupoSanguineo" asp-for="GrupoSanguineo">
+          <option value="">-- Selecciona un grupo --</option>
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+        </select>
+      </div>
+      <!-- Estado Civil -->
+      <div class="mb-3">
+        <label for="EstadoCivil" class="form-label">Estado Civil</label>
+        <select class="form-select" id="EstadoCivil" name="EstadoCivil" asp-for="EstadoCivil">
+          <option value="">-- Selecciona un estado civil --</option>
+          <option value="Soltero">Soltero</option>
+          <option value="Casado">Casado</option>
+          <option value="Union Libre">Unión Libre</option>
+          <option value="Viudo">Viudo</option>
+          <option value="Divorciado">Divorciado</option>
+        </select>
+      </div>
+      <!-- Entidad de Salud -->
+      <div class="mb-3">
+        <label for="EntidadSalud" class="form-label">Entidad de Salud</label>
+        <select class="form-select" id="EntidadSalud" name="EntidadSalud" asp-for="EntidadSalud" onchange="toggleOtraEntidad()">
+          <option value="">-- Selecciona una entidad --</option>
+          <option value="Sanitas">Sanitas</option>
+          <option value="Nueva EPS">Nueva EPS</option>
+          <option value="Famisanar">Famisanar</option>
+          <option value="Salud Total">Salud Total</option>
+          <option value="Otro">Otro</option>
+        </select>
+      </div>
+      <div class="mb-3" id="div-otra-entidad" style="display:none;">
+        <label for="OtraEntidadSalud" class="form-label">Otra Entidad de Salud</label>
+        <input type="text" class="form-control" id="OtraEntidadSalud" name="OtraEntidadSalud" asp-for="OtraEntidadSalud" placeholder="Escribe el nombre de la entidad" />
+      </div>
+      <!-- Estado (Activo/Inactivo) -->
+      <div class="mb-3">
+        <label for="Estado" class="form-label">Estado</label>
+        <select class="form-select" id="Estado" name="Estado" asp-for="Estado">
+          <option value="Activo">Activo</option>
+          <option value="Inactivo">Inactivo</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sección CONFIRMACIÓN -->
+  <div class="card mb-4">
+    <div class="card-header" style="background-color: #028090; color: white;">
+      <h4 class="mb-0 text-center">Confirmación</h4>
+    </div>
+    <div class="card-body">
+      <div class="d-flex justify-content-around">
+        <button type="button" class="btn action-back" style="width:40%;">Cancelar</button>
+        <button type="submit" class="btn action-save" style="width:40%; background-color: #02C39A; color: white;">Confirmar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/admin.js" asp-append-version="true"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 }

@@ -17,8 +17,14 @@
                            placeholder="Documento de identidad" required min="1000" style="border-color: #02c39a; font-size: 1rem;">
                 </div>
                 <div class="mb-4">
-                    <input type="password" class="form-control w-85 mx-auto py-3" id="password" name="Contraseña"
-                           placeholder="Contraseña" required minlength="8" style="border-color: #02c39a; font-size: 1rem;">
+                    <!-- Campo de contraseña con ícono de toggle -->
+                    <div class="input-group w-85 mx-auto">
+                        <input type="password" class="form-control py-3" id="password" name="Contraseña"
+                               placeholder="Contraseña" required minlength="8" style="border-color: #02c39a; font-size: 1rem;">
+                        <span class="input-group-text" style="cursor:pointer;">
+                            <i id="togglePassword" class="fa fa-eye" onclick="togglePasswordVisibility()"></i>
+                        </span>
+                    </div>
                 </div>
 
                 @if (TempData["IntentosRestantes"] is int intentos && intentos <= 5 && intentos > 0)
@@ -33,47 +39,12 @@
     </div>
 </div>
 
-
-
+<!-- Contenedor oculto para pasar datos del servidor -->
+<div id="loginScriptData" data-mensaje="@TempData["Mensaje"]" data-redireccion="@TempData["Redireccion"]" style="display: none;"></div>
 
 @section Scripts {
+    <!-- Asegúrate de incluir SweetAlert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
-        const mensaje = '@(TempData["Mensaje"] ?? "")';
-        const redireccion = '@(TempData["Redireccion"] ?? "")';
-
-        if (mensaje === "success") {
-            Swal.fire({
-                title: '¡Acceso permitido!',
-                text: 'Bienvenido al sistema.',
-                icon: 'success',
-                confirmButtonText: 'Aceptar'
-            }).then(() => {
-                window.location.href = redireccion;
-            });
-        } else if (mensaje === "usuarioNoEncontrado") {
-            Swal.fire({
-                title: 'Usuario no encontrado',
-                text: 'No hay un usuario registrado con ese documento.',
-                icon: 'question',
-                confirmButtonText: 'Reintentar'
-            });
-        } else if (mensaje === "contraIncorrecta") {
-            Swal.fire({
-                title: 'Contraseña incorrecta',
-                text: 'La contraseña ingresada no es correcta.',
-                icon: 'error',
-                confirmButtonText: 'Intentar de nuevo'
-            });
-        } else if (mensaje === "bloqueado") {
-            Swal.fire({
-                title: 'Demasiados intentos',
-                text: 'Has superado el límite de intentos fallidos. Intenta más tarde.',
-                icon: 'warning',
-                confirmButtonText: 'Aceptar'
-            }).then(() => {
-                window.location.href = "/ErrorBD";
-            });
-        }
-    </script>
+    <!-- Incluye el JS para el login -->
+    <script src="~/js/login.js" asp-append-version="true"></script>
 }

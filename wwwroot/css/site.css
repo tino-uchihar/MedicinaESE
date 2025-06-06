@@ -543,3 +543,31 @@ html, body {
    background-color: #E65100;
  }
  
+
+
+
+
+
+ /* Estilo para el mensaje de acceso denegado */
+.mensaje-acceso {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(220, 53, 69, 0.9); /* Rojo con transparencia */
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 9999;
+  text-align: center;
+  animation: fadeOut 3s ease-in-out 3s forwards;
+}
+
+/* Animación para desaparecer el mensaje después de 3s */
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; visibility: hidden; }
+}

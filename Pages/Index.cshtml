@@ -4,6 +4,14 @@
     ViewData["Title"] = "Inicio";
 }
 
+@if (TempData["MensajeError"] != null)
+{
+    <div id="mensaje-acceso-denegado" class="mensaje-acceso">
+        Acceso denegado
+    </div>
+}
+
+
 <!-- Contenedor principal -->
 <div class="main-content">
     <!-- Caja azul con la imagen -->
@@ -133,3 +141,5 @@
     console.log("Noticias cargadas desde Razor:", window.noticiasJson);
 </script>
 <script src="~/js/noticias.js"></script>
+<script src="~/js/index.js" asp-append-version="true"></script>
+

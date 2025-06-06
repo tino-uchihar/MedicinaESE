@@ -5,8 +5,14 @@ namespace Medicinaese.Pages
 {
     public class admin_mainModel : PageModel
     {
-        public void OnGet()
+        public IActionResult OnGet()
         {
+            if (User?.Identity?.IsAuthenticated != true)
+            {
+                TempData["MensajeError"] = "Acceso denegado";
+                return RedirectToPage("/Index");
+            }
+            return Page();
         }
     }
 }

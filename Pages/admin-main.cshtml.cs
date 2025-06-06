@@ -1,17 +1,14 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Medicinaese.Pages
+namespace MedicinaESE.Pages
 {
+    [Authorize(Policy = "RequireAdmin")]
     public class admin_mainModel : PageModel
     {
         public IActionResult OnGet()
         {
-            if (User?.Identity?.IsAuthenticated != true)
-            {
-                TempData["MensajeError"] = "Acceso denegado";
-                return RedirectToPage("/Index");
-            }
             return Page();
         }
     }

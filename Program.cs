@@ -2,7 +2,9 @@ using MedicinaESE.Services;
 using Microsoft.Data.SqlClient;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.IdentityModel.Tokens;
+
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,6 +18,40 @@ builder.Services.AddSingleton(_ => new SqlConnection(connectionString));
 
 // Registrar Razor Pages para que la aplicación funcione con páginas dinámicas
 builder.Services.AddRazorPages();
+
+// ----------------------
+// REGISTRO DE POLÍTICAS Y CONVENCIAS PARA AUTORIZACIÓN
+// ----------------------
+// Establece convenciones para que las carpetas se protejan de forma centralizada:
+builder.Services.Configure<RazorPagesOptions>(options =>
+{
+    // Solo los usuarios con el claim UsuarioTipo = "admin" podrán acceder a /Admin
+    options.Conventions.AuthorizeFolder("/Admin", "RequireAdmin");
+    // Para /Medico se permite a usuarios con UsuarioTipo "medico" o "admin"
+    options.Conventions.AuthorizeFolder("/Medico", "RequireMedico");
+    // Para /Paciente se permite a usuarios con UsuarioTipo "paciente", "medico" o "admin"
+    options.Conventions.AuthorizeFolder("/Paciente", "RequirePaciente");
+});
+
+// Registrar las políticas de autorización basadas en "UsuarioTipo"
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("RequireAdmin", policy =>
+    {
+        policy.RequireClaim("UsuarioTipo", "admin");
+    });
+    options.AddPolicy("RequireMedico", policy =>
+    {
+        policy.RequireClaim("UsuarioTipo", "medico", "admin");
+    });
+    options.AddPolicy("RequirePaciente", policy =>
+    {
+        policy.RequireClaim("UsuarioTipo", "paciente", "medico", "admin");
+    });
+});
+// ----------------------
+// FIN DEL BLOQUE DE POLÍTICAS Y CONVENCIAS
+// ----------------------
 
 // Registrar el servicio de Noticias
 builder.Services.AddSingleton<NoticiaService>(provider => new NoticiaService(connectionString));

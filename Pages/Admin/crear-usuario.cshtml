@@ -2,6 +2,21 @@
 @model MedicinaESE.Pages.Admin.CrearUsuarioModel
 @{
     ViewData["Title"] = "Crear Usuario";
+
+    // Usaremos TempData para mostrar un mensaje temporal
+    var mensaje = TempData["Mensaje"] as string;
+    var cssClass = "";
+    if (!string.IsNullOrEmpty(mensaje))
+    {
+        cssClass = mensaje.Contains("Se ha creado") ? "alert-success" : "alert-danger";
+    }
+}
+
+@if (!string.IsNullOrEmpty(mensaje))
+{
+    <div id="temp-message" class="alert @cssClass" role="alert" style="position: fixed; top: 10px; left: 50%; transform: translateX(-50%); z-index: 9999; width: auto; padding: 15px;">
+        @mensaje
+    </div>
 }
 
 <form method="post">
@@ -15,47 +30,54 @@
         <!-- Documento -->
         <div class="mb-3">
           <label for="DocumentoId" class="form-label">Documento</label>
-          <input type="number" class="form-control" id="DocumentoId" name="DocumentoId" asp-for="DocumentoId" required />
+          <input type="number" class="form-control @(ViewData.ModelState["DocumentoId"]?.Errors.Any() == true ? "is-invalid" : "")" id="DocumentoId" name="DocumentoId" asp-for="DocumentoId" required />
+          <span asp-validation-for="DocumentoId" class="text-danger"></span>
         </div>
         <!-- Nombre -->
         <div class="mb-3">
           <label for="Nombre" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="Nombre" name="Nombre" asp-for="Nombre" required />
+          <input type="text" class="form-control @(ViewData.ModelState["Nombre"]?.Errors.Any() == true ? "is-invalid" : "")" id="Nombre" name="Nombre" asp-for="Nombre" required />
+          <span asp-validation-for="Nombre" class="text-danger"></span>
         </div>
         <!-- Apellido -->
         <div class="mb-3">
           <label for="Apellido" class="form-label">Apellido</label>
-          <input type="text" class="form-control" id="Apellido" name="Apellido" asp-for="Apellido" required />
+          <input type="text" class="form-control @(ViewData.ModelState["Apellido"]?.Errors.Any() == true ? "is-invalid" : "")" id="Apellido" name="Apellido" asp-for="Apellido" required />
+          <span asp-validation-for="Apellido" class="text-danger"></span>
         </div>
-        <!-- Teléfono (opcional, si se ingresa debe tener entre 8 y 20 caracteres) -->
+        <!-- Teléfono -->
         <div class="mb-3">
           <label for="Telefono" class="form-label">Teléfono</label>
-          <input type="number" class="form-control" id="Telefono" name="Telefono" asp-for="Telefono" minlength="8" maxlength="20" />
+          <input type="number" class="form-control @(ViewData.ModelState["Telefono"]?.Errors.Any() == true ? "is-invalid" : "")" id="Telefono" name="Telefono" asp-for="Telefono" minlength="8" maxlength="20" />
+          <span asp-validation-for="Telefono" class="text-danger"></span>
         </div>
         <!-- Correo -->
         <div class="mb-3">
           <label for="Correo" class="form-label">Correo</label>
-          <input type="email" class="form-control" id="Correo" name="Correo" asp-for="Correo" required />
+          <input type="email" class="form-control @(ViewData.ModelState["Correo"]?.Errors.Any() == true ? "is-invalid" : "")" id="Correo" name="Correo" asp-for="Correo" required />
+          <span asp-validation-for="Correo" class="text-danger"></span>
         </div>
         <!-- Contraseña -->
-      <div class="mb-3">
-      <label for="Contraseña" class="form-label">Contraseña</label>
-      <div class="input-group">
-          <input type="password" class="form-control" id="Contraseña" name="Contraseña" asp-for="Contraseña" required />
-          <span class="input-group-text" style="cursor:pointer;">
-          <i id="togglePassword" class="fa fa-eye" onclick="togglePasswordVisibility()"></i>
-          </span>
-      </div>
-      </div>
+        <div class="mb-3">
+          <label for="Contraseña" class="form-label">Contraseña</label>
+          <div class="input-group">
+            <input type="password" class="form-control @(ViewData.ModelState["Contraseña"]?.Errors.Any() == true ? "is-invalid" : "")" id="Contraseña" name="Contraseña" asp-for="Contraseña" required />
+            <span class="input-group-text" style="cursor:pointer;">
+              <i id="togglePassword" class="fa fa-eye" onclick="togglePasswordVisibility()"></i>
+            </span>
+          </div>
+          <span asp-validation-for="Contraseña" class="text-danger"></span>
+        </div>
         <!-- Tipo de Usuario -->
         <div class="mb-3">
           <label for="TipoUsuario" class="form-label">Tipo de Usuario</label>
-          <select class="form-select" id="TipoUsuario" name="TipoUsuario" asp-for="TipoUsuario" required onchange="toggleCampos()">
+          <select class="form-select @(ViewData.ModelState["TipoUsuario"]?.Errors.Any() == true ? "is-invalid" : "")" id="TipoUsuario" name="TipoUsuario" asp-for="TipoUsuario" required onchange="toggleCampos()">
             <option value="">-- Selecciona un rol --</option>
             <option value="admin">Administrador</option>
             <option value="medico">Médico</option>
             <option value="paciente">Paciente</option>
           </select>
+          <span asp-validation-for="TipoUsuario" class="text-danger"></span>
         </div>
       </div>
     </div>
@@ -69,7 +91,7 @@
         <!-- Especialidad -->
         <div class="mb-3">
           <label for="Especialidad" class="form-label">Especialidad</label>
-          <select class="form-select" id="Especialidad" name="Especialidad" asp-for="Especialidad" onchange="toggleOtraEspecialidad()">
+          <select class="form-select @(ViewData.ModelState["Especialidad"]?.Errors.Any() == true ? "is-invalid" : "")" id="Especialidad" name="Especialidad" asp-for="Especialidad" onchange="toggleOtraEspecialidad()">
             <option value="">-- Selecciona una especialidad --</option>
             <option value="Medico General">Médico General</option>
             <option value="Odontologo">Odontólogo</option>
@@ -77,26 +99,31 @@
             <option value="Pediatria">Pediatría</option>
             <option value="Otro">Otro</option>
           </select>
+          <span asp-validation-for="Especialidad" class="text-danger"></span>
         </div>
         <div class="mb-3" id="div-otra-especialidad" style="display:none;">
           <label for="OtraEspecialidad" class="form-label">Otra Especialidad</label>
-          <input type="text" class="form-control" id="OtraEspecialidad" name="OtraEspecialidad" asp-for="OtraEspecialidad" placeholder="Escribe la especialidad" />
+          <input type="text" class="form-control @(ViewData.ModelState["OtraEspecialidad"]?.Errors.Any() == true ? "is-invalid" : "")" id="OtraEspecialidad" name="OtraEspecialidad" asp-for="OtraEspecialidad" placeholder="Escribe la especialidad" />
+          <span asp-validation-for="OtraEspecialidad" class="text-danger"></span>
         </div>
         <!-- Horarios -->
         <div class="row">
           <div class="col-md-6 mb-3">
             <label for="HorarioInicio" class="form-label">Horario Inicio</label>
-            <input type="time" class="form-control" id="HorarioInicio" name="HorarioInicio" asp-for="HorarioInicio" />
+            <input type="time" class="form-control @(ViewData.ModelState["HorarioInicio"]?.Errors.Any() == true ? "is-invalid" : "")" id="HorarioInicio" name="HorarioInicio" asp-for="HorarioInicio" />
+            <span asp-validation-for="HorarioInicio" class="text-danger"></span>
           </div>
           <div class="col-md-6 mb-3">
             <label for="HorarioFin" class="form-label">Horario Fin</label>
-            <input type="time" class="form-control" id="HorarioFin" name="HorarioFin" asp-for="HorarioFin" />
+            <input type="time" class="form-control @(ViewData.ModelState["HorarioFin"]?.Errors.Any() == true ? "is-invalid" : "")" id="HorarioFin" name="HorarioFin" asp-for="HorarioFin" />
+            <span asp-validation-for="HorarioFin" class="text-danger"></span>
           </div>
         </div>
         <!-- Consultorio -->
         <div class="mb-3">
           <label for="Consultorio" class="form-label">Consultorio</label>
-          <input type="text" class="form-control" id="Consultorio" name="Consultorio" asp-for="Consultorio" />
+          <input type="text" class="form-control @(ViewData.ModelState["Consultorio"]?.Errors.Any() == true ? "is-invalid" : "")" id="Consultorio" name="Consultorio" asp-for="Consultorio" />
+          <span asp-validation-for="Consultorio" class="text-danger"></span>
         </div>
       </div>
     </div>
@@ -110,12 +137,13 @@
         <!-- Fecha de Nacimiento -->
         <div class="mb-3">
           <label for="FechaNacimiento" class="form-label">Fecha de Nacimiento</label>
-          <input type="date" class="form-control" id="FechaNacimiento" name="FechaNacimiento" asp-for="FechaNacimiento" />
+          <input type="date" class="form-control @(ViewData.ModelState["FechaNacimiento"]?.Errors.Any() == true ? "is-invalid" : "")" id="FechaNacimiento" name="FechaNacimiento" asp-for="FechaNacimiento" />
+          <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
         </div>
         <!-- Grupo Sanguíneo -->
         <div class="mb-3">
           <label for="GrupoSanguineo" class="form-label">Grupo Sanguíneo</label>
-          <select class="form-select" id="GrupoSanguineo" name="GrupoSanguineo" asp-for="GrupoSanguineo">
+          <select class="form-select @(ViewData.ModelState["GrupoSanguineo"]?.Errors.Any() == true ? "is-invalid" : "")" id="GrupoSanguineo" name="GrupoSanguineo" asp-for="GrupoSanguineo">
             <option value="">-- Selecciona un grupo --</option>
             <option value="A+">A+</option>
             <option value="A-">A-</option>
@@ -126,11 +154,12 @@
             <option value="O+">O+</option>
             <option value="O-">O-</option>
           </select>
+          <span asp-validation-for="GrupoSanguineo" class="text-danger"></span>
         </div>
         <!-- Estado Civil -->
         <div class="mb-3">
           <label for="EstadoCivil" class="form-label">Estado Civil</label>
-          <select class="form-select" id="EstadoCivil" name="EstadoCivil" asp-for="EstadoCivil">
+          <select class="form-select @(ViewData.ModelState["EstadoCivil"]?.Errors.Any() == true ? "is-invalid" : "")" id="EstadoCivil" name="EstadoCivil" asp-for="EstadoCivil">
             <option value="">-- Selecciona un estado civil --</option>
             <option value="Soltero">Soltero</option>
             <option value="Casado">Casado</option>
@@ -138,11 +167,12 @@
             <option value="Viudo">Viudo</option>
             <option value="Divorciado">Divorciado</option>
           </select>
+          <span asp-validation-for="EstadoCivil" class="text-danger"></span>
         </div>
         <!-- Entidad de Salud -->
         <div class="mb-3">
           <label for="EntidadSalud" class="form-label">Entidad de Salud</label>
-          <select class="form-select" id="EntidadSalud" name="EntidadSalud" asp-for="EntidadSalud" onchange="toggleOtraEntidad()">
+          <select class="form-select @(ViewData.ModelState["EntidadSalud"]?.Errors.Any() == true ? "is-invalid" : "")" id="EntidadSalud" name="EntidadSalud" asp-for="EntidadSalud" onchange="toggleOtraEntidad()">
             <option value="">-- Selecciona una entidad --</option>
             <option value="Sanitas">Sanitas</option>
             <option value="Nueva EPS">Nueva EPS</option>
@@ -150,18 +180,21 @@
             <option value="Salud Total">Salud Total</option>
             <option value="Otro">Otro</option>
           </select>
+          <span asp-validation-for="EntidadSalud" class="text-danger"></span>
         </div>
         <div class="mb-3" id="div-otra-entidad" style="display:none;">
           <label for="OtraEntidadSalud" class="form-label">Otra Entidad de Salud</label>
-          <input type="text" class="form-control" id="OtraEntidadSalud" name="OtraEntidadSalud" asp-for="OtraEntidadSalud" placeholder="Escribe el nombre de la entidad" />
+          <input type="text" class="form-control @(ViewData.ModelState["OtraEntidadSalud"]?.Errors.Any() == true ? "is-invalid" : "")" id="OtraEntidadSalud" name="OtraEntidadSalud" asp-for="OtraEntidadSalud" placeholder="Escribe el nombre de la entidad" />
+          <span asp-validation-for="OtraEntidadSalud" class="text-danger"></span>
         </div>
         <!-- Estado (Activo/Inactivo) -->
         <div class="mb-3">
           <label for="Estado" class="form-label">Estado</label>
-          <select class="form-select" id="Estado" name="Estado" asp-for="Estado">
+          <select class="form-select @(ViewData.ModelState["Estado"]?.Errors.Any() == true ? "is-invalid" : "")" id="Estado" name="Estado" asp-for="Estado">
             <option value="Activo">Activo</option>
             <option value="Inactivo">Inactivo</option>
           </select>
+          <span asp-validation-for="Estado" class="text-danger"></span>
         </div>
       </div>
     </div>
@@ -182,6 +215,25 @@
 </form>
 
 @section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var tempMessage = document.getElementById("temp-message");
+            if (tempMessage) {
+                setTimeout(function () {
+                    tempMessage.style.display = "none";
+                }, 3000); // 3000ms = 3 segundos
+            }
+        });
+        // Remover la clase "is-invalid" cuando se modifique el campo.
+        document.querySelectorAll('.form-control').forEach(input => {
+            input.addEventListener("input", function () {
+                this.classList.remove("is-invalid");
+            });
+        });
+    </script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate.unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
     <script src="~/js/admin.js" asp-append-version="true"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 }

@@ -19,6 +19,7 @@ function confirmLogout() {
 
 
 document.addEventListener('DOMContentLoaded', function() {
+
     // Función para mostrar u ocultar secciones según el rol seleccionado.
     window.toggleCampos = function () {
         var tipo = document.getElementById("TipoUsuario").value;
@@ -36,6 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
             divPaciente.style.display = "none";
         }
     };
+
+    // Ejecuta toggleCampos al cargar la página
+    toggleCampos();
 
     // Función para gestionar la opción "Otro" en especialidad.
     window.toggleOtraEspecialidad = function () {
@@ -96,13 +100,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
-    }    
+    }
 });
 
 
 
 
-
+// Función para alternar la visibilidad del campo de contraseña.
 window.togglePasswordVisibility = function () {
     var passwordInput = document.getElementById("Contraseña");
     var toggleIcon = document.getElementById("togglePassword");

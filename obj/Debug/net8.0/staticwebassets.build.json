@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Fd8lHWnC2rU2DNFd3jqa3uCZI60SfTKcmB3wn5Stapg=",
+  "Hash": "maf6W/GEnZPIrm9CozcsrUQto9QXscsCRle422ZqzfU=",
   "Source": "MedicinaESE",
   "BasePath": "_content/MedicinaESE",
   "Mode": "Default",
@@ -556,8 +556,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "yudfpllyj0",
-      "Integrity": "Fg+RchpwiPij+HD3uovh1wutKywUF+Cr4Z4oeIv71n4=",
+      "Fingerprint": "hmtcpkfeuq",
+      "Integrity": "B+Yx09+uBNKpxUY+f0XNAuoOvXctvliprIKDiEymmC4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\admin.js"
@@ -3732,6 +3732,51 @@
       ]
     },
     {
+      "Route": "js/admin.hmtcpkfeuq.js",
+      "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\js\\admin.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4391"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"B+Yx09+uBNKpxUY+f0XNAuoOvXctvliprIKDiEymmC4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Jun 2025 17:54:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hmtcpkfeuq"
+        },
+        {
+          "Name": "label",
+          "Value": "js/admin.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-B+Yx09+uBNKpxUY+f0XNAuoOvXctvliprIKDiEymmC4="
+        }
+      ]
+    },
+    {
       "Route": "js/admin.js",
       "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\js\\admin.js",
       "Selectors": [],
@@ -3742,7 +3787,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4254"
+          "Value": "4391"
         },
         {
           "Name": "Content-Type",
@@ -3750,11 +3795,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Fg+RchpwiPij+HD3uovh1wutKywUF+Cr4Z4oeIv71n4=\""
+          "Value": "\"B+Yx09+uBNKpxUY+f0XNAuoOvXctvliprIKDiEymmC4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 07 Jun 2025 05:04:37 GMT"
+          "Value": "Sat, 07 Jun 2025 17:54:11 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3764,52 +3809,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Fg+RchpwiPij+HD3uovh1wutKywUF+Cr4Z4oeIv71n4="
-        }
-      ]
-    },
-    {
-      "Route": "js/admin.yudfpllyj0.js",
-      "AssetFile": "C:\\Cosas y weas varias\\Programas\\Programeishon\\CiSharp\\MedicinaESE\\wwwroot\\js\\admin.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4254"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Fg+RchpwiPij+HD3uovh1wutKywUF+Cr4Z4oeIv71n4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 07 Jun 2025 05:04:37 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "yudfpllyj0"
-        },
-        {
-          "Name": "label",
-          "Value": "js/admin.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Fg+RchpwiPij+HD3uovh1wutKywUF+Cr4Z4oeIv71n4="
+          "Value": "sha256-B+Yx09+uBNKpxUY+f0XNAuoOvXctvliprIKDiEymmC4="
         }
       ]
     },

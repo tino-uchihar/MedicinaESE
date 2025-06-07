@@ -6,16 +6,17 @@
 
 <div class="admin-container">
     <h1 class="admin-title">Lista de Usuarios</h1>
-    
+
     <div class="table-container">
         <table class="users-table">
             <thead>
                 <tr>
-                    <th><input type="checkbox" id="selectAll"></th>
-                    <th class="sortable" data-column="DocumentoId">ID</th>
-                    <th class="sortable" data-column="Nombre">Nombre</th>
-                    <th class="sortable" data-column="Correo">Correo</th>
-                    <th class="sortable" data-column="TipoUsuario">Tipo de Usuario</th>
+                    <th><input type="checkbox" id="selectAll" /></th>
+                    <th class="sortable" data-column="1">ID</th>
+                    <th class="sortable" data-column="2">Nombre</th>
+                    <th class="sortable" data-column="3">Correo</th>
+                    <th class="sortable" data-column="4">Teléfono</th>
+                    <th class="sortable" data-column="5">Tipo de Usuario</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
@@ -23,10 +24,11 @@
                 @foreach (var usuario in Model.Usuarios)
                 {
                     <tr>
-                        <td><input type="checkbox" class="select-user"></td>
+                        <td><input type="checkbox" class="select-user" /></td>
                         <td>@usuario.DocumentoId</td>
                         <td>@usuario.Nombre</td>
                         <td>@usuario.Correo</td>
+                        <td>@(string.IsNullOrWhiteSpace(usuario.Telefono) ? "-" : usuario.Telefono)</td>
                         <td>@usuario.TipoUsuario</td>
                         <td>
                             <button class="edit-btn">Editar</button>
@@ -48,23 +50,36 @@
 
 @section Scripts {
     <script>
+        // Actualiza la página
         document.getElementById("refreshPage").addEventListener("click", () => location.reload());
-        document.getElementById("selectAll").addEventListener("change", function() {
+
+        // Seleccionar/desseleccionar todos los checkboxes
+        document.getElementById("selectAll").addEventListener("change", function () {
             document.querySelectorAll(".select-user").forEach(checkbox => checkbox.checked = this.checked);
         });
 
+        // Agregar eventos para que los encabezados ordenables ordenen la tabla.
         document.querySelectorAll(".sortable").forEach(header => {
-            header.addEventListener("click", function() {
-                const column = this.getAttribute("data-column");
-                sortTable(column);
+            header.addEventListener("click", function () {
+                const colIndex = parseInt(this.getAttribute("data-column"));
+                sortTable(colIndex);
             });
         });
 
-        function sortTable(column) {
-            const rows = Array.from(document.querySelector("#userTableBody").rows);
-            rows.sort((a, b) => a.cells[column].innerText.localeCompare(b.cells[column].innerText));
-            document.querySelector("#userTableBody").innerHTML = "";
-            rows.forEach(row => document.querySelector("#userTableBody").appendChild(row));
+        function sortTable(colIndex) {
+            const tbody = document.getElementById("userTableBody");
+            const rows = Array.from(tbody.rows);
+            rows.sort((a, b) => {
+                const cellA = a.cells[colIndex].innerText.trim();
+                const cellB = b.cells[colIndex].innerText.trim();
+                return cellA.localeCompare(cellB, undefined, { numeric: true });
+            });
+            tbody.innerHTML = "";
+            rows.forEach(row => tbody.appendChild(row));
         }
     </script>
+    <!-- Scripts de jQuery para validación (si fuera necesario para extender la funcionalidad) -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate.unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
 }

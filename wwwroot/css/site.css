@@ -606,3 +606,21 @@ html, body {
   border-radius: 8px;
   margin-top: 20px;
 }
+
+
+/* Asegura que la celda de acciones tenga poco padding y no rompa la línea */
+td.actions-cell {
+  padding: 4px;             /* Ajusta según necesites */
+  white-space: nowrap;      /* Evita que se salten de línea */
+  text-align: center;       /* Centra el contenido */
+}
+
+/* Estilo para el botón de editar */
+td.actions-cell button.edit-btn {
+  margin-right: 2px;        /* Margen derecho para separar de delete */
+}
+
+/* Opcional: Ajusta el tamaño de los iconos si fuera necesario */
+td.actions-cell i {
+  font-size: 1rem;          /* Por defecto */
+}

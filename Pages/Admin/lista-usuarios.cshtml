@@ -50,13 +50,13 @@
                         <td>@usuario.Correo</td>
                         <td>@(string.IsNullOrWhiteSpace(usuario.Telefono) ? "-" : usuario.Telefono)</td>
                         <td>@usuario.TipoUsuario</td>
-                        <td>
-                            <button class="edit-btn" title="Editar">
-                                <i class="fas fa-pencil-alt"></i>
-                            </button>
-                            <button class="delete-btn" title="Eliminar">
-                                <i class="fas fa-trash-alt"></i>
-                            </button>
+                        <td class="actions-cell">
+                        <button class="edit-btn" title="Editar">
+                            <i class="fas fa-pencil-alt"></i>
+                        </button>
+                        <button class="delete-btn" title="Eliminar">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
                         </td>
                     </tr>
                 }
@@ -80,10 +80,10 @@
 
     <!-- Acciones -->
     <div class="admin-actions mx-auto" style="max-width:900px;">
+        <button onclick="window.location.href='../admin-main'" class="action-btn action-back">Volver</button>
         <button id="refreshPage" class="action-btn me-2">Refrescar</button>
         <button id="undoChanges" class="action-btn me-2">Deshacer cambios</button>
         <button id="saveChanges" class="action-btn action-save me-2">Guardar todo</button>
-        <button onclick="window.location.href='../admin-main'" class="action-btn action-back">Volver</button>
     </div>
 </div>
 

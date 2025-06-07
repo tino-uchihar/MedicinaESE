@@ -10,9 +10,9 @@ namespace MedicinaESE.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options) { }
 
-        public DbSet<Usuario>  Usuarios  { get; set; }
-        public DbSet<Medico>   Medicos   { get; set; }
-        public DbSet<Paciente> Pacientes { get; set; }
+        public DbSet<Usuario>  Usuarios  { get; set; } = default!;
+        public DbSet<Medico>   Medicos   { get; set; } = default!;
+        public DbSet<Paciente> Pacientes { get; set; } = default!;
         public DbSet<Noticia>  Noticias  { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)

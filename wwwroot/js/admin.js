@@ -22,44 +22,47 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Función para mostrar u ocultar secciones según el rol seleccionado.
     window.toggleCampos = function () {
-        var tipo = document.getElementById("TipoUsuario").value;
+        var tipoElem = document.getElementById("TipoUsuario");
+        if (!tipoElem) return; // Si no existe, salimos de la función
+    
+        var tipo = tipoElem.value;
         var divMedico = document.getElementById("div-medico");
         var divPaciente = document.getElementById("div-paciente");
-
+    
         if (tipo === "admin" || tipo === "medico") {
-            divMedico.style.display = "block";
-            divPaciente.style.display = "block";
+            if (divMedico) divMedico.style.display = "block";
+            if (divPaciente) divPaciente.style.display = "block";
         } else if (tipo === "paciente") {
-            divMedico.style.display = "none";
-            divPaciente.style.display = "block";
+            if (divMedico) divMedico.style.display = "none";
+            if (divPaciente) divPaciente.style.display = "block";
         } else {
-            divMedico.style.display = "none";
-            divPaciente.style.display = "none";
+            if (divMedico) divMedico.style.display = "none";
+            if (divPaciente) divPaciente.style.display = "none";
         }
     };
-
+    
     // Ejecuta toggleCampos al cargar la página
     toggleCampos();
 
     // Función para gestionar la opción "Otro" en especialidad.
     window.toggleOtraEspecialidad = function () {
-        var especialidad = document.getElementById("Especialidad").value;
+        var especialidadElem = document.getElementById("Especialidad");
+        if (!especialidadElem) return;
+        var especialidad = especialidadElem.value;
         var divOtra = document.getElementById("div-otra-especialidad");
-        if (especialidad === "Otro") {
-            divOtra.style.display = "block";
-        } else {
-            divOtra.style.display = "none";
+        if (divOtra) {
+            divOtra.style.display = (especialidad === "Otro") ? "block" : "none";
         }
     };
 
     // Función para gestionar la opción "Otro" en entidad de salud.
     window.toggleOtraEntidad = function () {
-        var entidad = document.getElementById("EntidadSalud").value;
+        var entidadElem = document.getElementById("EntidadSalud");
+        if (!entidadElem) return;
+        var entidad = entidadElem.value;
         var divOtra = document.getElementById("div-otra-entidad");
-        if (entidad === "Otro") {
-            divOtra.style.display = "block";
-        } else {
-            divOtra.style.display = "none";
+        if (divOtra) {
+            divOtra.style.display = (entidad === "Otro") ? "block" : "none";
         }
     };
 
@@ -103,10 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-
-
-
-// Función para alternar la visibilidad del campo de contraseña.
+// Función para alternar la visibilidad del campo de contraseña (modo creación o edición).
 window.togglePasswordVisibility = function () {
     var passwordInput = document.getElementById("Contraseña");
     var toggleIcon = document.getElementById("togglePassword");
@@ -120,3 +120,87 @@ window.togglePasswordVisibility = function () {
         toggleIcon.classList.add("fa-eye");
     }
 };
+
+
+
+
+// Función para alternar la visibilidad del campo de contraseña en modo edición.
+function toggleEditPasswordVisibility() {
+    var passwordInput = document.getElementById("editContraseña");
+    if (!passwordInput) return;
+    passwordInput.type = (passwordInput.type === "password") ? "text" : "password";
+}
+
+// Función para restablecer el valor original del campo usando su atributo data-original.
+function resetField(fieldId) {
+    var field = document.getElementById(fieldId);
+    if (field && field.dataset.original) {
+        field.value = field.dataset.original;
+    }
+}
+
+// Función para invocar la edición del usuario mediante Fetch, cargando el partial view renderizado.
+function editUser(documentoId) {
+    fetch(`/Admin/editar-usuario?documentoId=${documentoId}`)
+        .then(response => {
+            if (!response.ok) {
+                // Mostrar un mensaje minimalista en caso de error 404.
+                Swal.fire({
+                    title: "Error",
+                    text: "No se encontró el usuario.",
+                    icon: "error",
+                    confirmButtonText: "Aceptar"
+                });
+                throw new Error("Error al obtener información del usuario");
+            }
+            return response.text();
+        })
+        .then(html => {
+            // Inyecta el HTML del partial view en el contenedor con id "editSection"
+            var container = document.getElementById("editSection");
+            if (container) {
+                container.innerHTML = html;
+            }
+            // Opcionalmente, resalta la fila del usuario editado en la lista.
+            resaltarFila(documentoId);
+        })
+        .catch(error => console.error("Error:", error));
+}
+
+// Función para resaltar la fila de usuario editada en la lista.
+function resaltarFila(documentoId) {
+    const rows = document.querySelectorAll("#userTableBody tr.userRow");
+    rows.forEach(row => {
+        if (row.cells[1].innerText.trim() === documentoId) {
+            row.classList.add("editing");
+        } else {
+            row.classList.remove("editing");
+        }
+    });
+}
+
+// Función para cancelar la edición (oculta el partial view y quita el resaltado).
+function cancelEditing() {
+    var container = document.getElementById("editSection");
+    if (container) {
+        container.innerHTML = "";
+    }
+    document.querySelectorAll("#userTableBody tr.userRow")
+        .forEach(row => row.classList.remove("editing"));
+}
+
+// Función para confirmar la edición (placeholder; aquí se acumularían o guardarían cambios).
+function confirmEditing() {
+    Swal.fire({
+        title: "¿Confirmar edición?",
+        text: "Los cambios se acumularán hasta que se haga clic en 'Guardar todo'.",
+        icon: "question",
+        showCancelButton: true,
+        confirmButtonText: "Sí, confirmar",
+        cancelButtonText: "Cancelar"
+    }).then((result) => {
+        if (result.isConfirmed) {
+            cancelEditing();
+        }
+    });
+}

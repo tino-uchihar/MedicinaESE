@@ -23,6 +23,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 // Registrar Razor Pages para que la aplicación funcione con páginas dinámicas
 builder.Services.AddRazorPages();
 
+// Registrar controladores para los endpoints API
+builder.Services.AddControllers();
+
 // ----------------------
 // REGISTRO DE POLÍTICAS Y CONVENCIAS PARA AUTORIZACIÓN
 // ----------------------
@@ -131,6 +134,9 @@ app.UseAuthorization();
 
 // Redireccionar errores 404 a /Error404
 app.UseStatusCodePagesWithRedirects("/Error404");
+
+// Mapear los controladores creados en la carpeta Controllers
+app.MapControllers();
 
 // Mapear Razor Pages
 app.MapRazorPages();

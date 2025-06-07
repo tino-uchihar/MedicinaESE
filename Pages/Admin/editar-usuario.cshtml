@@ -1,0 +1,242 @@
+@page
+@model MedicinaESE.Pages.Admin.EditarUsuarioModel
+@{
+    ViewData["Title"] = "Editar Usuario";
+    Layout = null;
+}
+
+<div id="editarUsuarioContainer" class="mt-4">
+  <!-- Card Usuario (Datos Generales) -->
+  <div class="card mb-4">
+    <div class="card-header" style="background-color:#028090; color:white;">
+      <h4 class="mb-0 text-center">Editar Usuario</h4>
+    </div>
+    <div class="card-body">
+      <!-- Documento -->
+      <div class="mb-3">
+        <label for="editDocumentoId" class="form-label">Documento</label>
+        <div class="input-group">
+          <input type="number" id="editDocumentoId" class="form-control" value="@Model.EditarUsuario.DocumentoId" data-original="@Model.EditarUsuario.DocumentoId" />
+          <button class="refresh-btn btn btn-outline-secondary" onclick="resetField('editDocumentoId')">
+            <i class="fas fa-sync-alt"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Nombre -->
+      <div class="mb-3">
+        <label for="editNombre" class="form-label">Nombre</label>
+        <div class="input-group">
+          <input type="text" id="editNombre" class="form-control" value="@Model.EditarUsuario.Nombre" data-original="@Model.EditarUsuario.Nombre" />
+          <button class="refresh-btn btn btn-outline-secondary" onclick="resetField('editNombre')">
+            <i class="fas fa-sync-alt"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Apellido -->
+      <div class="mb-3">
+        <label for="editApellido" class="form-label">Apellido</label>
+        <div class="input-group">
+          <input type="text" id="editApellido" class="form-control" value="@Model.EditarUsuario.Apellido" data-original="@Model.EditarUsuario.Apellido" />
+          <button class="refresh-btn btn btn-outline-secondary" onclick="resetField('editApellido')">
+            <i class="fas fa-sync-alt"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Correo -->
+      <div class="mb-3">
+        <label for="editCorreo" class="form-label">Correo</label>
+        <div class="input-group">
+          <input type="email" id="editCorreo" class="form-control" value="@Model.EditarUsuario.Correo" data-original="@Model.EditarUsuario.Correo" />
+          <button class="refresh-btn btn btn-outline-secondary" onclick="resetField('editCorreo')">
+            <i class="fas fa-sync-alt"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Teléfono -->
+      <div class="mb-3">
+        <label for="editTelefono" class="form-label">Teléfono</label>
+        <div class="input-group">
+          <input type="text" id="editTelefono" class="form-control" value="@Model.EditarUsuario.Telefono" data-original="@Model.EditarUsuario.Telefono" />
+          <button class="refresh-btn btn btn-outline-secondary" onclick="resetField('editTelefono')">
+            <i class="fas fa-sync-alt"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Contraseña -->
+      <div class="mb-3">
+        <label for="editContraseña" class="form-label">Contraseña</label>
+        <div class="input-group">
+          <input type="password" id="editContraseña" class="form-control" value="********" data-original="@Model.EditarUsuario.Contraseña" readonly />
+          <span class="input-group-text" style="cursor:pointer;" onclick="toggleEditPasswordVisibility()">
+            <i class="fas fa-eye"></i>
+          </span>
+          <button class="refresh-btn btn btn-outline-secondary" onclick="resetField('editContraseña')">
+            <i class="fas fa-sync-alt"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @if(Model.EditarUsuario.TipoUsuario.ToLower() == "admin" || Model.EditarUsuario.TipoUsuario.ToLower() == "medico")
+  {
+    <!-- Card Médico -->
+    <div class="card mb-4">
+      <div class="card-header" style="background-color:#028090; color:white;">
+        <h4 class="mb-0 text-center">Editar Información del Médico</h4>
+      </div>
+      <div class="card-body">
+        <!-- Especialidad -->
+        <div class="mb-3">
+          <label for="editEspecialidad" class="form-label">Especialidad</label>
+          <div class="input-group">
+            <input type="text" id="editEspecialidad" class="form-control" value="@Model.EditarUsuario.Especialidad" data-original="@Model.EditarUsuario.Especialidad" />
+            <button class="refresh-btn btn btn-outline-secondary" onclick="resetField('editEspecialidad')">
+              <i class="fas fa-sync-alt"></i>
+            </button>
+          </div>
+        </div>
+        <!-- Otra Especialidad -->
+        <div class="mb-3">
+          <label for="editOtraEspecialidad" class="form-label">Otra Especialidad</label>
+          <div class="input-group">
+            <input type="text" id="editOtraEspecialidad" class="form-control" value="@Model.EditarUsuario.OtraEspecialidad" data-original="@Model.EditarUsuario.OtraEspecialidad" />
+            <button class="refresh-btn btn btn-outline-secondary" onclick="resetField('editOtraEspecialidad')">
+              <i class="fas fa-sync-alt"></i>
+            </button>
+          </div>
+        </div>
+        <!-- Horario Inicio -->
+        <div class="mb-3">
+          <label for="editHorarioInicio" class="form-label">Horario Inicio</label>
+          <div class="input-group">
+            <input type="time" id="editHorarioInicio" class="form-control"
+                   value="@(Model.EditarUsuario.HorarioInicio.HasValue ? Model.EditarUsuario.HorarioInicio.Value.ToString(@"hh\:mm") : "")"
+                   data-original="@(Model.EditarUsuario.HorarioInicio.HasValue ? Model.EditarUsuario.HorarioInicio.Value.ToString(@"hh\:mm") : "")" />
+            <button class="refresh-btn btn btn-outline-secondary" onclick="resetField('editHorarioInicio')">
+              <i class="fas fa-sync-alt"></i>
+            </button>
+          </div>
+        </div>
+        <!-- Horario Fin -->
+        <div class="mb-3">
+          <label for="editHorarioFin" class="form-label">Horario Fin</label>
+          <div class="input-group">
+            <input type="time" id="editHorarioFin" class="form-control"
+                   value="@(Model.EditarUsuario.HorarioFin.HasValue ? Model.EditarUsuario.HorarioFin.Value.ToString(@"hh\:mm") : "")"
+                   data-original="@(Model.EditarUsuario.HorarioFin.HasValue ? Model.EditarUsuario.HorarioFin.Value.ToString(@"hh\:mm") : "")" />
+            <button class="refresh-btn btn btn-outline-secondary" onclick="resetField('editHorarioFin')">
+              <i class="fas fa-sync-alt"></i>
+            </button>
+          </div>
+        </div>
+        <!-- Consultorio -->
+        <div class="mb-3">
+          <label for="editConsultorio" class="form-label">Consultorio</label>
+          <div class="input-group">
+            <input type="text" id="editConsultorio" class="form-control" value="@Model.EditarUsuario.Consultorio" data-original="@Model.EditarUsuario.Consultorio" />
+            <button class="refresh-btn btn btn-outline-secondary" onclick="resetField('editConsultorio')">
+              <i class="fas fa-sync-alt"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  }
+
+  <!-- Card Paciente -->
+  <div class="card mb-4">
+    <div class="card-header" style="background-color:#028090; color:white;">
+      <h4 class="mb-0 text-center">Editar Información del Paciente</h4>
+    </div>
+    <div class="card-body">
+      <!-- Fecha de Nacimiento -->
+      <div class="mb-3">
+        <label for="editFechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+        <div class="input-group">
+          <input type="date" id="editFechaNacimiento" class="form-control"
+                 value="@(Model.EditarUsuario.FechaNacimiento.HasValue ? Model.EditarUsuario.FechaNacimiento.Value.ToString("yyyy-MM-dd") : "")"
+                 data-original="@(Model.EditarUsuario.FechaNacimiento.HasValue ? Model.EditarUsuario.FechaNacimiento.Value.ToString("yyyy-MM-dd") : "")" />
+          <button class="refresh-btn btn btn-outline-secondary" onclick="resetField('editFechaNacimiento')">
+            <i class="fas fa-sync-alt"></i>
+          </button>
+        </div>
+      </div>
+      <!-- Grupo Sanguíneo -->
+      <div class="mb-3">
+        <label for="editGrupoSanguineo" class="form-label">Grupo Sanguíneo</label>
+        <div class="input-group">
+          <input type="text" id="editGrupoSanguineo" class="form-control" value="@Model.EditarUsuario.GrupoSanguineo" data-original="@Model.EditarUsuario.GrupoSanguineo" />
+          <button class="refresh-btn btn btn-outline-secondary" onclick="resetField('editGrupoSanguineo')">
+            <i class="fas fa-sync-alt"></i>
+          </button>
+        </div>
+      </div>
+      <!-- Estado Civil -->
+      <div class="mb-3">
+        <label for="editEstadoCivil" class="form-label">Estado Civil</label>
+        <div class="input-group">
+          <input type="text" id="editEstadoCivil" class="form-control" value="@Model.EditarUsuario.EstadoCivil" data-original="@Model.EditarUsuario.EstadoCivil" />
+          <button class="refresh-btn btn btn-outline-secondary" onclick="resetField('editEstadoCivil')">
+            <i class="fas fa-sync-alt"></i>
+          </button>
+        </div>
+      </div>
+      <!-- Entidad de Salud -->
+      <div class="mb-3">
+        <label for="editEntidadSalud" class="form-label">Entidad de Salud</label>
+        <div class="input-group">
+          <input type="text" id="editEntidadSalud" class="form-control" value="@Model.EditarUsuario.EntidadSalud" data-original="@Model.EditarUsuario.EntidadSalud" />
+          <button class="refresh-btn btn btn-outline-secondary" onclick="resetField('editEntidadSalud')">
+            <i class="fas fa-sync-alt"></i>
+          </button>
+        </div>
+      </div>
+      <!-- Otra Entidad de Salud -->
+      <div class="mb-3">
+        <label for="editOtraEntidadSalud" class="form-label">Otra Entidad de Salud</label>
+        <div class="input-group">
+          <input type="text" id="editOtraEntidadSalud" class="form-control" value="@Model.EditarUsuario.OtraEntidadSalud" data-original="@Model.EditarUsuario.OtraEntidadSalud" />
+          <button class="refresh-btn btn btn-outline-secondary" onclick="resetField('editOtraEntidadSalud')">
+            <i class="fas fa-sync-alt"></i>
+          </button>
+        </div>
+      </div>
+      <!-- Estado -->
+      <div class="mb-3">
+        <label for="editEstado" class="form-label">Estado</label>
+        <div class="input-group">
+          <input type="text" id="editEstado" class="form-control" value="@Model.EditarUsuario.Estado" data-original="@Model.EditarUsuario.Estado" />
+          <button class="refresh-btn btn btn-outline-secondary" onclick="resetField('editEstado')">
+            <i class="fas fa-sync-alt"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card Confirmación -->
+  <div class="card mb-4">
+    <div class="card-header" style="background-color:#028090; color:white;">
+      <h4 class="mb-0 text-center">Confirmación</h4>
+    </div>
+    <div class="card-body">
+      <div class="d-flex justify-content-around">
+        <button type="button" class="btn btn-secondary" onclick="cancelEditing()">Cancelar</button>
+        <button type="button" class="btn btn-success" onclick="confirmEditing()">Confirmar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+@section Scripts {
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+}

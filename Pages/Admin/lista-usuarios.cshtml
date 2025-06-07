@@ -51,18 +51,21 @@
                         <td>@(string.IsNullOrWhiteSpace(usuario.Telefono) ? "-" : usuario.Telefono)</td>
                         <td>@usuario.TipoUsuario</td>
                         <td class="actions-cell">
-                        <button class="edit-btn" title="Editar">
-                            <i class="fas fa-pencil-alt"></i>
-                        </button>
-                        <button class="delete-btn" title="Eliminar">
-                            <i class="fas fa-trash-alt"></i>
-                        </button>
+                            <button class="edit-btn" title="Editar" onclick="editUser('@usuario.DocumentoId')">
+                                <i class="fas fa-pencil-alt"></i>
+                            </button>
+                            <button class="delete-btn" title="Eliminar">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
                         </td>
                     </tr>
                 }
             </tbody>
         </table>
     </div>
+
+    <!-- Sección de edición (inicialmente vacía) -->
+    <div id="editSection" class="mx-auto" style="max-width:900px; margin-top:20px;"></div>
 
     <!-- Paginación -->
     <div class="pagination-wrapper mx-auto" style="max-width:900px;">
@@ -178,6 +181,7 @@
         window.addEventListener("load", paginateTable);
     </script>
     <!-- jQuery y validación unobtrusive (si se requiere) -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.6.0.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.3/jquery.validate.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate.unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>

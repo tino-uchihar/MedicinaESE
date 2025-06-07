@@ -4,35 +4,59 @@
     ViewData["Title"] = "Lista de Usuarios";
 }
 
-<div class="admin-container">
-    <h1 class="admin-title">Lista de Usuarios</h1>
+<div class="admin-container mx-auto text-center">
+    <!-- Encabezado -->
+    <div class="lista-header">
+        LISTA DE USUARIOS
+    </div>
 
-    <div class="table-container">
-        <table class="users-table">
+    <!-- Buscador dinámico -->
+    <div class="search-container mb-3 mx-auto" style="margin:0 auto;">
+        <div class="input-group justify-content-center">
+            <input type="text" id="searchInput" class="form-control" placeholder="Buscar..." style="max-width:300px;">
+            <select id="searchField" class="form-select" style="max-width:200px;">
+                <option value="1">Documento</option>
+                <option value="2">Nombre</option>
+                <option value="3">Apellido</option>
+                <option value="4">Correo</option>
+                <option value="5">Teléfono</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Tabla de usuarios -->
+    <div class="table-container mx-auto" style="max-width:900px;">
+        <table class="users-table table table-striped">
             <thead>
                 <tr>
                     <th><input type="checkbox" id="selectAll" /></th>
-                    <th class="sortable" data-column="1">ID</th>
+                    <th class="sortable" data-column="1">Documento</th>
                     <th class="sortable" data-column="2">Nombre</th>
-                    <th class="sortable" data-column="3">Correo</th>
-                    <th class="sortable" data-column="4">Teléfono</th>
-                    <th class="sortable" data-column="5">Tipo de Usuario</th>
+                    <th class="sortable" data-column="3">Apellidos</th>
+                    <th class="sortable" data-column="4">Correo</th>
+                    <th class="sortable" data-column="5">Teléfono</th>
+                    <th class="sortable" data-column="6">Tipo de Usuario</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
             <tbody id="userTableBody">
                 @foreach (var usuario in Model.Usuarios)
                 {
-                    <tr>
+                    <tr class="userRow">
                         <td><input type="checkbox" class="select-user" /></td>
                         <td>@usuario.DocumentoId</td>
                         <td>@usuario.Nombre</td>
+                        <td>@usuario.Apellido</td>
                         <td>@usuario.Correo</td>
                         <td>@(string.IsNullOrWhiteSpace(usuario.Telefono) ? "-" : usuario.Telefono)</td>
                         <td>@usuario.TipoUsuario</td>
                         <td>
-                            <button class="edit-btn">Editar</button>
-                            <button class="delete-btn">Eliminar</button>
+                            <button class="edit-btn" title="Editar">
+                                <i class="fas fa-pencil-alt"></i>
+                            </button>
+                            <button class="delete-btn" title="Eliminar">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
                         </td>
                     </tr>
                 }
@@ -40,46 +64,123 @@
         </table>
     </div>
 
-    <div class="admin-actions">
-        <button id="refreshPage" class="action-btn">Refrescar</button>
-        <button id="undoChanges" class="action-btn">Deshacer cambios</button>
-        <button id="saveChanges" class="action-btn action-save">Guardar todo</button>
+    <!-- Paginación -->
+    <div class="pagination-wrapper mx-auto" style="max-width:900px;">
+        <div class="input-group justify-content-center">
+            <span class="input-group-text" style="background-color: transparent; border: none; color: #028090;">Mostrar los primeros:</span>
+            <select id="rowsPerPage" class="form-select me-2" style="max-width:150px;">
+                <option value="20">20 usuarios</option>
+                <option value="50">50 usuarios</option>
+                <option value="100">100 usuarios</option>
+            </select>
+            <button id="prevPage" class="action-btn me-2" disabled>Anterior</button>
+            <button id="nextPage" class="action-btn">Siguiente</button>
+        </div>
+    </div>
+
+    <!-- Acciones -->
+    <div class="admin-actions mx-auto" style="max-width:900px;">
+        <button id="refreshPage" class="action-btn me-2">Refrescar</button>
+        <button id="undoChanges" class="action-btn me-2">Deshacer cambios</button>
+        <button id="saveChanges" class="action-btn action-save me-2">Guardar todo</button>
         <button onclick="window.location.href='../admin-main'" class="action-btn action-back">Volver</button>
     </div>
 </div>
 
 @section Scripts {
     <script>
-        // Actualiza la página
-        document.getElementById("refreshPage").addEventListener("click", () => location.reload());
+        // Paginación
+        let currentPage = 1;
+        let rowsPerPage = parseInt(document.getElementById("rowsPerPage").value);
 
-        // Seleccionar/desseleccionar todos los checkboxes
-        document.getElementById("selectAll").addEventListener("change", function () {
-            document.querySelectorAll(".select-user").forEach(checkbox => checkbox.checked = this.checked);
+        function paginateTable() {
+            const rows = Array.from(document.querySelectorAll("#userTableBody tr.userRow"))
+                              .filter(row => row.style.display !== "none" || !row.style.display);
+            const totalRows = rows.length;
+            const totalPages = Math.ceil(totalRows / rowsPerPage);
+            document.getElementById("prevPage").disabled = currentPage === 1;
+            document.getElementById("nextPage").disabled = currentPage === totalPages || totalPages === 0;
+            let count = 0;
+            rows.forEach(row => {
+                count++;
+                row.style.display = (count > (currentPage - 1) * rowsPerPage && count <= currentPage * rowsPerPage) ? "" : "none";
+            });
+        }
+
+        function filterTable() {
+            const filterText = document.getElementById("searchInput").value.toLowerCase();
+            const colIndex = parseInt(document.getElementById("searchField").value);
+            const rows = Array.from(document.querySelectorAll("#userTableBody tr.userRow"));
+            rows.forEach(row => {
+                const cell = row.cells[colIndex];
+                if (cell) {
+                    const text = cell.innerText.toLowerCase();
+                    row.style.display = text.includes(filterText) ? "" : "none";
+                }
+            });
+            currentPage = 1;
+            paginateTable();
+        }
+
+        document.getElementById("searchInput").addEventListener("keyup", filterTable);
+        document.getElementById("searchField").addEventListener("change", filterTable);
+        document.getElementById("rowsPerPage").addEventListener("change", function () {
+            rowsPerPage = parseInt(this.value);
+            currentPage = 1;
+            paginateTable();
+        });
+        document.getElementById("prevPage").addEventListener("click", function () {
+            if (currentPage > 1) {
+                currentPage--;
+                paginateTable();
+            }
+        });
+        document.getElementById("nextPage").addEventListener("click", function () {
+            const rows = document.querySelectorAll("#userTableBody tr.userRow");
+            const totalRows = Array.from(rows).filter(row => row.style.display !== "none" || !row.style.display).length;
+            if (currentPage * rowsPerPage < totalRows) {
+                currentPage++;
+                paginateTable();
+            }
         });
 
-        // Agregar eventos para que los encabezados ordenables ordenen la tabla.
+        // Ordenar la tabla
         document.querySelectorAll(".sortable").forEach(header => {
             header.addEventListener("click", function () {
                 const colIndex = parseInt(this.getAttribute("data-column"));
                 sortTable(colIndex);
+                currentPage = 1;
+                paginateTable();
             });
         });
 
         function sortTable(colIndex) {
             const tbody = document.getElementById("userTableBody");
-            const rows = Array.from(tbody.rows);
+            let rows = Array.from(tbody.querySelectorAll("tr.userRow")).filter(row => row.style.display !== "none" || !row.style.display);
             rows.sort((a, b) => {
-                const cellA = a.cells[colIndex].innerText.trim();
-                const cellB = b.cells[colIndex].innerText.trim();
-                return cellA.localeCompare(cellB, undefined, { numeric: true });
+                const textA = a.cells[colIndex].innerText.trim().toLowerCase();
+                const textB = b.cells[colIndex].innerText.trim().toLowerCase();
+                return textA.localeCompare(textB, undefined, { numeric: true });
             });
             tbody.innerHTML = "";
             rows.forEach(row => tbody.appendChild(row));
         }
+
+        // Seleccionar checkboxes
+        document.getElementById("selectAll").addEventListener("change", function () {
+            document.querySelectorAll(".select-user").forEach(c => c.checked = this.checked);
+        });
+
+        // Botón refrescar
+        document.getElementById("refreshPage").addEventListener("click", () => location.reload());
+        
+        // Inicializar paginación al cargar la página
+        window.addEventListener("load", paginateTable);
     </script>
-    <!-- Scripts de jQuery para validación (si fuera necesario para extender la funcionalidad) -->
+    <!-- jQuery y validación unobtrusive (si se requiere) -->
     <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.6.0.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.3/jquery.validate.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate.unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+    <!-- Asegúrate de tener fontawesome en tu layout, por ejemplo: -->
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />-->
 }

@@ -19,12 +19,12 @@ namespace MedicinaESE.Pages.Admin
 
         public void OnGet()
         {
-            // Usando EF Core, se obtiene la lista de usuarios actualizada
             Usuarios = _context.Usuarios
                 .Select(u => new UsuarioModel
                 {
                     DocumentoId = u.DocumentoId,
                     Nombre = u.Nombre,
+                    Apellido = u.Apellido,
                     Correo = u.Correo,
                     Telefono = u.Telefono ?? "",
                     TipoUsuario = u.TipoUsuario
@@ -37,6 +37,7 @@ namespace MedicinaESE.Pages.Admin
     {
         public string DocumentoId { get; set; } = "";
         public string Nombre { get; set; } = "";
+        public string Apellido { get; set; } = "";
         public string Correo { get; set; } = "";
         public string Telefono { get; set; } = "";
         public string TipoUsuario { get; set; } = "";

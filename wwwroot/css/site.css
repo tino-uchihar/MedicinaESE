@@ -571,3 +571,38 @@ html, body {
   from { opacity: 1; }
   to { opacity: 0; visibility: hidden; }
 }
+
+
+
+/* LISTA para ver los usuarios actualizada */
+
+.lista-header {
+  background-color: #028090;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.pagination-wrapper {
+  background-color: white;
+  color: #028090;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.admin-actions {
+  background-color: #028090;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+}

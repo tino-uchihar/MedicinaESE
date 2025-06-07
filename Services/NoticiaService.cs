@@ -1,59 +1,30 @@
 using System.Collections.Generic;
-using Microsoft.Data.SqlClient;
+using System.Linq;
+using MedicinaESE.Data;
 using MedicinaESE.Models;
 
-namespace MedicinaESE.Services;
-
-// Servicio para gestionar noticias obtenidas desde SQL Server
-public class NoticiaService
+namespace MedicinaESE.Services
 {
-    private readonly string _connectionString;
-
-    // Constructor: Recibe la cadena de conexión desde `Program.cs`
-    public NoticiaService(string connectionString)
+    // Servicio para gestionar noticias obtenidas desde la BBDD con EF Core
+    public class NoticiaService
     {
-        _connectionString = connectionString 
-                            ?? throw new ArgumentNullException(nameof(connectionString)); // Evita valores `null`
-    }
+        private readonly ApplicationDbContext _db;
 
-    // Método para obtener la lista de noticias desde la base de datos
-    public List<Noticia> ObtenerNoticias()
-    {
-        List<Noticia> noticias = new();
-
-        try
+        // Inyectamos el DbContext para acceder a las tablas
+        public NoticiaService(ApplicationDbContext db)
         {
-            // Establecer la conexión con SQL Server
-            using (SqlConnection connection = new SqlConnection(_connectionString))
-            {
-                connection.Open(); // Intenta conectar con la base de datos
-                
-                string query = "SELECT Id, Titulo, Descripcion, ImagenUrl, FechaPublicacion FROM Noticias"; // Consulta SQL
-
-                // Ejecutar la consulta
-                using (SqlCommand command = new SqlCommand(query, connection))
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    while (reader.Read()) // Leer los resultados fila por fila
-                    {
-                        noticias.Add(new Noticia
-                        {
-                            Id = reader.GetInt32(0), // ID de la noticia
-                            Titulo = reader.GetString(1), // Título de la noticia
-                            Descripcion = reader.GetString(2), // Descripción corta
-                            ImagenUrl = reader.GetString(3), // URL de la imagen asociada
-                            FechaPublicacion = reader.GetDateTime(4) // Fecha de publicación
-                        });
-                    }
-                }
-            }
-        }
-        catch (SqlException ex)
-        {
-            // Si la base de datos no está disponible, lanzar un mensaje más claro
-            throw new Exception($"Error de conexión con la base de datos: {ex.Message}");
+            _db = db;
         }
 
-        return noticias; // Retorna la lista de noticias obtenidas
+        // Obtiene todas las noticias, ordenadas por Fecha de publicación descendente
+        public List<Noticia> ObtenerNoticias()
+        {
+            // 1) _db.Noticias accede a la tabla Noticias
+            // 2) OrderByDescending para mostrar primero las más recientes
+            // 3) ToList ejecuta la consulta y materializa la lista
+            return _db.Noticias
+                      .OrderByDescending(n => n.FechaPublicacion)
+                      .ToList();
+        }
     }
 }

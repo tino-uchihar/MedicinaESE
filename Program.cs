@@ -1,4 +1,6 @@
 using MedicinaESE.Services;
+using Microsoft.EntityFrameworkCore;
+using MedicinaESE.Data;
 using Microsoft.Data.SqlClient;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -13,8 +15,10 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DoctorNowDB")
                        ?? throw new InvalidOperationException("La cadena de conexión no está definida en appsettings.json");
 
-// Registrar la conexión SQL para que esté disponible en la aplicación
-builder.Services.AddSingleton(_ => new SqlConnection(connectionString));
+// Registrar EF Core con SQL Server
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(connectionString));
+
 
 // Registrar Razor Pages para que la aplicación funcione con páginas dinámicas
 builder.Services.AddRazorPages();
@@ -54,10 +58,10 @@ builder.Services.AddAuthorization(options =>
 // ----------------------
 
 // Registrar el servicio de Noticias
-builder.Services.AddSingleton<NoticiaService>(provider => new NoticiaService(connectionString));
+builder.Services.AddScoped<NoticiaService>();
 
 // Registrar el servicio de Autenticación
-builder.Services.AddSingleton<AuthService>();
+builder.Services.AddScoped<AuthService>();
 
 // Registrar IHttpContextAccessor para poder acceder a HttpContext (opcional en vistas)
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();

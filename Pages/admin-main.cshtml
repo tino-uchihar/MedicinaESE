@@ -4,6 +4,24 @@
     ViewData["Title"] = "Panel de Administración";
 }
 
+@{
+    var mensaje = TempData["Mensaje"] as string;
+    var cssClass = "";
+    if (!string.IsNullOrEmpty(mensaje))
+    {
+        // Si el mensaje comienza con "Se ha creado", lo tratamos como éxito (verde), de lo contrario, error (rojo)
+        cssClass = mensaje.Contains("Se ha creado") ? "alert-success" : "alert-danger";
+    }
+}
+
+@if (!string.IsNullOrEmpty(mensaje))
+{
+    <div id="temp-message" class="alert @cssClass" role="alert" style="position: fixed; top: 10px; left: 50%; transform: translateX(-50%); z-index: 9999; width: auto; padding: 15px;">
+        @mensaje
+    </div>
+}
+
+
 <div class="admin-main-container">
     <h1 class="admin-main-header">Panel de Administración</h1>
     <p class="admin-main-subtext">Selecciona una opción para gestionar el sistema.</p>
@@ -19,5 +37,17 @@
 </div>
 
 
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="~/js/admin.js" asp-append-version="true"></script>
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var tempMessage = document.getElementById("temp-message");
+            if (tempMessage) {
+                setTimeout(function () {
+                    tempMessage.style.display = "none";
+                }, 3000); // 3000ms = 3 segundos
+            }
+        });
+    </script>
+    <script src="~/js/admin.js" asp-append-version="true"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+}

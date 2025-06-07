@@ -1,10 +1,12 @@
-namespace MedicinaESE.Models;
-
-public class Noticia
+namespace MedicinaESE.Models
 {
-    public int Id { get; set; }
-    public required string Titulo { get; set; }
-    public required string Descripcion { get; set; }
-    public required string ImagenUrl { get; set; }
-    public required DateTime FechaPublicacion { get; set; }
+    // Representa un registro de la tabla Noticias
+    public class Noticia
+    {
+        public int      Id               { get; set; }   // PK Identity
+        public string   Titulo           { get; set; } = null!;
+        public string   Descripcion      { get; set; } = null!;
+        public string   ImagenUrl        { get; set; } = null!;
+        public DateTime FechaPublicacion { get; set; }    // Fecha y hora
+    }
 }

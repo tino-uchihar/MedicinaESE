@@ -82,8 +82,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Confirmación para el botón Confirmar (envío del formulario) usando SweetAlert2.
     var form = document.querySelector('form');
     if (form) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault(); // evita el envío inmediato
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
             Swal.fire({
                 title: '¿Confirma la creación del usuario?',
                 icon: 'question',
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
-    }
+    }    
 });
 
 

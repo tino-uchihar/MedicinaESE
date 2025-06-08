@@ -16,7 +16,8 @@
       <div class="mb-3">
         <label for="editDocumentoId" class="form-label">Documento</label>
         <div class="input-group">
-          <input type="number" id="editDocumentoId" class="form-control" value="@Model.EditarUsuario.DocumentoId" data-original="@Model.EditarUsuario.DocumentoId" />
+          <input type="number" id="editDocumentoId" name="editDocumentoId" class="form-control" 
+                 value="@Model.EditarUsuario.DocumentoId" data-original="@Model.EditarUsuario.DocumentoId" />
           <button class="refresh-btn btn btn-outline-secondary" onclick="resetField('editDocumentoId')">
             <i class="fas fa-sync-alt"></i>
           </button>
@@ -27,7 +28,8 @@
       <div class="mb-3">
         <label for="editNombre" class="form-label">Nombre</label>
         <div class="input-group">
-          <input type="text" id="editNombre" class="form-control" value="@Model.EditarUsuario.Nombre" data-original="@Model.EditarUsuario.Nombre" />
+          <input type="text" id="editNombre" name="editNombre" class="form-control" 
+                 value="@Model.EditarUsuario.Nombre" data-original="@Model.EditarUsuario.Nombre" />
           <button class="refresh-btn btn btn-outline-secondary" onclick="resetField('editNombre')">
             <i class="fas fa-sync-alt"></i>
           </button>
@@ -38,7 +40,8 @@
       <div class="mb-3">
         <label for="editApellido" class="form-label">Apellido</label>
         <div class="input-group">
-          <input type="text" id="editApellido" class="form-control" value="@Model.EditarUsuario.Apellido" data-original="@Model.EditarUsuario.Apellido" />
+          <input type="text" id="editApellido" name="editApellido" class="form-control" 
+                 value="@Model.EditarUsuario.Apellido" data-original="@Model.EditarUsuario.Apellido" />
           <button class="refresh-btn btn btn-outline-secondary" onclick="resetField('editApellido')">
             <i class="fas fa-sync-alt"></i>
           </button>
@@ -49,7 +52,8 @@
       <div class="mb-3">
         <label for="editCorreo" class="form-label">Correo</label>
         <div class="input-group">
-          <input type="email" id="editCorreo" class="form-control" value="@Model.EditarUsuario.Correo" data-original="@Model.EditarUsuario.Correo" />
+          <input type="email" id="editCorreo" name="editCorreo" class="form-control" 
+                 value="@Model.EditarUsuario.Correo" data-original="@Model.EditarUsuario.Correo" />
           <button class="refresh-btn btn btn-outline-secondary" onclick="resetField('editCorreo')">
             <i class="fas fa-sync-alt"></i>
           </button>
@@ -60,7 +64,8 @@
       <div class="mb-3">
         <label for="editTelefono" class="form-label">Teléfono</label>
         <div class="input-group">
-          <input type="text" id="editTelefono" class="form-control" value="@Model.EditarUsuario.Telefono" data-original="@Model.EditarUsuario.Telefono" />
+          <input type="text" id="editTelefono" name="editTelefono" class="form-control" 
+                 value="@Model.EditarUsuario.Telefono" data-original="@Model.EditarUsuario.Telefono" />
           <button class="refresh-btn btn btn-outline-secondary" onclick="resetField('editTelefono')">
             <i class="fas fa-sync-alt"></i>
           </button>
@@ -71,7 +76,9 @@
       <div class="mb-3">
         <label for="editContraseña" class="form-label">Contraseña</label>
         <div class="input-group">
-          <input type="password" id="editContraseña" class="form-control" value="********" data-original="@Model.EditarUsuario.Contraseña" readonly />
+          <!-- Se utiliza el valor real para que, al aplicar el input password, se oculte -->
+          <input type="password" id="editContraseña" name="editContraseña" class="form-control" 
+                 value="@Model.EditarUsuario.Contraseña" data-original="@Model.EditarUsuario.Contraseña" readonly />
           <span class="input-group-text" style="cursor:pointer;" onclick="toggleEditPasswordVisibility()">
             <i class="fas fa-eye"></i>
           </span>
@@ -95,7 +102,8 @@
         <div class="mb-3">
           <label for="editEspecialidad" class="form-label">Especialidad</label>
           <div class="input-group">
-            <input type="text" id="editEspecialidad" class="form-control" value="@Model.EditarUsuario.Especialidad" data-original="@Model.EditarUsuario.Especialidad" />
+            <input type="text" id="editEspecialidad" name="editEspecialidad" class="form-control" 
+                   value="@Model.EditarUsuario.Especialidad" data-original="@Model.EditarUsuario.Especialidad" />
             <button class="refresh-btn btn btn-outline-secondary" onclick="resetField('editEspecialidad')">
               <i class="fas fa-sync-alt"></i>
             </button>
@@ -105,7 +113,8 @@
         <div class="mb-3">
           <label for="editOtraEspecialidad" class="form-label">Otra Especialidad</label>
           <div class="input-group">
-            <input type="text" id="editOtraEspecialidad" class="form-control" value="@Model.EditarUsuario.OtraEspecialidad" data-original="@Model.EditarUsuario.OtraEspecialidad" />
+            <input type="text" id="editOtraEspecialidad" name="editOtraEspecialidad" class="form-control" 
+                   value="@Model.EditarUsuario.OtraEspecialidad" data-original="@Model.EditarUsuario.OtraEspecialidad" />
             <button class="refresh-btn btn btn-outline-secondary" onclick="resetField('editOtraEspecialidad')">
               <i class="fas fa-sync-alt"></i>
             </button>
@@ -115,7 +124,7 @@
         <div class="mb-3">
           <label for="editHorarioInicio" class="form-label">Horario Inicio</label>
           <div class="input-group">
-            <input type="time" id="editHorarioInicio" class="form-control"
+            <input type="time" id="editHorarioInicio" name="editHorarioInicio" class="form-control"
                    value="@(Model.EditarUsuario.HorarioInicio.HasValue ? Model.EditarUsuario.HorarioInicio.Value.ToString(@"hh\:mm") : "")"
                    data-original="@(Model.EditarUsuario.HorarioInicio.HasValue ? Model.EditarUsuario.HorarioInicio.Value.ToString(@"hh\:mm") : "")" />
             <button class="refresh-btn btn btn-outline-secondary" onclick="resetField('editHorarioInicio')">
@@ -127,7 +136,7 @@
         <div class="mb-3">
           <label for="editHorarioFin" class="form-label">Horario Fin</label>
           <div class="input-group">
-            <input type="time" id="editHorarioFin" class="form-control"
+            <input type="time" id="editHorarioFin" name="editHorarioFin" class="form-control"
                    value="@(Model.EditarUsuario.HorarioFin.HasValue ? Model.EditarUsuario.HorarioFin.Value.ToString(@"hh\:mm") : "")"
                    data-original="@(Model.EditarUsuario.HorarioFin.HasValue ? Model.EditarUsuario.HorarioFin.Value.ToString(@"hh\:mm") : "")" />
             <button class="refresh-btn btn btn-outline-secondary" onclick="resetField('editHorarioFin')">
@@ -139,7 +148,8 @@
         <div class="mb-3">
           <label for="editConsultorio" class="form-label">Consultorio</label>
           <div class="input-group">
-            <input type="text" id="editConsultorio" class="form-control" value="@Model.EditarUsuario.Consultorio" data-original="@Model.EditarUsuario.Consultorio" />
+            <input type="text" id="editConsultorio" name="editConsultorio" class="form-control" 
+                   value="@Model.EditarUsuario.Consultorio" data-original="@Model.EditarUsuario.Consultorio" />
             <button class="refresh-btn btn btn-outline-secondary" onclick="resetField('editConsultorio')">
               <i class="fas fa-sync-alt"></i>
             </button>
@@ -159,7 +169,7 @@
       <div class="mb-3">
         <label for="editFechaNacimiento" class="form-label">Fecha de Nacimiento</label>
         <div class="input-group">
-          <input type="date" id="editFechaNacimiento" class="form-control"
+          <input type="date" id="editFechaNacimiento" name="editFechaNacimiento" class="form-control"
                  value="@(Model.EditarUsuario.FechaNacimiento.HasValue ? Model.EditarUsuario.FechaNacimiento.Value.ToString("yyyy-MM-dd") : "")"
                  data-original="@(Model.EditarUsuario.FechaNacimiento.HasValue ? Model.EditarUsuario.FechaNacimiento.Value.ToString("yyyy-MM-dd") : "")" />
           <button class="refresh-btn btn btn-outline-secondary" onclick="resetField('editFechaNacimiento')">
@@ -171,7 +181,8 @@
       <div class="mb-3">
         <label for="editGrupoSanguineo" class="form-label">Grupo Sanguíneo</label>
         <div class="input-group">
-          <input type="text" id="editGrupoSanguineo" class="form-control" value="@Model.EditarUsuario.GrupoSanguineo" data-original="@Model.EditarUsuario.GrupoSanguineo" />
+          <input type="text" id="editGrupoSanguineo" name="editGrupoSanguineo" class="form-control" 
+                 value="@Model.EditarUsuario.GrupoSanguineo" data-original="@Model.EditarUsuario.GrupoSanguineo" />
           <button class="refresh-btn btn btn-outline-secondary" onclick="resetField('editGrupoSanguineo')">
             <i class="fas fa-sync-alt"></i>
           </button>
@@ -181,7 +192,8 @@
       <div class="mb-3">
         <label for="editEstadoCivil" class="form-label">Estado Civil</label>
         <div class="input-group">
-          <input type="text" id="editEstadoCivil" class="form-control" value="@Model.EditarUsuario.EstadoCivil" data-original="@Model.EditarUsuario.EstadoCivil" />
+          <input type="text" id="editEstadoCivil" name="editEstadoCivil" class="form-control" 
+                 value="@Model.EditarUsuario.EstadoCivil" data-original="@Model.EditarUsuario.EstadoCivil" />
           <button class="refresh-btn btn btn-outline-secondary" onclick="resetField('editEstadoCivil')">
             <i class="fas fa-sync-alt"></i>
           </button>
@@ -191,7 +203,8 @@
       <div class="mb-3">
         <label for="editEntidadSalud" class="form-label">Entidad de Salud</label>
         <div class="input-group">
-          <input type="text" id="editEntidadSalud" class="form-control" value="@Model.EditarUsuario.EntidadSalud" data-original="@Model.EditarUsuario.EntidadSalud" />
+          <input type="text" id="editEntidadSalud" name="editEntidadSalud" class="form-control" 
+                 value="@Model.EditarUsuario.EntidadSalud" data-original="@Model.EditarUsuario.EntidadSalud" />
           <button class="refresh-btn btn btn-outline-secondary" onclick="resetField('editEntidadSalud')">
             <i class="fas fa-sync-alt"></i>
           </button>
@@ -201,7 +214,8 @@
       <div class="mb-3">
         <label for="editOtraEntidadSalud" class="form-label">Otra Entidad de Salud</label>
         <div class="input-group">
-          <input type="text" id="editOtraEntidadSalud" class="form-control" value="@Model.EditarUsuario.OtraEntidadSalud" data-original="@Model.EditarUsuario.OtraEntidadSalud" />
+          <input type="text" id="editOtraEntidadSalud" name="editOtraEntidadSalud" class="form-control" 
+                 value="@Model.EditarUsuario.OtraEntidadSalud" data-original="@Model.EditarUsuario.OtraEntidadSalud" />
           <button class="refresh-btn btn btn-outline-secondary" onclick="resetField('editOtraEntidadSalud')">
             <i class="fas fa-sync-alt"></i>
           </button>
@@ -211,7 +225,8 @@
       <div class="mb-3">
         <label for="editEstado" class="form-label">Estado</label>
         <div class="input-group">
-          <input type="text" id="editEstado" class="form-control" value="@Model.EditarUsuario.Estado" data-original="@Model.EditarUsuario.Estado" />
+          <input type="text" id="editEstado" name="editEstado" class="form-control" 
+                 value="@Model.EditarUsuario.Estado" data-original="@Model.EditarUsuario.Estado" />
           <button class="refresh-btn btn btn-outline-secondary" onclick="resetField('editEstado')">
             <i class="fas fa-sync-alt"></i>
           </button>
@@ -236,7 +251,6 @@
 
 
 @section Scripts {
-
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+    <script src="~/js/admin.js" asp-append-version="true"></script>
 }

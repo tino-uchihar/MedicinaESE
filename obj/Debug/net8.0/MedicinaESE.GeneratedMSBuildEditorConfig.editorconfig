@@ -52,24 +52,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cbGlzdGEtdXN1YXJpb3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Cosas y weas varias/Programas/Programeishon/CiSharp/MedicinaESE/Pages/Admin/Logout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cTG9nb3V0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Cosas y weas varias/Programas/Programeishon/CiSharp/MedicinaESE/Pages/agendar-cita.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcYWdlbmRhci1jaXRhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Cosas y weas varias/Programas/Programeishon/CiSharp/MedicinaESE/Pages/Comun/Error404.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tdW5cRXJyb3I0MDQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Cosas y weas varias/Programas/Programeishon/CiSharp/MedicinaESE/Pages/Comun/ErrorBD.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tdW5cRXJyb3JCRC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Cosas y weas varias/Programas/Programeishon/CiSharp/MedicinaESE/Pages/Comun/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tdW5cTG9nb3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Cosas y weas varias/Programas/Programeishon/CiSharp/MedicinaESE/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Cosas y weas varias/Programas/Programeishon/CiSharp/MedicinaESE/Pages/Error404.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3I0MDQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Cosas y weas varias/Programas/Programeishon/CiSharp/MedicinaESE/Pages/ErrorBD.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3JCRC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Cosas y weas varias/Programas/Programeishon/CiSharp/MedicinaESE/Pages/ficha-medica.cshtml]

@@ -10,7 +10,7 @@ function confirmLogout() {
         cancelButtonText: "Cancelar"
     }).then((result) => {
         if (result.isConfirmed) {
-            window.location.href = "/Admin/Logout"; // Redirige a la página de cierre de sesión
+            window.location.href = "/Comun/Logout"; // Redirige a la página de cierre de sesión
         }
     });
 }

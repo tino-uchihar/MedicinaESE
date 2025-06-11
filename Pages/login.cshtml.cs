@@ -86,7 +86,7 @@ namespace MedicinaESE.Pages
                     "admin" => "/admin-main",
                     "medico" => "/ficha-medica",
                     "paciente" => "/agendar-cita",
-                    _ => "/ErrorBD"
+                    _ => "/Comun/ErrorBD"
                 };
             }
             else

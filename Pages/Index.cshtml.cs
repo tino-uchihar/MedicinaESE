@@ -38,7 +38,7 @@ public class IndexModel : PageModel
         catch (Exception ex)
         {
             _logger.LogError($"Error al obtener noticias: {ex.Message}");
-            return RedirectToPage("/ErrorBD"); // Redirige a la página de error
+            return RedirectToPage("/Comun/ErrorBD"); // Redirige a la página de error
         }
     }
 }

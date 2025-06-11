@@ -132,8 +132,8 @@ app.UseSession();
 // Activar autorización
 app.UseAuthorization();
 
-// Redireccionar errores 404 a /Error404
-app.UseStatusCodePagesWithRedirects("/Error404");
+// Redireccionar errores 404 a /Comun/Error404
+app.UseStatusCodePagesWithRedirects("/Comun/Error404");
 
 // Mapear los controladores creados en la carpeta Controllers
 app.MapControllers();

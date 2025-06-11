@@ -14,7 +14,7 @@ public class PerfilUsuarioModel : PageModel
     {
         if (HttpContext.Session.GetString("UsuarioDocumento") == null)
         {
-            //return RedirectToPage("/ErrorBD"); // Si no hay sesión, redirigir a la página de error
+            //return RedirectToPage("/Comun/ErrorBD"); // Si no hay sesión, redirigir a la página de error
         }
 
         DocumentoId = HttpContext.Session.GetString("UsuarioDocumento") ?? "No disponible";

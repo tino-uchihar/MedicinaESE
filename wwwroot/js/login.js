@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
             icon: 'warning',
             confirmButtonText: 'Aceptar'
         }).then(() => {
-            window.location.href = "/ErrorBD";
+            window.location.href = "/Comun/ErrorBD";
         });
     }
 });

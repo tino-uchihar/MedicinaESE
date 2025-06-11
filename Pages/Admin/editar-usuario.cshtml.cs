@@ -39,7 +39,7 @@ namespace MedicinaESE.Pages.Admin
             EditarUsuario.Apellido = usuario.Apellido;
             EditarUsuario.Correo = usuario.Correo;
             EditarUsuario.Telefono = usuario.Telefono ?? "";
-            EditarUsuario.Contraseña = usuario.Contraseña;
+            EditarUsuario.Contraseña = "";
             EditarUsuario.TipoUsuario = usuario.TipoUsuario;
 
             // Si es "medico" o "admin" se consultan los datos de la tabla Medicos

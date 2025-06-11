@@ -191,6 +191,22 @@ function cancelEditing() {
 
 // Función para confirmar la edición (placeholder; aquí se acumularían o guardarían cambios).
 function confirmEditing() {
+    const docId = document.getElementById("editDocumentoId").value.trim();
+
+    const dto = {
+        nombre:     document.getElementById("editNombre").value.trim(),
+        apellido:   document.getElementById("editApellido").value.trim(),
+        correo:     document.getElementById("editCorreo").value.trim(),
+        telefono:   document.getElementById("editTelefono").value.trim(),
+        contraseña: document.getElementById("editContraseña").value.trim()   // puede venir vacío
+    };
+
+    // Validar longitud mínima de contraseña si se ha escrito algo
+    if (dto.contraseña && dto.contraseña.length < 8) {
+        Swal.fire("Error", "La contraseña debe tener al menos 8 caracteres.", "error");
+        return;
+    }
+
     Swal.fire({
         title: "¿Confirmar edición?",
         text: "Los cambios se acumularán hasta que se haga clic en 'Guardar todo'.",
@@ -198,10 +214,21 @@ function confirmEditing() {
         showCancelButton: true,
         confirmButtonText: "Sí, confirmar",
         cancelButtonText: "Cancelar"
-    }).then((result) => {
-        if (result.isConfirmed) {
+    }).then(res => {
+        if (!res.isConfirmed) return;
+
+        fetch(`/api/Usuarios/${docId}`, {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(dto)
+        })
+        .then(r => {
+            if (r.status === 400) return r.text().then(t => { throw t; });
+            if (!r.ok) throw "No se pudo actualizar.";
+            Swal.fire("Guardado", "Usuario actualizado.", "success");
             cancelEditing();
-        }
+        })
+        .catch(err => Swal.fire("Error", err, "error"));
     });
 }
 

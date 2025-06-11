@@ -61,7 +61,10 @@
         <div class="mb-3">
           <label for="Contraseña" class="form-label">Contraseña</label>
           <div class="input-group">
-            <input type="password" class="form-control @(ViewData.ModelState["Contraseña"]?.Errors.Any() == true ? "is-invalid" : "")" id="Contraseña" name="Contraseña" asp-for="Contraseña" required />
+            <input type="password"
+            class="form-control @(ViewData.ModelState["Contraseña"]?.Errors.Any() == true ? "is-invalid" : "")"
+            id="Contraseña" name="Contraseña" asp-for="Contraseña"
+            required minlength="8" />
             <span class="input-group-text" style="cursor:pointer;">
               <i id="togglePassword" class="fa fa-eye" onclick="togglePasswordVisibility()"></i>
             </span>

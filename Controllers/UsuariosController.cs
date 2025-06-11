@@ -46,14 +46,14 @@ namespace MedicinaESE.Controllers
 
 
         // Aquí podrás agregar otros endpoints para actualizar, guardar cambios, etc.
-        
+
         [HttpDelete("{documentoId}")]
         public IActionResult Delete(string documentoId)
         {
             var u = _db.Usuarios.FirstOrDefault(x => x.DocumentoId == documentoId);
             if (u == null) return NotFound();
 
-            var med = _db.Medicos  .FirstOrDefault(m => m.IdUsuario == u.IdUsuario);
+            var med = _db.Medicos.FirstOrDefault(m => m.IdUsuario == u.IdUsuario);
             var pac = _db.Pacientes.FirstOrDefault(p => p.IdUsuario == u.IdUsuario);
             if (med != null) _db.Medicos.Remove(med);
             if (pac != null) _db.Pacientes.Remove(pac);
@@ -62,6 +62,42 @@ namespace MedicinaESE.Controllers
             _db.SaveChanges();
             return NoContent();      // 204
         }
+        
+                // DTO mínimo para la edición (solo los campos que realmente cambias desde la vista)
+        public class UsuarioUpdateDto
+        {
+            public string Nombre       { get; set; } = "";
+            public string Apellido     { get; set; } = "";
+            public string Correo       { get; set; } = "";
+            public string? Telefono    { get; set; }
+            public string? Contraseña  { get; set; }   // ← puede venir null o vacía
+        }
+
+        [HttpPut("{documentoId}")]
+        public IActionResult Put(string documentoId, [FromBody] UsuarioUpdateDto dto)
+        {
+            var usuario = _db.Usuarios.FirstOrDefault(u => u.DocumentoId == documentoId);
+            if (usuario == null) return NotFound();
+
+            // 1) Actualizar datos básicos
+            usuario.Nombre   = dto.Nombre;
+            usuario.Apellido = dto.Apellido;
+            usuario.Correo   = dto.Correo;
+            usuario.Telefono = string.IsNullOrWhiteSpace(dto.Telefono) ? null : dto.Telefono;
+
+            // 2) Validar y aplicar nueva contraseña (si la enviaron)
+            if (!string.IsNullOrWhiteSpace(dto.Contraseña))
+            {
+                if (dto.Contraseña.Length < 8)
+                    return BadRequest("La contraseña debe tener al menos 8 caracteres.");   // ← aquí va el BadRequest
+
+                usuario.Contraseña = BCrypt.Net.BCrypt.HashPassword(dto.Contraseña);
+            }
+
+            _db.SaveChanges();
+            return NoContent();   // 204 éxito sin cuerpo
+        }
+
 
     }
 }

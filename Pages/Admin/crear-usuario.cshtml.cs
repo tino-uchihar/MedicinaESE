@@ -69,6 +69,14 @@ namespace MedicinaESE.Pages.Admin
 
         public async Task<IActionResult> OnPostAsync()
         {
+
+            // Validar longitud mínima de contraseña (8)
+            if (string.IsNullOrWhiteSpace(Contraseña) || Contraseña.Length < 8)
+            {
+                ModelState.AddModelError("Contraseña",
+                    "La contraseña debe tener al menos 8 caracteres.");
+            }
+            
             // --- VALIDACIÓN CONDICIONAL SEGÚN TIPO DE USUARIO ---
 
             // Para "admin" y "medico" se requieren datos de las secciones de Médico y Paciente.

@@ -76,9 +76,11 @@
       <div class="mb-3">
         <label for="editContraseña" class="form-label">Contraseña</label>
         <div class="input-group">
-          <!-- Se utiliza el valor real para que, al aplicar el input password, se oculte -->
-          <input type="password" id="editContraseña" name="editContraseña" class="form-control" 
-                 value="@Model.EditarUsuario.Contraseña" data-original="@Model.EditarUsuario.Contraseña" readonly />
+          <input type="password"
+                id="editContraseña" name="editContraseña"
+                class="form-control"
+                placeholder="Contraseña usuario"
+                minlength="8" />   <!-- exige 8+ -->
           <span class="input-group-text" style="cursor:pointer;" onclick="toggleEditPasswordVisibility()">
             <i class="fas fa-eye"></i>
           </span>

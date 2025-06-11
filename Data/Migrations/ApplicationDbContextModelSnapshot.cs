@@ -22,6 +22,170 @@ namespace MedicinaESE.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("MedicinaESE.Models.AsignacionHorario", b =>
+                {
+                    b.Property<int>("IdAsignacion")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdAsignacion"));
+
+                    b.Property<DateTime>("FechaFinSemana")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("FechaInicioSemana")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("HorarioGeneralIdHorarioGeneral")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdHorarioGeneral")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdMedico")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("MedicoIdMedico")
+                        .HasColumnType("int");
+
+                    b.HasKey("IdAsignacion");
+
+                    b.HasIndex("HorarioGeneralIdHorarioGeneral");
+
+                    b.HasIndex("MedicoIdMedico");
+
+                    b.ToTable("AsignacionHorarios");
+                });
+
+            modelBuilder.Entity("MedicinaESE.Models.Cita", b =>
+                {
+                    b.Property<int>("IdCita")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdCita"));
+
+                    b.Property<string>("EstadoCita")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("nvarchar(max)")
+                        .HasDefaultValue("Pendiente");
+
+                    b.Property<DateTime>("FechaCita")
+                        .HasColumnType("datetime2");
+
+                    b.Property<TimeSpan>("HoraCita")
+                        .HasColumnType("time");
+
+                    b.Property<int>("IdMedico")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdPaciente")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("MedicoIdMedico")
+                        .HasColumnType("int");
+
+                    b.Property<string>("MotivoConsulta")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("PacienteIdPaciente")
+                        .HasColumnType("int");
+
+                    b.HasKey("IdCita");
+
+                    b.HasIndex("MedicoIdMedico");
+
+                    b.HasIndex("PacienteIdPaciente");
+
+                    b.ToTable("Citas");
+                });
+
+            modelBuilder.Entity("MedicinaESE.Models.ExcepcionHorario", b =>
+                {
+                    b.Property<int>("IdExcepcion")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdExcepcion"));
+
+                    b.Property<bool>("Cancelado")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("Fecha")
+                        .HasColumnType("datetime2");
+
+                    b.Property<TimeSpan?>("HoraFinEspecial")
+                        .HasColumnType("time");
+
+                    b.Property<TimeSpan?>("HoraInicioEspecial")
+                        .HasColumnType("time");
+
+                    b.Property<int>("IdMedico")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("MedicoIdMedico")
+                        .HasColumnType("int");
+
+                    b.HasKey("IdExcepcion");
+
+                    b.HasIndex("MedicoIdMedico");
+
+                    b.ToTable("ExcepcionesHorario");
+                });
+
+            modelBuilder.Entity("MedicinaESE.Models.HistorialClinico", b =>
+                {
+                    b.Property<int>("IdHistorial")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdHistorial"));
+
+                    b.Property<string>("Diagnostico")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("IdCita")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NotasAdicionales")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RecetaMedica")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("IdHistorial");
+
+                    b.HasIndex("IdCita");
+
+                    b.ToTable("HistorialClinico");
+                });
+
+            modelBuilder.Entity("MedicinaESE.Models.HorarioGeneral", b =>
+                {
+                    b.Property<int>("IdHorarioGeneral")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdHorarioGeneral"));
+
+                    b.Property<string>("Descripcion")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<TimeSpan>("HoraFin")
+                        .HasColumnType("time");
+
+                    b.Property<TimeSpan>("HoraInicio")
+                        .HasColumnType("time");
+
+                    b.HasKey("IdHorarioGeneral");
+
+                    b.ToTable("HorariosGenerales");
+                });
+
             modelBuilder.Entity("MedicinaESE.Models.Medico", b =>
                 {
                     b.Property<int>("IdMedico")
@@ -156,6 +320,66 @@ namespace MedicinaESE.Data.Migrations
                         .IsUnique();
 
                     b.ToTable("Usuarios");
+                });
+
+            modelBuilder.Entity("MedicinaESE.Models.AsignacionHorario", b =>
+                {
+                    b.HasOne("MedicinaESE.Models.HorarioGeneral", "HorarioGeneral")
+                        .WithMany("Asignaciones")
+                        .HasForeignKey("HorarioGeneralIdHorarioGeneral");
+
+                    b.HasOne("MedicinaESE.Models.Medico", "Medico")
+                        .WithMany()
+                        .HasForeignKey("MedicoIdMedico");
+
+                    b.Navigation("HorarioGeneral");
+
+                    b.Navigation("Medico");
+                });
+
+            modelBuilder.Entity("MedicinaESE.Models.Cita", b =>
+                {
+                    b.HasOne("MedicinaESE.Models.Medico", "Medico")
+                        .WithMany()
+                        .HasForeignKey("MedicoIdMedico");
+
+                    b.HasOne("MedicinaESE.Models.Paciente", "Paciente")
+                        .WithMany()
+                        .HasForeignKey("PacienteIdPaciente");
+
+                    b.Navigation("Medico");
+
+                    b.Navigation("Paciente");
+                });
+
+            modelBuilder.Entity("MedicinaESE.Models.ExcepcionHorario", b =>
+                {
+                    b.HasOne("MedicinaESE.Models.Medico", "Medico")
+                        .WithMany()
+                        .HasForeignKey("MedicoIdMedico");
+
+                    b.Navigation("Medico");
+                });
+
+            modelBuilder.Entity("MedicinaESE.Models.HistorialClinico", b =>
+                {
+                    b.HasOne("MedicinaESE.Models.Cita", "Cita")
+                        .WithMany("Historiales")
+                        .HasForeignKey("IdCita")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Cita");
+                });
+
+            modelBuilder.Entity("MedicinaESE.Models.Cita", b =>
+                {
+                    b.Navigation("Historiales");
+                });
+
+            modelBuilder.Entity("MedicinaESE.Models.HorarioGeneral", b =>
+                {
+                    b.Navigation("Asignaciones");
                 });
 #pragma warning restore 612, 618
         }

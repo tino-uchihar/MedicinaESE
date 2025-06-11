@@ -54,7 +54,7 @@
                             <button class="edit-btn" title="Editar" onclick="editUser('@usuario.DocumentoId')">
                                 <i class="fas fa-pencil-alt"></i>
                             </button>
-                            <button class="delete-btn" title="Eliminar">
+                            <button class="delete-btn" title="Eliminar" onclick="deleteUser('@usuario.DocumentoId')">
                                 <i class="fas fa-trash-alt"></i>
                             </button>
                         </td>
@@ -167,6 +167,11 @@
             });
             tbody.innerHTML = "";
             rows.forEach(row => tbody.appendChild(row));
+        }
+
+        function deleteUser(documentoId) {
+            // Redirección “tradicional” a la vista de confirmación
+            window.location.href = `/Admin/borrar-usuario?documentoId=${documentoId}`;
         }
 
         // Seleccionar checkboxes

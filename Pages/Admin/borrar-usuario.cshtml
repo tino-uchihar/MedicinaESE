@@ -1,0 +1,35 @@
+﻿@page
+@model MedicinaESE.Pages.Admin.BorrarUsuarioModel
+@{
+    ViewData["Title"] = "Eliminar usuario";
+    Layout = null;
+}
+
+<div id="borrarUsuarioContainer" class="mt-4">
+  <div class="card mb-4">
+    <div class="card-header" style="background-color:#028090; color:white;">
+        <h4>Eliminar usuario</h4>
+    </div>
+    <div class="card-body text-center">
+        <p class="mb-4">
+            ¿Está seguro de que desea eliminar al usuario
+            <strong>@Model.NombreCompleto</strong>  
+            (Documento: <strong>@Model.DocumentoId</strong>)?
+        </p>
+
+        <form method="post">
+            <input type="hidden" asp-for="DocumentoId" />
+            <a asp-page="lista-usuarios" class="btn btn-secondary">
+                Cancelar
+            </a>
+            <button type="button" class="btn btn-warning" onclick="confirmDelete('@Model.DocumentoId')">Confirmar</button>
+        </form>
+    </div>
+  </div>
+</div>
+
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="~/js/admin.js" asp-append-version="true"></script>
+}

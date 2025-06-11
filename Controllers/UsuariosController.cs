@@ -36,15 +36,32 @@ namespace MedicinaESE.Controllers
             // Siempre obtener la información del paciente.
             var paciente = _db.Pacientes.FirstOrDefault(p => p.IdUsuario == usuario.IdUsuario);
 
-            return Ok(new 
-            { 
+            return Ok(new
+            {
                 usuario,
                 medico,
-                paciente 
+                paciente
             });
         }
 
 
         // Aquí podrás agregar otros endpoints para actualizar, guardar cambios, etc.
+        
+        [HttpDelete("{documentoId}")]
+        public IActionResult Delete(string documentoId)
+        {
+            var u = _db.Usuarios.FirstOrDefault(x => x.DocumentoId == documentoId);
+            if (u == null) return NotFound();
+
+            var med = _db.Medicos  .FirstOrDefault(m => m.IdUsuario == u.IdUsuario);
+            var pac = _db.Pacientes.FirstOrDefault(p => p.IdUsuario == u.IdUsuario);
+            if (med != null) _db.Medicos.Remove(med);
+            if (pac != null) _db.Pacientes.Remove(pac);
+
+            _db.Usuarios.Remove(u);
+            _db.SaveChanges();
+            return NoContent();      // 204
+        }
+
     }
 }

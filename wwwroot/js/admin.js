@@ -204,3 +204,47 @@ function confirmEditing() {
         }
     });
 }
+
+
+
+/* ---------- flujo borrar ---------- */
+function deleteUser(documentoId) {
+    fetch(`/Admin/borrar-usuario?documentoId=${documentoId}`)
+        .then(r => {
+            if (!r.ok) throw "No encontrado";
+            return r.text();
+        })
+        .then(html => {
+            document.getElementById("editSection").innerHTML = html;
+            resaltarFila(documentoId);
+        })
+        .catch(() => Swal.fire("Error", "No se encontró el usuario.", "error"));
+}
+
+function confirmDelete(documentoId) {
+    Swal.fire({
+        title: "¿Eliminar usuario?",
+        text: "Esta acción no se puede deshacer.",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#d33",
+        cancelButtonText: "Cancelar",
+        confirmButtonText: "Sí, eliminar"
+    }).then(res => {
+        if (!res.isConfirmed) return;
+
+        fetch(`/api/Usuarios/${documentoId}`, { method: "DELETE" })
+            .then(r => {
+                if (!r.ok) throw "Falló el borrado";
+                // 1) quitar fila
+                document.querySelectorAll("#userTableBody tr.userRow")
+                    .forEach(row => {
+                        if (row.cells[1].innerText.trim() === documentoId) row.remove();
+                    });
+                // 2) limpiar panel
+                cancelEditing();
+                Swal.fire("Eliminado", "Usuario eliminado.", "success");
+            })
+            .catch(() => Swal.fire("Error", "No se pudo eliminar.", "error"));
+    });
+}

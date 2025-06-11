@@ -2,6 +2,7 @@
 @model MedicinaESE.Pages.Admin.ListaUsuariosModel
 @{
     ViewData["Title"] = "Lista de Usuarios";
+    var docActual = User.FindFirst("DocumentoId")?.Value ?? "";
 }
 
 <div class="admin-container mx-auto text-center">
@@ -51,10 +52,14 @@
                         <td>@(string.IsNullOrWhiteSpace(usuario.Telefono) ? "-" : usuario.Telefono)</td>
                         <td>@usuario.TipoUsuario</td>
                         <td class="actions-cell">
-                            <button class="edit-btn" title="Editar" onclick="editUser('@usuario.DocumentoId')">
+                            <button class="edit-btn" title="Editar"
+                                onclick="editUser('@usuario.DocumentoId')"
+                                @(usuario.DocumentoId == docActual ? "disabled" : "")>
                                 <i class="fas fa-pencil-alt"></i>
                             </button>
-                            <button class="delete-btn" title="Eliminar" onclick="deleteUser('@usuario.DocumentoId')">
+                            <button class="delete-btn" title="Eliminar"
+                                    onclick="deleteUser('@usuario.DocumentoId')"
+                                    @(usuario.DocumentoId == docActual ? "disabled" : "")>
                                 <i class="fas fa-trash-alt"></i>
                             </button>
                         </td>
@@ -93,6 +98,7 @@
 @section Scripts {
     <script>
         // Paginación
+        const currentUserDoc = '@docActual';
         let currentPage = 1;
         let rowsPerPage = parseInt(document.getElementById("rowsPerPage").value);
 

@@ -59,7 +59,9 @@ namespace MedicinaESE.Pages
                     // Un claim personalizado para el tipo de usuario, importante para redirecciones
                     new Claim("UsuarioTipo", resultado.TipoUsuario),
                     // También incluímos el correo
-                    new Claim(ClaimTypes.Email, resultado.Correo)
+                    new Claim(ClaimTypes.Email, resultado.Correo),
+                    // Claim para el documento we
+                    new Claim("DocumentoId", Documento)
                 };
 
                 // Crear el ClaimsIdentity con el esquema de autenticación de cookies

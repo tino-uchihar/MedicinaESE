@@ -1,0 +1,48 @@
+@page
+@model MedicinaESE.Pages.medico_mainModel
+@{
+    ViewData["Title"] = "Panel del Medico";
+}
+
+@{
+    var mensaje = TempData["Mensaje"] as string;
+    var cssClass = "";
+    if (!string.IsNullOrEmpty(mensaje))
+    {
+        cssClass = mensaje.Contains("éxito") ? "alert-success" : "alert-danger";
+    }
+}
+
+@if (!string.IsNullOrEmpty(mensaje))
+{
+    <div id="temp-message" class="alert @cssClass" role="alert" style="position: fixed; top: 10px; left: 50%; transform: translateX(-50%); z-index: 9999; width: auto; padding: 15px;">
+        @mensaje
+    </div>
+}
+
+<div class="medico-main-container">
+    <h1 class="medico-main-header">Panel del Medico</h1>
+    <p class="medico-main-subtext">Bienvenido, aquí puedes gestionar tus citas y datos personales.</p>
+
+    <div class="medico-main-options">
+        <a href="/Medicoo/agendar-cita" class="medico-btn">Agendar cita</a>
+        <a href="/Medicoo/ficha-medica" class="medico-btn">Actualizar datos personales</a>
+        <a href="/Medicoo/historial-citas" class="medico-btn">Ver historial de citas</a>
+        <a href="#" onclick="confirmLogout()" class="medico-btn medico-btn-danger">Cerrar sesión</a>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var tempMessage = document.getElementById("temp-message");
+            if (tempMessage) {
+                setTimeout(function () {
+                    tempMessage.style.display = "none";
+                }, 3000);
+            }
+        });
+    </script>
+    <script src="~/js/medico.js" asp-append-version="true"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+} 

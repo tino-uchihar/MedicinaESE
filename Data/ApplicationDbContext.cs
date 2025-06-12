@@ -73,6 +73,22 @@ namespace MedicinaESE.Data
                 .HasKey(hc => hc.IdHistorial);
 
 
+            // Medico ↔ Usuario   (uno a muchos)
+            builder.Entity<Medico>()
+                .HasOne(m => m.Usuario)
+                .WithMany(u => u.Medicos)
+                .HasForeignKey(m => m.IdUsuario)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            // Paciente ↔ Usuario (uno a muchos)
+            builder.Entity<Paciente>()
+                .HasOne(p => p.Usuario)
+                .WithMany(u => u.Pacientes)
+                .HasForeignKey(p => p.IdUsuario)
+                .OnDelete(DeleteBehavior.NoAction);
+
+
+
         }
 
 

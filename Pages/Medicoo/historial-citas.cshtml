@@ -1,0 +1,46 @@
+@page
+@model MedicinaESE.Pages.Medicoo.HistorialCitasMedicoModel
+@{
+    ViewData["Title"] = "Historial de Citas";
+}
+
+<div class="container mt-4">
+    <h2>Historial de Citas Atendidas</h2>
+    <table class="table table-striped mt-3">
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Paciente</th>
+                <th>Tipo de cita</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+        @if (Model.Citas != null && Model.Citas.Any())
+        {
+            foreach (var cita in Model.Citas)
+            {
+                <tr>
+                    <td>@cita.Fecha.ToShortDateString()</td>
+                    <td>@cita.Hora</td>
+                    <td>@cita.Paciente</td>
+                    <td>@cita.TipoCita</td>
+                    <td>@cita.Estado</td>
+                    <td>
+                        <form method="post" asp-page-handler="GenerarPDF" asp-route-id="@cita.IdCita" style="display:inline;">
+                            <button type="submit" class="btn btn-sm btn-outline-primary">PDF</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr><td colspan="6" class="text-center">No hay citas registradas para tu especialidad.</td></tr>
+        }
+        </tbody>
+    </table>
+    <a href="/Medicoo/medico-main" class="btn btn-secondary mt-3">Volver al panel</a>
+</div> 

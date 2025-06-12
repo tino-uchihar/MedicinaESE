@@ -86,8 +86,8 @@ namespace MedicinaESE.Pages
                 TempData["Redireccion"] = resultado.TipoUsuario switch
                 {
                     "admin" => "/admin-main",
-                    "medico" => "/ficha-medica",
-                    "paciente" => "/agendar-cita",
+                    "medico" => "/medico-main",
+                    "paciente" => "/paciente-main",
                     _ => "/Comun/ErrorBD"
                 };
             }

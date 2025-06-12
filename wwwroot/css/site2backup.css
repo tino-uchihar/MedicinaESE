@@ -1,0 +1,638 @@
+/* Colores principales de la página
+   #05668D - Azul oscuro (botones, texto)
+   #028090 - Azul medio
+   #00A896 - Verde azulado (detalles destacados)
+   #02C39A - Verde brillante (elementos interactivos)
+   #F0F3BD - Amarillo claro (fondo general)
+*/
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* Efectos en botones y formularios */
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, 
+.form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+/* Ajuste global */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  background-color: #F0F3BD; /* Amarillo claro */
+  color: #05668D; /* Azul oscuro para texto */
+  margin-bottom: 60px;
+}
+
+html, body {
+  overflow-x: hidden; /* Oculta el desplazamiento lateral */
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.container {
+  flex: 1; /* Hace que el contenido principal ocupe el espacio disponible */  
+}
+
+
+/* Contenedor principal */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0; /* antes en 40px 0*/
+  position: relative;
+}
+
+/* Caja azul que contiene la imagen y la gota */
+.banner-container {
+  background-color: #028090;
+  width: 95%; /* Ahora tiene el mismo tamaño que la caja de texto */
+  aspect-ratio: 320 / 77; /* 21 a 9 es mas standart pero para la imagen actual ta bien*/
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 30px; /* Para evitar que se empalme con la siguiente sección */
+}
+
+/* Caja rectangular que contiene la imagen */
+.image-box {
+  background-color: white;
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Altura completa */
+  border-radius: 8px; /* Sin bordes redondeados */
+  position: relative;
+  z-index: 2;
+  overflow: hidden; /* Evita que la imagen sobresalga del contenedor */
+}
+
+/* Imagen dentro de la caja */
+.content-image {
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Altura completa */
+  object-fit: cover; /* La imagen se adapta al contenedor */
+  border: 8px solid white; /* Borde blanco alrededor de la imagen */
+  border-radius: 12px; /* Bordes curveados para el borde */
+}
+
+
+/* El ovalo debajo para una forma curiosa*/
+.oval-container {
+  position: absolute;
+  left: 50%;
+  width: 80%;
+  height: 50%;
+  border-radius: 0 0 40% 40%; /* Mantener la forma ovalada */
+  background: #028090; /* Igual al banner */
+  transform: translateX(-50%) translateY(0); /* Centrar horizontalmente sin bajar tanto */
+  bottom: -25%; /* Lo situamos a la mitad del óvalo con el borde inferior del banner */
+  z-index: 1; /* Asegura que quede sobre la siguiente sección */
+}
+
+
+.oval-button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* Centra el botón en el óvalo */
+  z-index: 2; /* Para que quede visible */
+  background-color: #02C39A;
+  color: white;
+  border: none;
+  width: 80%;
+  min-height: 30px;
+  border-radius: 4px 4px 32px 32px;
+  font-size: clamp(8px, 3vw, 34px); /* Tamaño de texto responsivo */
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Efecto al pasar el mouse sobre el botón */
+.oval-button:hover {
+  background-color: #00A896; /* Azul medio al pasar el mouse */
+}
+
+
+
+/* Contenedor de texto debajo del círculo */
+.content-box {
+  background-color: white;
+  width: 95%;
+  padding: clamp(20px, 5vw, 50px);
+  border-radius: 20px;
+  margin-top: -5px; /* Lo acercamos al círculo */
+  text-align: center;
+  z-index: 0;
+}
+
+/* Fila superior de sub-divs */
+.text-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Bloques de texto */
+.text-block {
+  background-color: #05668D;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  flex: 1;
+  margin: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Bloque grande */
+.text-block.large {
+  width: 100%;
+  background-color: #00A896;
+  padding: 20px;
+  font-size: 18px;
+  margin-left: auto; /* Margen automático a la izquierda */
+  margin-right: auto; /* Margen automático a la derecha */
+}
+
+
+
+.btn-login-custom {
+  background-color: #4A148C; /* Violeta oscuro */
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn-login-custom:hover {
+  background-color: #7C4DFF; /* Violeta claro */
+  transform: scale(1.05);
+}
+
+
+.rounded-custom {
+  border-top-right-radius: 25%;
+  border-bottom-left-radius: 25%;
+}
+
+
+/* Contenedor con fondo azul clarísimo */
+.full-wrapper {
+  background-color: #d6f4f5; /* Versión muy clara de rgb(2, 128, 144) */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.confirmation-wrapper {
+  background-color: #d6f4f5; /* Azul muy claro basado en rgb(2, 128, 144) */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.top-section {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Asegura alineación vertical */
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.logo-img {
+  width: clamp(120px, 10vw, 180px); /* Tamaño responsivo */
+  height: auto;
+  margin: auto;
+}
+
+
+
+/* Fondos alternados en la sección "Acerca de" */
+.service-row-left {
+  background-color: #d6f4f5; /* Azul claro */
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.service-row-right {
+  background-color: #F0F3BD; /* Amarillo claro */
+  padding: 10px;
+  border-radius: 12px;
+}
+
+/* Ajuste del tamaño de las imágenes */
+.service-img {
+  width: 100%; /* Ajusta automáticamente al contenedor */
+  max-width: 250px; /* Reduce tamaño en escritorio */
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+
+
+
+
+/* Contenedor principal del carrusel */
+.carousel-box {
+  display: flex;
+  align-items: center; /* Centra los elementos verticalmente */
+  justify-content: center; /* Espaciado correcto */
+  width: 100%;
+  gap: 2%;
+}
+
+/* Botón de desplazamiento izquierdo */
+.section-btn-left {
+  width: 9%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Botón de desplazamiento derecho */
+.section-btn-right {
+  width: 9%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Botones de desplazamiento */
+.carousel-btn-prev, .carousel-btn-next {
+  width: 99%;
+  aspect-ratio: 1/1;
+  background-color: #05668D;
+  color: white;
+  border: none;
+  font-size: clamp(12px, 3vw, 24px);
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Contenedor del carrusel */
+.section-carousel {
+  width: 80%;
+  overflow: hidden; /* Se ocultan los elementos fuera del área visible */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Carrusel dinámico */
+.carousel {
+  display: flex;
+  gap: 2px; /* Reducimos el espacio entre ítems a solo 2px */
+  justify-content: center; /* Mantiene alineación */
+  transition: transform 0.3s ease-in-out; /* Animación de desplazamiento */
+}
+
+/* Estilos de cada noticia */
+.carousel-item {
+  width: 31%;
+  min-height: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Imagen ajustada proporcionalmente */
+.news-img {
+  width: 100%;
+  height: 69%;
+  object-fit: fill; /* Se ajusta y recorta para evitar distorsión */
+  margin: 0;
+  padding: 0;
+}
+
+/* Título ajustado dinámicamente */
+.news-title {
+  width: 100%;
+  height: 29%;
+  text-align: center;
+  font-size: clamp(8px, 3vw, 24px); /* Se adapta automáticamente */
+  font-weight: bold;
+  color: #05668D;
+}
+
+
+
+
+/*------------------------------------------------------
+  Panel Admin we 
+------------------------------------------------------*/
+
+.admin-main-container {
+   margin: 40px auto;
+   padding: 30px;
+   max-width: 900px;
+   background-color: #f9f9f9; /* Fondo claro */
+   border-radius: 12px;
+   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+   text-align: center;
+ }
+ 
+ .admin-main-header {
+   font-size: 26px;
+   font-weight: bold;
+   color: #05668D;
+   margin-bottom: 20px;
+ }
+ 
+ .admin-main-subtext {
+   font-size: 18px;
+   color: #028090;
+   margin-bottom: 30px;
+ }
+ 
+ .admin-main-options {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   align-items: center;
+   width: 100%;
+ }
+ 
+ /* Botones del panel principal */
+ .admin-btn {
+   display: block;
+   width: 80%;
+   padding: 12px;
+   font-size: 18px;
+   font-weight: bold;
+   text-align: center;
+   color: #fff;
+   background-color: #02C39A;
+   border-radius: 8px;
+   text-decoration: none;
+   transition: background-color 0.3s ease;
+ }
+ 
+ .admin-btn:hover {
+   background-color: #00A896;
+ }
+ 
+ .admin-btn-danger {
+   background-color: #E63946;
+ }
+ 
+ .admin-btn-danger:hover {
+   background-color: #D62828;
+ }
+ 
+ /*------------------------------------------------------
+   La Lista de Usuarios (admin/lista-usuarios)
+ ------------------------------------------------------*/
+ 
+ .admin-container {
+   max-width: 900px;
+   margin: 40px auto; /* Alineado con el panel, con un poco de margen */
+   text-align: center;
+ }
+ 
+ .admin-title {
+   font-size: 24px;
+   margin-bottom: 20px;
+   color: #05668D;
+ }
+ 
+ /* Contenedor de la tabla con scroll */
+ .table-container {
+   max-height: 400px;
+   overflow-y: auto;
+   border: 1px solid #ccc;
+   padding: 10px;
+   background-color: #fff; /* Fondo blanco para la legibilidad */
+   border-radius: 8px;
+ }
+ 
+ /* Estilo de la tabla */
+ .users-table {
+   width: 100%;
+   border-collapse: collapse;
+ }
+ 
+ .users-table th,
+ .users-table td {
+   padding: 10px;
+   border-bottom: 1px solid #ccc;
+   text-align: center;
+ }
+ 
+ /* Header con un fondo claro y fuente en negrita */
+ .users-table th {
+   background-color: #f1f1f1;
+   font-weight: bold;
+   position: sticky;
+   top: 0;
+   z-index: 2;
+ }
+ 
+ /* Hover sobre filas de la tabla */
+ .users-table tbody tr:hover {
+   background-color: #f9f9f9;
+ }
+ 
+ /* Estilo para columnas ordenables */
+ .sortable {
+   cursor: pointer;
+   font-weight: bold;
+ }
+ 
+ /* Botones para editar y eliminar (dentro de la tabla) */
+ .edit-btn {
+   background-color: #0288D1;
+   color: #fff;
+   padding: 5px 10px;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   transition: background 0.3s ease;
+   margin-right: 5px;
+ }
+ 
+ .edit-btn:hover {
+   background-color: #0277BD;
+ }
+ 
+ .delete-btn {
+   background-color: #D32F2F;
+   color: #fff;
+   padding: 5px 10px;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   transition: background 0.3s ease;
+ }
+ 
+ .delete-btn:hover {
+   background-color: #C62828;
+ }
+ 
+ /* Contenedor de acciones generales (debajo de la tabla) */
+ .admin-actions {
+   margin-top: 20px;
+ }
+ 
+ /* Botones de acciones (refrescar, deshacer, guardar, volver) */
+ .action-btn {
+   padding: 10px 15px;
+   margin: 5px;
+   border: none;
+   background-color: #039BE5;
+   color: #fff;
+   cursor: pointer;
+   font-weight: bold;
+   border-radius: 8px;
+   transition: background 0.3s ease;
+ }
+ 
+ .action-btn:hover {
+   background-color: #0288D1;
+ }
+ 
+ .action-save {
+   background-color: #43A047;
+ }
+ 
+ .action-save:hover {
+   background-color: #388E3C;
+ }
+ 
+ .action-back {
+   background-color: #F57C00;
+ }
+ 
+ .action-back:hover {
+   background-color: #E65100;
+ }
+ 
+
+
+
+
+
+ /* Estilo para el mensaje de acceso denegado */
+.mensaje-acceso {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(220, 53, 69, 0.9); /* Rojo con transparencia */
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 9999;
+  text-align: center;
+  animation: fadeOut 3s ease-in-out 3s forwards;
+}
+
+/* Animación para desaparecer el mensaje después de 3s */
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; visibility: hidden; }
+}
+
+
+
+/* LISTA para ver los usuarios actualizada */
+
+.lista-header {
+  background-color: #028090;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.pagination-wrapper {
+  background-color: white;
+  color: #028090;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.admin-actions {
+  background-color: #028090;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+
+/* Asegura que la celda de acciones tenga poco padding y no rompa la línea */
+td.actions-cell {
+  padding: 4px;             /* Ajusta según necesites */
+  white-space: nowrap;      /* Evita que se salten de línea */
+  text-align: center;       /* Centra el contenido */
+}
+
+/* Estilo para el botón de editar */
+td.actions-cell button.edit-btn {
+  margin-right: 2px;        /* Margen derecho para separar de delete */
+}
+
+/* Opcional: Ajusta el tamaño de los iconos si fuera necesario */
+td.actions-cell i {
+  font-size: 1rem;          /* Por defecto */
+}
+
+
+
+/* botones deshabilitados: gris y cursor bloqueado */
+button.edit-btn[disabled],
+button.delete-btn[disabled] {
+    background-color: #bfbfbf !important;   /* gris */
+    border-color:     #bfbfbf !important;
+    color:            #5a5a5a !important;
+    cursor: not-allowed;
+    opacity: 1
+}

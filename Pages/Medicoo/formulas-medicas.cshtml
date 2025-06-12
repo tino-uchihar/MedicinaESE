@@ -1,0 +1,29 @@
+@page
+@model MedicinaESE.Pages.Medicoo.FormulasMedicasModel
+@{
+    ViewData["Title"] = "Fórmulas Médicas";
+}
+
+<div class="container mt-4">
+    <h2>Generar Fórmula Médica</h2>
+    <form method="post">
+        <div class="mb-3">
+            <label for="Paciente" class="form-label">Nombre del Paciente</label>
+            <input type="text" class="form-control" id="Paciente" name="Paciente" asp-for="Paciente" required />
+        </div>
+        <div class="mb-3">
+            <label for="Medicamentos" class="form-label">Medicamentos</label>
+            <textarea class="form-control" id="Medicamentos" name="Medicamentos" asp-for="Medicamentos" rows="3" required></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="Indicaciones" class="form-label">Indicaciones</label>
+            <textarea class="form-control" id="Indicaciones" name="Indicaciones" asp-for="Indicaciones" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Generar PDF</button>
+    </form>
+    @if (Model.PdfGenerado)
+    {
+        <div class="alert alert-success mt-3">Fórmula generada correctamente. El PDF se descargará automáticamente.</div>
+    }
+    <a href="/Medicoo/medico-main" class="btn btn-secondary mt-3">Volver al panel</a>
+</div> 

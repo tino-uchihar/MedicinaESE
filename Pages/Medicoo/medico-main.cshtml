@@ -1,0 +1,53 @@
+@page
+@model MedicinaESE.Pages.Medicoo.medico_mainModel
+@{
+    ViewData["Title"] = "Panel del Médico";
+}
+
+@{
+    var mensaje = TempData["Mensaje"] as string;
+    var cssClass = "";
+    if (!string.IsNullOrEmpty(mensaje))
+    {
+        cssClass = mensaje.Contains("éxito") ? "alert-success" : "alert-danger";
+    }
+}
+
+@if (!string.IsNullOrEmpty(mensaje))
+{
+    <div id="temp-message" class="alert @cssClass" role="alert" style="position: fixed; top: 10px; left: 50%; transform: translateX(-50%); z-index: 9999; width: auto; padding: 15px;">
+        @mensaje
+    </div>
+}
+
+<div class="paciente-main-container">
+    <h1 class="paciente-main-header">Panel del Médico</h1>
+    <p class="paciente-main-subtext">Bienvenido, aquí puedes gestionar tus citas y fórmulas médicas.</p>
+
+    <div class="mb-4 text-center">
+        <strong>Especialidad:</strong> @Model.Especialidad <br />
+        <strong>Horario:</strong> @Model.HorarioInicio - @Model.HorarioFin <br />
+        <strong>Consultorio:</strong> @Model.Consultorio
+    </div>
+
+    <div class="paciente-main-options">
+        <a href="/Medicoo/historial-citas" class="paciente-btn">Ver historial de citas</a>
+        <a href="/Medicoo/formulas-medicas" class="paciente-btn">Formular fórmulas médicas</a>
+        <a href="#" onclick="confirmLogout()" class="paciente-btn paciente-btn-danger">Cerrar sesión</a>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var tempMessage = document.getElementById("temp-message");
+            if (tempMessage) {
+                setTimeout(function () {
+                    tempMessage.style.display = "none";
+                }, 3000);
+            }
+        });
+    </script>
+    <script src="~/js/admin.js" asp-append-version="true"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+} 

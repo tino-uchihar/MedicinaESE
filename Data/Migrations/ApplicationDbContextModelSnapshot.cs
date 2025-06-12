@@ -213,6 +213,8 @@ namespace MedicinaESE.Data.Migrations
 
                     b.HasKey("IdMedico");
 
+                    b.HasIndex("IdUsuario");
+
                     b.ToTable("Medicos");
                 });
 
@@ -257,21 +259,26 @@ namespace MedicinaESE.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("EstadoCivil")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("FechaNacimiento")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("GrupoSanguineo")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("IdUsuario")
                         .HasColumnType("int");
 
                     b.Property<string>("NombreEPS")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("IdPaciente");
+
+                    b.HasIndex("IdUsuario");
 
                     b.ToTable("Pacientes");
                 });
@@ -372,6 +379,28 @@ namespace MedicinaESE.Data.Migrations
                     b.Navigation("Cita");
                 });
 
+            modelBuilder.Entity("MedicinaESE.Models.Medico", b =>
+                {
+                    b.HasOne("MedicinaESE.Models.Usuario", "Usuario")
+                        .WithMany("Medicos")
+                        .HasForeignKey("IdUsuario")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Usuario");
+                });
+
+            modelBuilder.Entity("MedicinaESE.Models.Paciente", b =>
+                {
+                    b.HasOne("MedicinaESE.Models.Usuario", "Usuario")
+                        .WithMany("Pacientes")
+                        .HasForeignKey("IdUsuario")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Usuario");
+                });
+
             modelBuilder.Entity("MedicinaESE.Models.Cita", b =>
                 {
                     b.Navigation("Historiales");
@@ -380,6 +409,13 @@ namespace MedicinaESE.Data.Migrations
             modelBuilder.Entity("MedicinaESE.Models.HorarioGeneral", b =>
                 {
                     b.Navigation("Asignaciones");
+                });
+
+            modelBuilder.Entity("MedicinaESE.Models.Usuario", b =>
+                {
+                    b.Navigation("Medicos");
+
+                    b.Navigation("Pacientes");
                 });
 #pragma warning restore 612, 618
         }

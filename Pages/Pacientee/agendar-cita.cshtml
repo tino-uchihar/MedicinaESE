@@ -1,0 +1,98 @@
+﻿@page
+@model MedicinaESE.Pages.Pacientee.AgendarCitaModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Agendar Cita";
+}
+
+<div class="full-wrapper p-4 rounded shadow-sm">
+  <div class="container">
+    <h2 class="mb-4">Agendamiento de Citas Médicas</h2>
+
+    <form method="post">
+      <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+      <!-- Tipo de cita -->
+      <div class="mb-3">
+        <label class="form-label">Tipo de cita</label>
+        <select class="form-select" asp-for="AppointmentType"
+                asp-items="@(new SelectList(new[]{ "Medicina General","Dermatología","Cardiología",
+                         "Odontología","Ginecología","Pediatría"}))"
+                onchange="onTipoChange()" required>
+          <option value="">-- Seleccione --</option>
+        </select>
+      </div>
+
+      <!-- Profesional -->
+      <div class="mb-3">
+        <label class="form-label">Profesional</label>
+        <select class="form-select" asp-for="SelectedMedicoId"
+                asp-items="Model.Profesionales" onchange="onMedicoChange()" required>
+          <option value="">-- Seleccione --</option>
+        </select>
+      </div>
+
+      <!-- Fecha -->
+      <div class="mb-3">
+        <label class="form-label">Fecha</label>
+        <input type="date" class="form-control" asp-for="Date"
+               onchange="onFechaChange()" required />
+      </div>
+
+      <!-- Hora -->
+      <div class="mb-3">
+        <label class="form-label">Hora</label>
+        <select class="form-select" asp-for="Time" id="horaSelect" required>
+          <option value="">-- Seleccione fecha y profesional --</option>
+        </select>
+      </div>
+
+      <!-- Notas -->
+      <div class="mb-4">
+        <label class="form-label">Notas / Síntomas (opcional)</label>
+        <textarea class="form-control" asp-for="Notes" rows="3"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Agendar</button>
+      <a asp-page="/paciente-main" class="btn btn-outline-secondary">Cancelar</a>
+    </form>
+  </div>
+</div>
+
+@if (Model.CitaConfirmada)
+{
+  <div class="alert alert-success mt-4">
+    <h4>Cita agendada</h4>
+    <p><strong>Profesional:</strong> @Model.Professional</p>
+    <p><strong>Fecha:</strong> @Model.Date.ToShortDateString()</p>
+    <p><strong>Hora:</strong> @Model.Time</p>
+    <p><strong>Sala:</strong> @Model.Sala</p>
+  </div>
+}
+
+@section Scripts{
+<script>
+  async function recargarHoras() {
+    const medId = document.getElementById("SelectedMedicoId").value;
+    const fecha = document.getElementById("Date").value;
+    if (!medId || !fecha) return;
+
+    const resp = await fetch(`?handler=Horas&medicoId=${medId}&fecha=${fecha}`);
+    if (!resp.ok) return;
+    const listado = await resp.json();
+
+    const sel = document.getElementById("horaSelect");
+    sel.innerHTML = ""; // limpia
+    if (listado.length === 0){
+        sel.innerHTML = `<option value="">Sin horarios disponibles</option>`;
+        return;
+    }
+    sel.innerHTML = `<option value="">-- Seleccione --</option>` +
+        listado.map(h => `<option value="${h}">${h}</option>`).join('');
+  }
+
+  function onTipoChange(){ document.getElementById("SelectedMedicoId").selectedIndex = 0; }
+  function onMedicoChange(){ recargarHoras(); }
+  function onFechaChange(){ recargarHoras(); }
+</script>
+}
